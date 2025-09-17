@@ -1,0 +1,910 @@
+--- Starting Portfolio Backtest ---
+
+--- Backtesting Symbol: Wall Street 30 ---
+
+--- Starting Backtest for Wall Street 30 from 2025-06-16 11:06:14.105844+00:00 to 2025-09-14 11:06:14.105844+00:00 ---
+Successfully connected to account #40775569 on Deriv-Demo
+Shutting down MT5 connection.
+Opening Range for 2025-06-16 at 09:30: ORH=42532.85, ORL=42412.85
+Opening Range for 2025-06-17 at 09:30: ORH=42453.5, ORL=42354.35
+Opening Range for 2025-06-18 at 09:30: ORH=42320.5, ORL=42210.5
+Opening Range for 2025-06-19 at 09:30: ORH=41961.35, ORL=41873.5
+Opening Range for 2025-06-20 at 09:30: ORH=42452.5, ORL=42315.5
+Opening Range for 2025-06-23 at 09:30: ORH=42304.5, ORL=42147.5
+Opening Range for 2025-06-24 at 09:30: ORH=43018.5, ORL=42881.35
+Opening Range for 2025-06-25 at 09:30: ORH=43134.5, ORL=43057.5
+Opening Range for 2025-06-26 at 09:30: ORH=43277.5, ORL=43125.35
+Opening Range for 2025-06-27 at 09:30: ORH=43652.5, ORL=43545.85
+Opening Range for 2025-06-30 at 09:30: ORH=44104.35, ORL=44000.5
+Opening Range for 2025-07-01 at 09:30: ORH=44191.5, ORL=44046.85
+Opening Range for 2025-07-02 at 09:30: ORH=44554.35, ORL=44394.5
+Opening Range for 2025-07-03 at 09:30: ORH=44723.5, ORL=44573.35
+Opening Range for 2025-07-04 at 09:30: ORH=44626.5, ORL=44579.5
+Opening Range for 2025-07-07 at 09:30: ORH=44825.35, ORL=44696.45
+Opening Range for 2025-07-08 at 09:30: ORH=44415.5, ORL=44312.5
+Opening Range for 2025-07-09 at 09:30: ORH=44552.5, ORL=44443.5
+Opening Range for 2025-07-10 at 09:30: ORH=44471.5, ORL=44393.5
+Opening Range for 2025-07-11 at 09:30: ORH=44456.5, ORL=44320.5
+Opening Range for 2025-07-14 at 09:30: ORH=44392.5, ORL=44268.5
+Opening Range for 2025-07-15 at 09:30: ORH=44536.5, ORL=44311.5
+Opening Range for 2025-07-16 at 09:30: ORH=44255.5, ORL=44121.5
+Opening Range for 2025-07-17 at 09:30: ORH=44492.5, ORL=44212.35
+Opening Range for 2025-07-18 at 09:30: ORH=44601.35, ORL=44421.85
+Opening Range for 2025-07-21 at 09:30: ORH=44480.5, ORL=44374.5
+Opening Range for 2025-07-22 at 09:30: ORH=44482.5, ORL=44302.35
+Opening Range for 2025-07-23 at 09:30: ORH=44818.15, ORL=44729.15
+Opening Range for 2025-07-24 at 09:30: ORH=44760.5, ORL=44690.35
+Opening Range for 2025-07-25 at 09:30: ORH=44814.5, ORL=44724.5
+Opening Range for 2025-07-28 at 09:30: ORH=44937.35, ORL=44844.5
+Opening Range for 2025-07-29 at 09:30: ORH=44912.35, ORL=44812.5
+Opening Range for 2025-07-30 at 09:30: ORH=44718.5, ORL=44632.85
+Opening Range for 2025-07-31 at 09:30: ORH=44600.5, ORL=44454.5
+Opening Range for 2025-08-01 at 09:30: ORH=43782.35, ORL=43521.5
+Opening Range for 2025-08-04 at 09:30: ORH=43943.5, ORL=43782.35
+Opening Range for 2025-08-05 at 09:30: ORH=44318.85, ORL=44184.0
+Opening Range for 2025-08-06 at 09:30: ORH=44235.85, ORL=44087.5
+Opening Range for 2025-08-07 at 09:30: ORH=44521.5, ORL=44409.5
+Opening Range for 2025-08-08 at 09:30: ORH=44153.5, ORL=44038.5
+Opening Range for 2025-08-11 at 09:30: ORH=44288.5, ORL=44187.5
+Opening Range for 2025-08-12 at 09:30: ORH=44279.5, ORL=44112.5
+Opening Range for 2025-08-13 at 09:30: ORH=44767.15, ORL=44608.5
+Opening Range for 2025-08-14 at 09:30: ORH=44844.5, ORL=44725.5
+Opening Range for 2025-08-15 at 09:30: ORH=45221.35, ORL=45058.5
+Opening Range for 2025-08-18 at 09:30: ORH=45000.85, ORL=44905.85
+Opening Range for 2025-08-19 at 09:30: ORH=45121.5, ORL=44973.5
+Opening Range for 2025-08-20 at 09:30: ORH=45070.5, ORL=44978.5
+Opening Range for 2025-08-21 at 09:30: ORH=44787.5, ORL=44675.5
+Opening Range for 2025-08-22 at 09:30: ORH=45167.5, ORL=45021.0
+Opening Range for 2025-08-25 at 09:30: ORH=45618.5, ORL=45533.5
+Opening Range for 2025-08-26 at 09:30: ORH=45334.5, ORL=45238.35
+Opening Range for 2025-08-27 at 09:30: ORH=45584.5, ORL=45409.35
+Opening Range for 2025-08-28 at 09:30: ORH=45650.35, ORL=45520.5
+Opening Range for 2025-08-29 at 09:30: ORH=45636.5, ORL=45557.5
+Opening Range for 2025-09-01 at 09:30: ORH=45552.5, ORL=45509.15
+Opening Range for 2025-09-02 at 09:30: ORH=45174.85, ORL=44986.5
+Opening Range for 2025-09-03 at 09:30: ORH=45341.5, ORL=45252.35
+Opening Range for 2025-09-04 at 09:30: ORH=45359.5, ORL=45205.5
+Opening Range for 2025-09-05 at 09:30: ORH=45805.85, ORL=45651.85
+Opening Range for 2025-09-08 at 09:30: ORH=45498.35, ORL=45345.5
+Opening Range for 2025-09-09 at 09:30: ORH=45620.15, ORL=45532.15
+Opening Range for 2025-09-10 at 09:30: ORH=45737.5, ORL=45624.5
+Opening Range for 2025-09-11 at 09:30: ORH=45772.5, ORL=45606.35
+Opening Range for 2025-09-12 at 09:30: ORH=46115.15, ORL=46019.85
+
+--- Backtest Performance Summary ---
+Total Trades: 63
+Wins: 41
+Losses: 22
+Win Rate: 65.07936507936508
+Profit Factor: 1.681330727801342
+Max Drawdown Pct: -70.4901153212518
+Max Drawdown Dollars: -194.40000000000146
+Sharpe Ratio: 2.2822301719592275
+Pnl: 714.75
+Equity Curve: [(datetime.datetime(2025, 6, 16, 11, 6, 14, 105844, tzinfo=<UTC>), 100.0), (Timestamp('2025-06-16 09:45:00-0400', tz='America/New_York'), 230.5), (Timestamp('2025-06-17 05:00:00-0400', tz='America/New_York'), 238.5), (Timestamp('2025-06-18 02:45:00-0400', tz='America/New_York'), 242.8000000000029), (Timestamp('2025-06-19 18:00:00-0400', tz='America/New_York'), 179.8000000000029), (Timestamp('2025-06-20 08:45:00-0400', tz='America/New_York'), 141.95000000000437), (Timestamp('2025-06-23 01:15:00-0400', tz='America/New_York'), 151.65000000000146), (Timestamp('2025-06-24 08:30:00-0400', tz='America/New_York'), 71.65000000000146), (Timestamp('2025-06-25 03:00:00-0400', tz='America/New_York'), 71.95000000000437), (Timestamp('2025-06-26 03:30:00-0400', tz='America/New_York'), 101.95000000000437), (Timestamp('2025-06-27 09:30:00-0400', tz='America/New_York'), 179.95000000000437), (Timestamp('2025-06-30 00:45:00-0400', tz='America/New_York'), 183.95000000000437), (Timestamp('2025-07-01 09:30:00-0400', tz='America/New_York'), 297.95000000000437), (Timestamp('2025-07-02 08:30:00-0400', tz='America/New_York'), 310.7500000000073), (Timestamp('2025-07-03 03:45:00-0400', tz='America/New_York'), 311.7500000000073), (Timestamp('2025-07-04 03:30:00-0400', tz='America/New_York'), 328.0500000000102), (Timestamp('2025-07-07 04:15:00-0400', tz='America/New_York'), 400.0500000000102), (Timestamp('2025-07-08 02:30:00-0400', tz='America/New_York'), 404.3500000000131), (Timestamp('2025-07-09 09:00:00-0400', tz='America/New_York'), 419.0500000000102), (Timestamp('2025-07-10 02:15:00-0400', tz='America/New_York'), 428.7500000000073), (Timestamp('2025-07-11 03:30:00-0400', tz='America/New_York'), 431.0500000000102), (Timestamp('2025-07-14 05:30:00-0400', tz='America/New_York'), 432.7500000000073), (Timestamp('2025-07-16 10:00:00-0400', tz='America/New_York'), 333.2500000000073), (Timestamp('2025-07-17 02:00:00-0400', tz='America/New_York'), 387.2500000000073), (Timestamp('2025-07-18 01:00:00-0400', tz='America/New_York'), 389.2500000000073), (Timestamp('2025-07-21 08:45:00-0400', tz='America/New_York'), 438.7500000000073), (Timestamp('2025-07-22 07:45:00-0400', tz='America/New_York'), 425.7500000000073), (Timestamp('2025-07-23 06:00:00-0400', tz='America/New_York'), 463.2500000000073), (Timestamp('2025-07-24 10:00:00-0400', tz='America/New_York'), 345.6000000000058), (Timestamp('2025-07-25 10:00:00-0400', tz='America/New_York'), 438.6000000000058), (Timestamp('2025-07-28 08:30:00-0400', tz='America/New_York'), 412.1000000000058), (Timestamp('2025-07-29 00:30:00-0400', tz='America/New_York'), 416.1000000000058), (Timestamp('2025-07-30 00:45:00-0400', tz='America/New_York'), 412.1000000000058), (Timestamp('2025-07-31 10:00:00-0400', tz='America/New_York'), 349.1000000000058), (Timestamp('2025-08-01 03:45:00-0400', tz='America/New_York'), 324.1000000000058), (Timestamp('2025-08-04 09:30:00-0400', tz='America/New_York'), 460.15000000000146), (Timestamp('2025-08-05 09:00:00-0400', tz='America/New_York'), 436.5), (Timestamp('2025-08-06 07:00:00-0400', tz='America/New_York'), 437.5), (Timestamp('2025-08-07 06:15:00-0400', tz='America/New_York'), 512.5), (Timestamp('2025-08-08 01:45:00-0400', tz='America/New_York'), 532.1999999999971), (Timestamp('2025-08-11 07:00:00-0400', tz='America/New_York'), 505.1999999999971), (Timestamp('2025-08-13 09:30:00-0400', tz='America/New_York'), 607.1999999999971), (Timestamp('2025-08-14 15:15:00-0400', tz='America/New_York'), 446.04999999999563), (Timestamp('2025-08-15 05:00:00-0400', tz='America/New_York'), 451.04999999999563), (Timestamp('2025-08-18 03:00:00-0400', tz='America/New_York'), 574.0499999999956), (Timestamp('2025-08-19 10:00:00-0400', tz='America/New_York'), 721.0499999999956), (Timestamp('2025-08-20 09:45:00-0400', tz='America/New_York'), 678.0499999999956), (Timestamp('2025-08-21 06:45:00-0400', tz='America/New_York'), 645.0499999999956), (Timestamp('2025-08-22 10:00:00-0400', tz='America/New_York'), 889.5499999999956), (Timestamp('2025-08-25 03:00:00-0400', tz='America/New_York'), 880.3999999999942), (Timestamp('2025-08-26 01:45:00-0400', tz='America/New_York'), 931.3999999999942), (Timestamp('2025-08-27 14:00:00-0400', tz='America/New_York'), 949.3999999999942), (Timestamp('2025-08-28 08:30:00-0400', tz='America/New_York'), 910.8999999999942), (Timestamp('2025-08-29 03:45:00-0400', tz='America/New_York'), 924.5999999999913), (Timestamp('2025-09-01 02:30:00-0400', tz='America/New_York'), 903.5999999999913), (Timestamp('2025-09-02 08:45:00-0400', tz='America/New_York'), 905.5999999999913), (Timestamp('2025-09-03 08:30:00-0400', tz='America/New_York'), 869.5999999999913), (Timestamp('2025-09-04 10:30:00-0400', tz='America/New_York'), 762.9499999999898), (Timestamp('2025-09-05 05:30:00-0400', tz='America/New_York'), 754.9999999999927), (Timestamp('2025-09-08 02:30:00-0400', tz='America/New_York'), 758.9999999999927), (Timestamp('2025-09-09 03:00:00-0400', tz='America/New_York'), 768.5999999999985), (Timestamp('2025-09-10 03:45:00-0400', tz='America/New_York'), 756.0999999999985), (Timestamp('2025-09-11 08:30:00-0400', tz='America/New_York'), 811.1499999999942), (Timestamp('2025-09-12 02:30:00-0400', tz='America/New_York'), 814.75)]
+Sortino Ratio: 3.4513226389534126
+Calmar Ratio: 0.10723456458389213
+Avg Holding Time: 0 days 01:33:34.285714285
+Max Consecutive Wins: 14
+Max Consecutive Losses: 3
+Avg Win: 43.01951219512202
+Avg Loss: 47.68409090909104
+Gross Profit: 1763.800000000003
+Gross Loss: 1049.050000000003
+Sl Hits: 22
+Tp Hits: 41
+Biggest Profit: 244.5
+Biggest Loss: -161.15000000000146
+
+--- Backtesting Symbol: US SP 500 ---
+
+--- Starting Backtest for US SP 500 from 2025-06-16 11:06:14.105844+00:00 to 2025-09-14 11:06:14.105844+00:00 ---
+Successfully connected to account #40775569 on Deriv-Demo
+Shutting down MT5 connection.
+Opening Range for 2025-06-16 at 09:30: ORH=6030.02, ORL=6016.15
+Opening Range for 2025-06-17 at 09:30: ORH=6021.42, ORL=6010.17
+Opening Range for 2025-06-18 at 09:30: ORH=5996.22, ORL=5984.97
+Opening Range for 2025-06-19 at 09:30: ORH=5949.67, ORL=5935.42
+Opening Range for 2025-06-20 at 09:30: ORH=6022.92, ORL=6004.67
+Opening Range for 2025-06-23 at 09:30: ORH=5986.64, ORL=5964.77
+Opening Range for 2025-06-24 at 09:30: ORH=6081.47, ORL=6067.07
+Opening Range for 2025-06-25 at 09:30: ORH=6112.17, ORL=6105.17
+Opening Range for 2025-06-26 at 09:30: ORH=6123.27, ORL=6117.27
+Opening Range for 2025-06-27 at 09:30: ORH=6165.57, ORL=6156.07
+Opening Range for 2025-06-30 at 09:30: ORH=6203.27, ORL=6190.77
+Opening Range for 2025-07-01 at 09:30: ORH=6195.87, ORL=6188.87
+Opening Range for 2025-07-02 at 09:30: ORH=6203.12, ORL=6193.82
+Opening Range for 2025-07-03 at 09:30: ORH=6260.67, ORL=6248.42
+Opening Range for 2025-07-04 at 09:30: ORH=6242.87, ORL=6235.62
+Opening Range for 2025-07-07 at 09:30: ORH=6266.27, ORL=6255.52
+Opening Range for 2025-07-08 at 09:30: ORH=6240.02, ORL=6232.02
+Opening Range for 2025-07-09 at 09:30: ORH=6270.62, ORL=6254.32
+Opening Range for 2025-07-10 at 09:30: ORH=6270.52, ORL=6261.77
+Opening Range for 2025-07-11 at 09:30: ORH=6260.27, ORL=6241.77
+Opening Range for 2025-07-14 at 09:30: ORH=6257.12, ORL=6241.62
+Opening Range for 2025-07-15 at 09:30: ORH=6303.07, ORL=6282.57
+Opening Range for 2025-07-16 at 09:30: ORH=6263.42, ORL=6252.67
+Opening Range for 2025-07-17 at 09:30: ORH=6279.52, ORL=6264.77
+Opening Range for 2025-07-18 at 09:30: ORH=6313.67, ORL=6305.42
+Opening Range for 2025-07-21 at 09:30: ORH=6318.02, ORL=6309.27
+Opening Range for 2025-07-22 at 09:30: ORH=6314.87, ORL=6305.37
+Opening Range for 2025-07-23 at 09:30: ORH=6340.17, ORL=6330.92
+Opening Range for 2025-07-24 at 09:30: ORH=6373.12, ORL=6363.92
+Opening Range for 2025-07-25 at 09:30: ORH=6377.02, ORL=6370.27
+Opening Range for 2025-07-28 at 09:30: ORH=6401.17, ORL=6393.17
+Opening Range for 2025-07-29 at 09:30: ORH=6410.82, ORL=6403.47
+Opening Range for 2025-07-30 at 09:30: ORH=6385.12, ORL=6377.62
+Opening Range for 2025-07-31 at 09:30: ORH=6419.92, ORL=6401.92
+Opening Range for 2025-08-01 at 09:30: ORH=6284.02, ORL=6243.27
+Opening Range for 2025-08-04 at 09:30: ORH=6301.47, ORL=6277.97
+Opening Range for 2025-08-05 at 09:30: ORH=6344.82, ORL=6334.07
+Opening Range for 2025-08-06 at 09:30: ORH=6316.77, ORL=6304.77
+Opening Range for 2025-08-07 at 09:30: ORH=6392.42, ORL=6379.92
+Opening Range for 2025-08-08 at 09:30: ORH=6368.72, ORL=6357.97
+Opening Range for 2025-08-11 at 09:30: ORH=6399.17, ORL=6390.17
+Opening Range for 2025-08-12 at 09:30: ORH=6420.37, ORL=6400.12
+Opening Range for 2025-08-13 at 09:30: ORH=6477.22, ORL=6466.47
+Opening Range for 2025-08-14 at 09:30: ORH=6455.77, ORL=6444.52
+Opening Range for 2025-08-15 at 09:30: ORH=6480.12, ORL=6469.87
+Opening Range for 2025-08-18 at 09:30: ORH=6455.67, ORL=6447.92
+Opening Range for 2025-08-19 at 09:30: ORH=6454.82, ORL=6439.72
+Opening Range for 2025-08-20 at 09:30: ORH=6415.17, ORL=6399.67
+Opening Range for 2025-08-21 at 09:30: ORH=6383.07, ORL=6370.57
+Opening Range for 2025-08-22 at 09:30: ORH=6410.32, ORL=6388.57
+Opening Range for 2025-08-25 at 09:30: ORH=6461.52, ORL=6452.02
+Opening Range for 2025-08-26 at 09:30: ORH=6446.72, ORL=6437.72
+Opening Range for 2025-08-27 at 09:30: ORH=6473.77, ORL=6462.77
+Opening Range for 2025-08-28 at 09:30: ORH=6499.52, ORL=6487.27
+Opening Range for 2025-08-29 at 09:30: ORH=6494.37, ORL=6484.12
+Opening Range for 2025-09-01 at 09:30: ORH=6470.02, ORL=6462.52
+Opening Range for 2025-09-02 at 09:30: ORH=6392.37, ORL=6377.92
+Opening Range for 2025-09-03 at 09:30: ORH=6450.52, ORL=6442.27
+Opening Range for 2025-09-04 at 09:30: ORH=6471.07, ORL=6459.7
+Opening Range for 2025-09-05 at 09:30: ORH=6537.77, ORL=6529.27
+Opening Range for 2025-09-08 at 09:30: ORH=6507.92, ORL=6497.67
+Opening Range for 2025-09-09 at 09:30: ORH=6512.07, ORL=6504.82
+Opening Range for 2025-09-10 at 09:30: ORH=6553.87, ORL=6543.62
+Opening Range for 2025-09-11 at 09:30: ORH=6562.57, ORL=6553.57
+Opening Range for 2025-09-12 at 09:30: ORH=6592.07, ORL=6585.57
+
+--- Backtest Performance Summary ---
+Total Trades: 65
+Wins: 36
+Losses: 29
+Win Rate: 55.38461538461539
+Profit Factor: 1.0801638708963104
+Max Drawdown Pct: -42.91406482307356
+Max Drawdown Dollars: -72.15999999999804
+Sharpe Ratio: 0.17952121092005724
+Pnl: 14.480000000000473
+Equity Curve: [(datetime.datetime(2025, 6, 16, 11, 6, 14, 105844, tzinfo=<UTC>), 100.0), (Timestamp('2025-06-16 09:45:00-0400', tz='America/New_York'), 118.75), (Timestamp('2025-06-17 03:30:00-0400', tz='America/New_York'), 118.95000000000073), (Timestamp('2025-06-18 06:30:00-0400', tz='America/New_York'), 116.40000000000055), (Timestamp('2025-06-19 04:00:00-0400', tz='America/New_York'), 121.74000000000069), (Timestamp('2025-06-20 09:15:00-0400', tz='America/New_York'), 137.79000000000178), (Timestamp('2025-06-23 01:15:00-0400', tz='America/New_York'), 138.55000000000018), (Timestamp('2025-06-24 08:30:00-0400', tz='America/New_York'), 127.47000000000025), (Timestamp('2025-06-25 09:45:00-0400', tz='America/New_York'), 122.60000000000036), (Timestamp('2025-06-26 03:30:00-0400', tz='America/New_York'), 127.0), (Timestamp('2025-06-27 07:30:00-0400', tz='America/New_York'), 137.70999999999913), (Timestamp('2025-06-30 01:00:00-0400', tz='America/New_York'), 138.0699999999997), (Timestamp('2025-07-01 02:15:00-0400', tz='America/New_York'), 140.32999999999993), (Timestamp('2025-07-02 08:00:00-0400', tz='America/New_York'), 143.72999999999956), (Timestamp('2025-07-03 08:45:00-0400', tz='America/New_York'), 149.22999999999956), (Timestamp('2025-07-04 04:30:00-0400', tz='America/New_York'), 150.82999999999993), (Timestamp('2025-07-07 01:30:00-0400', tz='America/New_York'), 151.38999999999942), (Timestamp('2025-07-08 02:15:00-0400', tz='America/New_York'), 154.14999999999964), (Timestamp('2025-07-09 09:30:00-0400', tz='America/New_York'), 167.64999999999964), (Timestamp('2025-07-10 04:45:00-0400', tz='America/New_York'), 168.14999999999964), (Timestamp('2025-07-11 11:30:00-0400', tz='America/New_York'), 157.14999999999964), (Timestamp('2025-07-14 05:15:00-0400', tz='America/New_York'), 155.59999999999945), (Timestamp('2025-07-15 00:45:00-0400', tz='America/New_York'), 153.96999999999935), (Timestamp('2025-07-16 09:45:00-0400', tz='America/New_York'), 143.46999999999935), (Timestamp('2025-07-17 02:00:00-0400', tz='America/New_York'), 140.34000000000015), (Timestamp('2025-07-18 01:00:00-0400', tz='America/New_York'), 139.07999999999993), (Timestamp('2025-07-21 09:00:00-0400', tz='America/New_York'), 134.82999999999993), (Timestamp('2025-07-22 04:45:00-0400', tz='America/New_York'), 135.9300000000003), (Timestamp('2025-07-23 01:45:00-0400', tz='America/New_York'), 136.38999999999942), (Timestamp('2025-07-24 03:45:00-0400', tz='America/New_York'), 133.13999999999942), (Timestamp('2025-07-25 10:30:00-0400', tz='America/New_York'), 130.38999999999942), (Timestamp('2025-07-28 10:45:00-0400', tz='America/New_York'), 124.63999999999942), (Timestamp('2025-07-29 00:45:00-0400', tz='America/New_York'), 125.09999999999854), (Timestamp('2025-07-30 01:15:00-0400', tz='America/New_York'), 125.95999999999913), (Timestamp('2025-07-31 10:45:00-0400', tz='America/New_York'), 145.0699999999988), (Timestamp('2025-08-01 08:30:00-0400', tz='America/New_York'), 129.3199999999988), (Timestamp('2025-08-04 04:00:00-0400', tz='America/New_York'), 130.8199999999988), (Timestamp('2025-08-05 01:15:00-0400', tz='America/New_York'), 131.07999999999902), (Timestamp('2025-08-06 06:00:00-0400', tz='America/New_York'), 134.57999999999902), (Timestamp('2025-08-07 04:15:00-0400', tz='America/New_York'), 135.67999999999938), (Timestamp('2025-08-08 01:00:00-0400', tz='America/New_York'), 136.83999999999924), (Timestamp('2025-08-11 05:45:00-0400', tz='America/New_York'), 131.08999999999924), (Timestamp('2025-08-12 10:00:00-0400', tz='America/New_York'), 121.33999999999924), (Timestamp('2025-08-13 09:45:00-0400', tz='America/New_York'), 135.58999999999924), (Timestamp('2025-08-14 10:30:00-0400', tz='America/New_York'), 111.50999999999931), (Timestamp('2025-08-15 06:45:00-0400', tz='America/New_York'), 106.25999999999931), (Timestamp('2025-08-18 10:15:00-0400', tz='America/New_York'), 101.00999999999931), (Timestamp('2025-08-19 12:30:00-0400', tz='America/New_York'), 132.96000000000095), (Timestamp('2025-08-20 00:30:00-0400', tz='America/New_York'), 129.51000000000113), (Timestamp('2025-08-21 06:45:00-0400', tz='America/New_York'), 134.51000000000113), (Timestamp('2025-08-22 06:15:00-0400', tz='America/New_York'), 132.26000000000113), (Timestamp('2025-08-25 06:15:00-0400', tz='America/New_York'), 141.26000000000113), (Timestamp('2025-08-26 02:15:00-0400', tz='America/New_York'), 137.25000000000182), (Timestamp('2025-08-27 01:30:00-0400', tz='America/New_York'), 137.51000000000204), (Timestamp('2025-08-28 07:00:00-0400', tz='America/New_York'), 133.25000000000182), (Timestamp('2025-08-29 08:30:00-0400', tz='America/New_York'), 126.25000000000182), (Timestamp('2025-09-01 01:00:00-0400', tz='America/New_York'), 123.74000000000251), (Timestamp('2025-09-02 09:45:00-0400', tz='America/New_York'), 115.41000000000258), (Timestamp('2025-09-03 09:45:00-0400', tz='America/New_York'), 107.91000000000258), (Timestamp('2025-09-04 02:00:00-0400', tz='America/New_York'), 106.3600000000024), (Timestamp('2025-09-05 09:45:00-0400', tz='America/New_York'), 95.9900000000016), (Timestamp('2025-09-08 10:45:00-0400', tz='America/New_York'), 112.58000000000084), (Timestamp('2025-09-09 01:00:00-0400', tz='America/New_York'), 113.58000000000084), (Timestamp('2025-09-10 04:00:00-0400', tz='America/New_York'), 113.6800000000012), (Timestamp('2025-09-11 06:45:00-0400', tz='America/New_York'), 114.1800000000012), (Timestamp('2025-09-12 02:15:00-0400', tz='America/New_York'), 114.48000000000047)]
+Sortino Ratio: 0.3290562275978601
+Calmar Ratio: 0.004846843506901835
+Avg Holding Time: 0 days 01:39:13.846153846
+Max Consecutive Wins: 11
+Max Consecutive Losses: 7
+Avg Win: 5.419722222222213
+Avg Loss: 6.228620689655145
+Gross Profit: 195.10999999999967
+Gross Loss: 180.6299999999992
+Sl Hits: 29
+Tp Hits: 36
+Biggest Profit: 31.950000000001637
+Biggest Loss: -24.079999999999927
+
+--- Backtesting Symbol: US Tech 100 ---
+
+--- Starting Backtest for US Tech 100 from 2025-06-16 11:06:14.105844+00:00 to 2025-09-14 11:06:14.105844+00:00 ---
+Successfully connected to account #40775569 on Deriv-Demo
+Shutting down MT5 connection.
+Opening Range for 2025-06-16 at 09:30: ORH=21881.85, ORL=21797.6
+Opening Range for 2025-06-17 at 09:30: ORH=21896.35, ORL=21818.1
+Opening Range for 2025-06-18 at 09:30: ORH=21781.1, ORL=21712.6
+Opening Range for 2025-06-19 at 09:30: ORH=21574.8, ORL=21507.05
+Opening Range for 2025-06-20 at 09:30: ORH=21917.3, ORL=21828.8
+Opening Range for 2025-06-23 at 09:30: ORH=21683.7, ORL=21557.45
+Opening Range for 2025-06-24 at 09:30: ORH=22122.9, ORL=22055.65
+Opening Range for 2025-06-25 at 09:30: ORH=22345.2, ORL=22290.7
+Opening Range for 2025-06-26 at 09:30: ORH=22364.05, ORL=22293.05
+Opening Range for 2025-06-27 at 09:30: ORH=22544.4, ORL=22488.15
+Opening Range for 2025-06-30 at 09:30: ORH=22680.4, ORL=22610.65
+Opening Range for 2025-07-01 at 09:30: ORH=22627.7, ORL=22586.95
+Opening Range for 2025-07-02 at 09:30: ORH=22513.35, ORL=22458.1
+Opening Range for 2025-07-03 at 09:30: ORH=22791.95, ORL=22738.2
+Opening Range for 2025-07-04 at 09:30: ORH=22744.0, ORL=22702.75
+Opening Range for 2025-07-07 at 09:30: ORH=22794.1, ORL=22719.6
+Opening Range for 2025-07-08 at 09:30: ORH=22766.4, ORL=22712.65
+Opening Range for 2025-07-09 at 09:30: ORH=22891.75, ORL=22804.5
+Opening Range for 2025-07-10 at 09:30: ORH=22918.5, ORL=22851.0
+Opening Range for 2025-07-11 at 09:30: ORH=22787.7, ORL=22701.2
+Opening Range for 2025-07-14 at 09:30: ORH=22817.5, ORL=22692.25
+Opening Range for 2025-07-15 at 09:30: ORH=23063.45, ORL=22964.2
+Opening Range for 2025-07-16 at 09:30: ORH=22933.5, ORL=22850.5
+Opening Range for 2025-07-17 at 09:30: ORH=22973.55, ORL=22911.55
+Opening Range for 2025-07-18 at 09:30: ORH=23158.4, ORL=23106.4
+Opening Range for 2025-07-21 at 09:30: ORH=23204.75, ORL=23112.5
+Opening Range for 2025-07-22 at 09:30: ORH=23208.3, ORL=23119.3
+Opening Range for 2025-07-23 at 09:30: ORH=23125.65, ORL=23045.65
+Opening Range for 2025-07-24 at 09:30: ORH=23265.2, ORL=23200.7
+Opening Range for 2025-07-25 at 09:30: ORH=23248.5, ORL=23201.75
+Opening Range for 2025-07-28 at 09:30: ORH=23384.0, ORL=23345.0
+Opening Range for 2025-07-29 at 09:30: ORH=23528.65, ORL=23472.15
+Opening Range for 2025-07-30 at 09:30: ORH=23389.8, ORL=23331.3
+Opening Range for 2025-07-31 at 09:30: ORH=23632.55, ORL=23503.55
+Opening Range for 2025-08-01 at 09:30: ORH=22980.5, ORL=22804.25
+Opening Range for 2025-08-04 at 09:30: ORH=23090.6, ORL=22982.85
+Opening Range for 2025-08-05 at 09:30: ORH=23262.6, ORL=23203.35
+Opening Range for 2025-08-06 at 09:30: ORH=23130.3, ORL=23051.55
+Opening Range for 2025-08-07 at 09:30: ORH=23553.45, ORL=23489.95
+Opening Range for 2025-08-08 at 09:30: ORH=23520.75, ORL=23437.0
+Opening Range for 2025-08-11 at 09:30: ORH=23651.1, ORL=23594.35
+Opening Range for 2025-08-12 at 09:30: ORH=23721.25, ORL=23626.0
+Opening Range for 2025-08-13 at 09:30: ORH=23986.9, ORL=23947.65
+Opening Range for 2025-08-14 at 09:30: ORH=23840.7, ORL=23758.7
+Opening Range for 2025-08-15 at 09:30: ORH=23831.4, ORL=23756.4
+Opening Range for 2025-08-18 at 09:30: ORH=23745.05, ORL=23696.05
+Opening Range for 2025-08-19 at 09:30: ORH=23702.8, ORL=23589.8
+Opening Range for 2025-08-20 at 09:30: ORH=23368.0, ORL=23258.75
+Opening Range for 2025-08-21 at 09:30: ORH=23224.8, ORL=23134.8
+Opening Range for 2025-08-22 at 09:30: ORH=23259.3, ORL=23142.3
+Opening Range for 2025-08-25 at 09:30: ORH=23456.6, ORL=23383.7
+Opening Range for 2025-08-26 at 09:30: ORH=23469.55, ORL=23415.05
+Opening Range for 2025-08-27 at 09:30: ORH=23514.85, ORL=23465.35
+Opening Range for 2025-08-28 at 09:30: ORH=23697.2, ORL=23586.7
+Opening Range for 2025-08-29 at 09:30: ORH=23625.8, ORL=23546.55
+Opening Range for 2025-09-01 at 09:30: ORH=23447.6, ORL=23406.7
+Opening Range for 2025-09-02 at 09:30: ORH=23147.5, ORL=22995.9
+Opening Range for 2025-09-03 at 09:30: ORH=23408.0, ORL=23342.75
+Opening Range for 2025-09-04 at 09:30: ORH=23521.35, ORL=23431.6
+Opening Range for 2025-09-05 at 09:30: ORH=23875.5, ORL=23796.25
+Opening Range for 2025-09-08 at 09:30: ORH=23828.6, ORL=23754.35
+Opening Range for 2025-09-09 at 09:30: ORH=23847.65, ORL=23808.65
+Opening Range for 2025-09-10 at 09:30: ORH=23991.4, ORL=23909.9
+Opening Range for 2025-09-11 at 09:30: ORH=23993.2, ORL=23908.7
+Opening Range for 2025-09-12 at 09:30: ORH=24063.4, ORL=24002.55
+
+--- Backtest Performance Summary ---
+Total Trades: 64
+Wins: 41
+Losses: 23
+Win Rate: 64.0625
+Profit Factor: 2.330181485435388
+Max Drawdown Pct: -45.471841704719175
+Max Drawdown Dollars: -145.75000000000364
+Sharpe Ratio: 3.022033643393664
+Pnl: 872.1999999999898
+Equity Curve: [(datetime.datetime(2025, 6, 16, 11, 6, 14, 105844, tzinfo=<UTC>), 100.0), (Timestamp('2025-06-16 09:30:00-0400', tz='America/New_York'), 174.25), (Timestamp('2025-06-17 03:00:00-0400', tz='America/New_York'), 229.0), (Timestamp('2025-06-18 06:30:00-0400', tz='America/New_York'), 236.0), (Timestamp('2025-06-19 04:00:00-0400', tz='America/New_York'), 239.0), (Timestamp('2025-06-20 09:00:00-0400', tz='America/New_York'), 251.5), (Timestamp('2025-06-23 04:00:00-0400', tz='America/New_York'), 256.5), (Timestamp('2025-06-24 01:15:00-0400', tz='America/New_York'), 256.79999999999563), (Timestamp('2025-06-25 08:15:00-0400', tz='America/New_York'), 262.79999999999563), (Timestamp('2025-06-26 06:15:00-0400', tz='America/New_York'), 250.04999999999563), (Timestamp('2025-06-27 07:00:00-0400', tz='America/New_York'), 228.79999999999563), (Timestamp('2025-06-30 00:30:00-0400', tz='America/New_York'), 230.79999999999563), (Timestamp('2025-07-01 04:15:00-0400', tz='America/New_York'), 233.29999999999563), (Timestamp('2025-07-02 04:45:00-0400', tz='America/New_York'), 239.29999999999563), (Timestamp('2025-07-03 08:45:00-0400', tz='America/New_York'), 245.29999999999563), (Timestamp('2025-07-04 04:30:00-0400', tz='America/New_York'), 258.79999999999563), (Timestamp('2025-07-07 06:45:00-0400', tz='America/New_York'), 251.29999999999563), (Timestamp('2025-07-08 03:30:00-0400', tz='America/New_York'), 225.79999999999563), (Timestamp('2025-07-09 10:30:00-0400', tz='America/New_York'), 148.54999999999563), (Timestamp('2025-07-10 04:15:00-0400', tz='America/New_York'), 143.29999999999563), (Timestamp('2025-07-11 06:00:00-0400', tz='America/New_York'), 228.04999999999563), (Timestamp('2025-07-14 10:15:00-0400', tz='America/New_York'), 357.79999999999563), (Timestamp('2025-07-15 09:15:00-0400', tz='America/New_York'), 430.54999999999563), (Timestamp('2025-07-16 02:30:00-0400', tz='America/New_York'), 431.54999999999563), (Timestamp('2025-07-17 09:00:00-0400', tz='America/New_York'), 507.29999999999563), (Timestamp('2025-07-21 09:30:00-0400', tz='America/New_York'), 595.7999999999956), (Timestamp('2025-07-22 20:00:00-0400', tz='America/New_York'), 569.0499999999956), (Timestamp('2025-07-23 03:00:00-0400', tz='America/New_York'), 573.6500000000015), (Timestamp('2025-07-24 20:15:00-0400', tz='America/New_York'), 665.1500000000015), (Timestamp('2025-07-25 03:15:00-0400', tz='America/New_York'), 667.1500000000015), (Timestamp('2025-07-28 08:45:00-0400', tz='America/New_York'), 650.1500000000015), (Timestamp('2025-07-29 05:45:00-0400', tz='America/New_York'), 641.5500000000029), (Timestamp('2025-07-30 07:45:00-0400', tz='America/New_York'), 631.5500000000029), (Timestamp('2025-07-31 10:30:00-0400', tz='America/New_York'), 774.0500000000029), (Timestamp('2025-08-01 08:30:00-0400', tz='America/New_York'), 693.5500000000029), (Timestamp('2025-08-04 09:30:00-0400', tz='America/New_York'), 753.5500000000029), (Timestamp('2025-08-05 02:30:00-0400', tz='America/New_York'), 756.5500000000029), (Timestamp('2025-08-06 06:00:00-0400', tz='America/New_York'), 757.0500000000029), (Timestamp('2025-08-07 09:45:00-0400', tz='America/New_York'), 821.5500000000029), (Timestamp('2025-08-08 08:15:00-0400', tz='America/New_York'), 796.0500000000029), (Timestamp('2025-08-11 00:45:00-0400', tz='America/New_York'), 796.5500000000029), (Timestamp('2025-08-12 09:45:00-0400', tz='America/New_York'), 676.6500000000015), (Timestamp('2025-08-13 09:00:00-0400', tz='America/New_York'), 684.6500000000015), (Timestamp('2025-08-14 00:45:00-0400', tz='America/New_York'), 688.1500000000015), (Timestamp('2025-08-15 04:45:00-0400', tz='America/New_York'), 679.4500000000007), (Timestamp('2025-08-18 10:45:00-0400', tz='America/New_York'), 753.7000000000007), (Timestamp('2025-08-19 06:45:00-0400', tz='America/New_York'), 742.7000000000007), (Timestamp('2025-08-20 06:30:00-0400', tz='America/New_York'), 735.9500000000007), (Timestamp('2025-08-21 06:15:00-0400', tz='America/New_York'), 742.4500000000007), (Timestamp('2025-08-22 00:30:00-0400', tz='America/New_York'), 737.9500000000007), (Timestamp('2025-08-25 04:00:00-0400', tz='America/New_York'), 755.9500000000007), (Timestamp('2025-08-26 02:30:00-0400', tz='America/New_York'), 737.7000000000007), (Timestamp('2025-08-27 09:15:00-0400', tz='America/New_York'), 726.2000000000007), (Timestamp('2025-08-28 03:15:00-0400', tz='America/New_York'), 728.3999999999978), (Timestamp('2025-08-29 09:45:00-0400', tz='America/New_York'), 844.6499999999978), (Timestamp('2025-09-01 00:30:00-0400', tz='America/New_York'), 850.4499999999935), (Timestamp('2025-09-02 09:30:00-0400', tz='America/New_York'), 988.4499999999935), (Timestamp('2025-09-03 05:30:00-0400', tz='America/New_York'), 1043.9499999999935), (Timestamp('2025-09-04 10:00:00-0400', tz='America/New_York'), 1008.6999999999935), (Timestamp('2025-09-05 10:15:00-0400', tz='America/New_York'), 905.549999999992), (Timestamp('2025-09-08 03:15:00-0400', tz='America/New_York'), 898.1999999999898), (Timestamp('2025-09-09 02:00:00-0400', tz='America/New_York'), 919.1999999999898), (Timestamp('2025-09-10 08:00:00-0400', tz='America/New_York'), 958.1999999999898), (Timestamp('2025-09-11 03:30:00-0400', tz='America/New_York'), 946.6999999999898), (Timestamp('2025-09-12 07:30:00-0400', tz='America/New_York'), 972.1999999999898)]
+Sortino Ratio: 4.979566043140569
+Calmar Ratio: 0.13933123528330782
+Avg Holding Time: 0 days 01:43:21.562500
+Max Consecutive Wins: 8
+Max Consecutive Losses: 4
+Avg Win: 37.26585365853644
+Avg Loss: 28.508695652174104
+Gross Profit: 1527.8999999999942
+Gross Loss: 655.7000000000044
+Sl Hits: 23
+Tp Hits: 41
+Biggest Profit: 142.5
+Biggest Loss: -119.90000000000146
+
+--- Backtesting Symbol: AAPL ---
+
+--- Starting Backtest for AAPL from 2025-06-16 11:06:14.105844+00:00 to 2025-09-14 11:06:14.105844+00:00 ---
+Successfully connected to account #40775569 on Deriv-Demo
+Shutting down MT5 connection.
+Opening Range for 2025-06-16 at 09:30: ORH=197.7, ORL=196.61
+Opening Range for 2025-06-17 at 09:30: ORH=197.88, ORL=196.57
+Opening Range for 2025-06-18 at 09:30: ORH=196.04, ORL=195.06
+Opening Range for 2025-06-20 at 09:30: ORH=200.92, ORL=197.53
+Opening Range for 2025-06-23 at 09:30: ORH=201.56, ORL=199.99
+Opening Range for 2025-06-24 at 09:30: ORH=202.63, ORL=201.44
+Opening Range for 2025-06-25 at 09:30: ORH=203.58, ORL=201.25
+Opening Range for 2025-06-26 at 09:30: ORH=202.53, ORL=199.67
+Opening Range for 2025-06-27 at 09:30: ORH=203.2, ORL=201.28
+Opening Range for 2025-06-30 at 09:30: ORH=202.12, ORL=200.56
+Opening Range for 2025-07-01 at 09:30: ORH=208.29, ORL=206.22
+Opening Range for 2025-07-02 at 09:30: ORH=211.81, ORL=208.19
+Opening Range for 2025-07-03 at 09:30: ORH=212.88, ORL=211.81
+Opening Range for 2025-07-07 at 09:30: ORH=216.18, ORL=212.58
+Opening Range for 2025-07-08 at 09:30: ORH=210.43, ORL=208.5
+Opening Range for 2025-07-09 at 09:30: ORH=210.86, ORL=209.26
+Opening Range for 2025-07-10 at 09:30: ORH=211.08, ORL=210.21
+Opening Range for 2025-07-11 at 09:30: ORH=210.96, ORL=209.86
+Opening Range for 2025-07-14 at 09:30: ORH=210.84, ORL=208.25
+Opening Range for 2025-07-15 at 09:30: ORH=211.11, ORL=208.94
+Opening Range for 2025-07-16 at 09:30: ORH=211.17, ORL=210.19
+Opening Range for 2025-07-17 at 09:30: ORH=210.98, ORL=210.08
+Opening Range for 2025-07-18 at 09:30: ORH=210.96, ORL=209.91
+Opening Range for 2025-07-21 at 09:30: ORH=214.82, ORL=211.64
+Opening Range for 2025-07-22 at 09:30: ORH=213.97, ORL=212.23
+Opening Range for 2025-07-23 at 09:30: ORH=215.02, ORL=213.28
+Opening Range for 2025-07-24 at 09:30: ORH=215.65, ORL=213.73
+Opening Range for 2025-07-25 at 09:30: ORH=214.8, ORL=213.82
+Opening Range for 2025-07-28 at 09:30: ORH=214.62, ORL=213.58
+Opening Range for 2025-07-29 at 09:30: ORH=214.78, ORL=213.76
+Opening Range for 2025-07-30 at 09:30: ORH=212.34, ORL=210.43
+Opening Range for 2025-07-31 at 09:30: ORH=209.43, ORL=207.84
+Opening Range for 2025-08-01 at 09:30: ORH=213.5, ORL=208.16
+Opening Range for 2025-08-04 at 09:30: ORH=206.08, ORL=204.2
+Opening Range for 2025-08-05 at 09:30: ORH=204.18, ORL=202.16
+Opening Range for 2025-08-06 at 09:30: ORH=209.82, ORL=205.56
+Opening Range for 2025-08-07 at 09:30: ORH=219.84, ORL=216.56
+Opening Range for 2025-08-08 at 09:30: ORH=221.0, ORL=219.25
+Opening Range for 2025-08-11 at 09:30: ORH=228.63, ORL=224.77
+Opening Range for 2025-08-12 at 09:30: ORH=229.88, ORL=227.37
+Opening Range for 2025-08-13 at 09:30: ORH=232.1, ORL=230.43
+Opening Range for 2025-08-14 at 09:30: ORH=235.0, ORL=232.87
+Opening Range for 2025-08-15 at 09:30: ORH=234.14, ORL=232.81
+Opening Range for 2025-08-18 at 09:30: ORH=232.51, ORL=231.35
+Opening Range for 2025-08-19 at 09:30: ORH=232.03, ORL=230.59
+Opening Range for 2025-08-20 at 09:30: ORH=230.34, ORL=227.37
+Opening Range for 2025-08-21 at 09:30: ORH=226.42, ORL=224.66
+Opening Range for 2025-08-22 at 09:30: ORH=226.84, ORL=225.41
+Opening Range for 2025-08-25 at 09:30: ORH=228.04, ORL=226.23
+Opening Range for 2025-08-26 at 09:30: ORH=227.04, ORL=225.25
+Opening Range for 2025-08-27 at 09:30: ORH=230.21, ORL=228.41
+Opening Range for 2025-08-28 at 09:30: ORH=230.87, ORL=229.35
+Opening Range for 2025-08-29 at 09:30: ORH=233.3, ORL=231.83
+Opening Range for 2025-09-02 at 09:30: ORH=229.47, ORL=227.69
+Opening Range for 2025-09-03 at 09:30: ORH=237.89, ORL=234.55
+Opening Range for 2025-09-04 at 09:30: ORH=239.29, ORL=237.05
+Opening Range for 2025-09-05 at 09:30: ORH=240.59, ORL=239.18
+Opening Range for 2025-09-08 at 09:30: ORH=240.11, ORL=238.74
+Opening Range for 2025-09-09 at 09:30: ORH=237.93, ORL=236.35
+Opening Range for 2025-09-10 at 09:30: ORH=232.11, ORL=228.89
+Opening Range for 2025-09-11 at 09:30: ORH=228.4, ORL=226.65
+Opening Range for 2025-09-12 at 09:30: ORH=230.87, ORL=229.05
+
+--- Backtest Performance Summary ---
+Total Trades: 47
+Wins: 30
+Losses: 17
+Win Rate: 63.829787234042556
+Profit Factor: 2.1314553990610237
+Max Drawdown Pct: -2.46442853157267
+Max Drawdown Dollars: -2.650000000000091
+Sharpe Ratio: 4.397452638904362
+Pnl: 9.639999999999901
+Equity Curve: [(datetime.datetime(2025, 6, 16, 11, 6, 14, 105844, tzinfo=<UTC>), 100.0), (Timestamp('2025-06-16 10:15:00-0400', tz='America/New_York'), 100.12), (Timestamp('2025-06-17 13:45:00-0400', tz='America/New_York'), 101.91999999999999), (Timestamp('2025-06-18 13:45:00-0400', tz='America/New_York'), 102.39999999999995), (Timestamp('2025-06-20 14:15:00-0400', tz='America/New_York'), 104.82999999999996), (Timestamp('2025-06-23 11:00:00-0400', tz='America/New_York'), 105.81999999999991), (Timestamp('2025-06-24 11:00:00-0400', tz='America/New_York'), 106.0799999999999), (Timestamp('2025-06-25 14:00:00-0400', tz='America/New_York'), 106.09999999999988), (Timestamp('2025-06-27 11:30:00-0400', tz='America/New_York'), 105.9599999999999), (Timestamp('2025-06-30 14:30:00-0400', tz='America/New_York'), 105.62999999999991), (Timestamp('2025-07-01 10:45:00-0400', tz='America/New_York'), 106.30999999999992), (Timestamp('2025-07-02 10:15:00-0400', tz='America/New_York'), 106.78999999999994), (Timestamp('2025-07-07 10:30:00-0400', tz='America/New_York'), 107.10999999999993), (Timestamp('2025-07-08 13:00:00-0400', tz='America/New_York'), 106.58999999999992), (Timestamp('2025-07-09 14:00:00-0400', tz='America/New_York'), 106.4899999999999), (Timestamp('2025-07-10 10:15:00-0400', tz='America/New_York'), 107.20999999999992), (Timestamp('2025-07-11 10:15:00-0400', tz='America/New_York'), 107.30999999999995), (Timestamp('2025-07-14 11:00:00-0400', tz='America/New_York'), 106.78999999999994), (Timestamp('2025-07-15 11:45:00-0400', tz='America/New_York'), 106.92999999999998), (Timestamp('2025-07-16 12:00:00-0400', tz='America/New_York'), 107.44999999999996), (Timestamp('2025-07-17 10:30:00-0400', tz='America/New_York'), 107.52999999999994), (Timestamp('2025-07-18 12:30:00-0400', tz='America/New_York'), 107.34999999999994), (Timestamp('2025-07-22 15:45:00-0400', tz='America/New_York'), 106.82999999999993), (Timestamp('2025-07-25 15:15:00-0400', tz='America/New_York'), 106.96999999999991), (Timestamp('2025-07-28 15:00:00-0400', tz='America/New_York'), 107.00999999999988), (Timestamp('2025-07-30 10:15:00-0400', tz='America/New_York'), 106.72999999999988), (Timestamp('2025-07-31 13:00:00-0400', tz='America/New_York'), 105.89999999999989), (Timestamp('2025-08-04 10:15:00-0400', tz='America/New_York'), 105.4199999999999), (Timestamp('2025-08-05 11:00:00-0400', tz='America/New_York'), 105.9799999999999), (Timestamp('2025-08-07 12:30:00-0400', tz='America/New_York'), 106.21999999999991), (Timestamp('2025-08-11 12:15:00-0400', tz='America/New_York'), 106.37999999999988), (Timestamp('2025-08-12 12:30:00-0400', tz='America/New_York'), 106.07999999999987), (Timestamp('2025-08-13 10:30:00-0400', tz='America/New_York'), 105.16999999999987), (Timestamp('2025-08-14 13:15:00-0400', tz='America/New_York'), 105.18999999999986), (Timestamp('2025-08-18 15:00:00-0400', tz='America/New_York'), 104.87999999999985), (Timestamp('2025-08-19 15:00:00-0400', tz='America/New_York'), 107.24999999999983), (Timestamp('2025-08-20 10:30:00-0400', tz='America/New_York'), 108.04999999999984), (Timestamp('2025-08-21 13:15:00-0400', tz='America/New_York'), 108.34999999999985), (Timestamp('2025-08-26 14:15:00-0400', tz='America/New_York'), 110.80999999999983), (Timestamp('2025-08-27 14:30:00-0400', tz='America/New_York'), 110.90999999999985), (Timestamp('2025-08-28 11:30:00-0400', tz='America/New_York'), 111.22999999999985), (Timestamp('2025-08-29 15:45:00-0400', tz='America/New_York'), 110.60999999999984), (Timestamp('2025-09-02 13:45:00-0400', tz='America/New_York'), 112.01999999999984), (Timestamp('2025-09-04 15:45:00-0400', tz='America/New_York'), 110.52999999999986), (Timestamp('2025-09-05 11:00:00-0400', tz='America/New_York'), 110.28999999999988), (Timestamp('2025-09-08 11:45:00-0400', tz='America/New_York'), 110.34999999999988), (Timestamp('2025-09-09 11:45:00-0400', tz='America/New_York'), 109.59999999999988), (Timestamp('2025-09-11 10:30:00-0400', tz='America/New_York'), 109.6399999999999)]
+Sortino Ratio: 10.878832042589835
+Calmar Ratio: 0.1963200144253933
+Avg Holding Time: 0 days 00:57:26.808510638
+Max Consecutive Wins: 7
+Max Consecutive Losses: 3
+Avg Win: 0.6053333333333294
+Avg Loss: 0.5011764705882342
+Gross Profit: 18.159999999999883
+Gross Loss: 8.519999999999982
+Sl Hits: 17
+Tp Hits: 30
+Biggest Profit: 2.4599999999999795
+Biggest Loss: -1.4899999999999807
+
+--- Backtesting Symbol: MSFT ---
+
+--- Starting Backtest for MSFT from 2025-06-16 11:06:14.105844+00:00 to 2025-09-14 11:06:14.105844+00:00 ---
+Successfully connected to account #40775569 on Deriv-Demo
+Shutting down MT5 connection.
+Opening Range for 2025-06-16 at 09:30: ORH=478.48, ORL=475.04
+Opening Range for 2025-06-17 at 09:30: ORH=476.43, ORL=474.12
+Opening Range for 2025-06-18 at 09:30: ORH=478.3, ORL=475.31
+Opening Range for 2025-06-20 at 09:30: ORH=483.26, ORL=480.93
+Opening Range for 2025-06-23 at 09:30: ORH=477.75, ORL=472.5
+Opening Range for 2025-06-24 at 09:30: ORH=489.55, ORL=487.75
+Opening Range for 2025-06-25 at 09:30: ORH=494.01, ORL=491.61
+Opening Range for 2025-06-26 at 09:30: ORH=495.38, ORL=492.78
+Opening Range for 2025-06-27 at 09:30: ORH=498.08, ORL=496.45
+Opening Range for 2025-06-30 at 09:30: ORH=497.96, ORL=495.61
+Opening Range for 2025-07-01 at 09:30: ORH=498.03, ORL=495.61
+Opening Range for 2025-07-02 at 09:30: ORH=493.2, ORL=488.71
+Opening Range for 2025-07-03 at 09:30: ORH=495.43, ORL=493.44
+Opening Range for 2025-07-07 at 09:30: ORH=498.33, ORL=496.05
+Opening Range for 2025-07-08 at 09:30: ORH=498.06, ORL=496.28
+Opening Range for 2025-07-09 at 09:30: ORH=503.8, ORL=499.8
+Opening Range for 2025-07-10 at 09:30: ORH=504.34, ORL=501.53
+Opening Range for 2025-07-11 at 09:30: ORH=500.68, ORL=497.75
+Opening Range for 2025-07-14 at 09:30: ORH=502.53, ORL=501.05
+Opening Range for 2025-07-15 at 09:30: ORH=505.61, ORL=502.31
+Opening Range for 2025-07-16 at 09:30: ORH=505.2, ORL=503.01
+Opening Range for 2025-07-17 at 09:30: ORH=509.02, ORL=505.41
+Opening Range for 2025-07-18 at 09:30: ORH=513.58, ORL=511.1
+Opening Range for 2025-07-21 at 09:30: ORH=510.67, ORL=505.55
+Opening Range for 2025-07-22 at 09:30: ORH=511.1, ORL=508.81
+Opening Range for 2025-07-23 at 09:30: ORH=506.75, ORL=502.21
+Opening Range for 2025-07-24 at 09:30: ORH=510.1, ORL=507.29
+Opening Range for 2025-07-25 at 09:30: ORH=512.3, ORL=510.32
+Opening Range for 2025-07-28 at 09:30: ORH=514.65, ORL=512.36
+Opening Range for 2025-07-29 at 09:30: ORH=517.58, ORL=515.0
+Opening Range for 2025-07-30 at 09:30: ORH=515.34, ORL=510.66
+Opening Range for 2025-07-31 at 09:30: ORH=555.0, ORL=539.39
+Opening Range for 2025-08-01 at 09:30: ORH=535.5, ORL=529.78
+Opening Range for 2025-08-04 at 09:30: ORH=534.43, ORL=528.0
+Opening Range for 2025-08-05 at 09:30: ORH=537.11, ORL=535.03
+Opening Range for 2025-08-06 at 09:30: ORH=531.31, ORL=527.06
+Opening Range for 2025-08-07 at 09:30: ORH=527.81, ORL=523.52
+Opening Range for 2025-08-08 at 09:30: ORH=524.4, ORL=522.1
+Opening Range for 2025-08-11 at 09:30: ORH=522.78, ORL=519.72
+Opening Range for 2025-08-12 at 09:30: ORH=527.51, ORL=523.69
+Opening Range for 2025-08-13 at 09:30: ORH=532.54, ORL=529.54
+Opening Range for 2025-08-14 at 09:30: ORH=522.89, ORL=520.18
+Opening Range for 2025-08-15 at 09:30: ORH=523.04, ORL=520.8
+Opening Range for 2025-08-18 at 09:30: ORH=522.73, ORL=520.04
+Opening Range for 2025-08-19 at 09:30: ORH=515.07, ORL=511.7
+Opening Range for 2025-08-20 at 09:30: ORH=510.88, ORL=506.29
+Opening Range for 2025-08-21 at 09:30: ORH=505.34, ORL=502.7
+Opening Range for 2025-08-22 at 09:30: ORH=506.35, ORL=502.41
+Opening Range for 2025-08-25 at 09:30: ORH=508.0, ORL=504.68
+Opening Range for 2025-08-26 at 09:30: ORH=504.86, ORL=502.6
+Opening Range for 2025-08-27 at 09:30: ORH=503.41, ORL=500.6
+Opening Range for 2025-08-28 at 09:30: ORH=510.14, ORL=506.62
+Opening Range for 2025-08-29 at 09:30: ORH=509.38, ORL=505.94
+Opening Range for 2025-09-02 at 09:30: ORH=502.84, ORL=497.06
+Opening Range for 2025-09-03 at 09:30: ORH=506.35, ORL=503.0
+Opening Range for 2025-09-04 at 09:30: ORH=506.87, ORL=503.86
+Opening Range for 2025-09-05 at 09:30: ORH=511.85, ORL=498.0
+Opening Range for 2025-09-08 at 09:30: ORH=499.51, ORL=495.03
+Opening Range for 2025-09-09 at 09:30: ORH=502.0, ORL=500.05
+Opening Range for 2025-09-10 at 09:30: ORH=503.08, ORL=496.7
+Opening Range for 2025-09-11 at 09:30: ORH=502.64, ORL=497.81
+Opening Range for 2025-09-12 at 09:30: ORH=506.73, ORL=503.8
+
+--- Backtest Performance Summary ---
+Total Trades: 48
+Wins: 28
+Losses: 20
+Win Rate: 58.333333333333336
+Profit Factor: 1.4716459197786589
+Max Drawdown Pct: -3.9211898783080157
+Max Drawdown Dollars: -4.060000000000116
+Sharpe Ratio: 3.517619267422721
+Pnl: 6.819999999999425
+Equity Curve: [(datetime.datetime(2025, 6, 16, 11, 6, 14, 105844, tzinfo=<UTC>), 100.0), (Timestamp('2025-06-16 14:30:00-0400', tz='America/New_York'), 99.85999999999996), (Timestamp('2025-06-17 11:30:00-0400', tz='America/New_York'), 100.25999999999993), (Timestamp('2025-06-18 10:45:00-0400', tz='America/New_York'), 100.63999999999993), (Timestamp('2025-06-20 10:15:00-0400', tz='America/New_York'), 100.73999999999995), (Timestamp('2025-06-24 10:15:00-0400', tz='America/New_York'), 100.37999999999994), (Timestamp('2025-06-25 12:45:00-0400', tz='America/New_York'), 100.39999999999992), (Timestamp('2025-06-26 10:15:00-0400', tz='America/New_York'), 100.5399999999999), (Timestamp('2025-06-27 14:45:00-0400', tz='America/New_York'), 103.5399999999999), (Timestamp('2025-06-30 14:45:00-0400', tz='America/New_York'), 102.6099999999999), (Timestamp('2025-07-07 14:15:00-0400', tz='America/New_York'), 102.08999999999992), (Timestamp('2025-07-08 10:45:00-0400', tz='America/New_York'), 101.28999999999996), (Timestamp('2025-07-09 10:30:00-0400', tz='America/New_York'), 101.78999999999996), (Timestamp('2025-07-10 14:00:00-0400', tz='America/New_York'), 101.55999999999995), (Timestamp('2025-07-14 12:00:00-0400', tz='America/New_York'), 101.91999999999985), (Timestamp('2025-07-15 11:15:00-0400', tz='America/New_York'), 101.06999999999988), (Timestamp('2025-07-16 11:30:00-0400', tz='America/New_York'), 100.09999999999985), (Timestamp('2025-07-17 10:30:00-0400', tz='America/New_York'), 100.13999999999982), (Timestamp('2025-07-18 10:30:00-0400', tz='America/New_York'), 100.6599999999998), (Timestamp('2025-07-21 12:00:00-0400', tz='America/New_York'), 100.3999999999998), (Timestamp('2025-07-22 10:15:00-0400', tz='America/New_York'), 99.94999999999982), (Timestamp('2025-07-23 11:00:00-0400', tz='America/New_York'), 99.47999999999979), (Timestamp('2025-07-24 11:15:00-0400', tz='America/New_York'), 100.05999999999983), (Timestamp('2025-07-25 11:15:00-0400', tz='America/New_York'), 100.9599999999997), (Timestamp('2025-07-28 13:15:00-0400', tz='America/New_York'), 99.85999999999967), (Timestamp('2025-07-31 10:30:00-0400', tz='America/New_York'), 101.15999999999963), (Timestamp('2025-08-04 10:30:00-0400', tz='America/New_York'), 101.39999999999964), (Timestamp('2025-08-06 10:15:00-0400', tz='America/New_York'), 102.53999999999974), (Timestamp('2025-08-08 13:30:00-0400', tz='America/New_York'), 102.73999999999978), (Timestamp('2025-08-12 12:45:00-0400', tz='America/New_York'), 103.31999999999971), (Timestamp('2025-08-14 10:15:00-0400', tz='America/New_York'), 102.41999999999973), (Timestamp('2025-08-15 11:15:00-0400', tz='America/New_York'), 100.98999999999978), (Timestamp('2025-08-18 10:15:00-0400', tz='America/New_York'), 101.26999999999975), (Timestamp('2025-08-19 10:45:00-0400', tz='America/New_York'), 101.3499999999998), (Timestamp('2025-08-20 11:45:00-0400', tz='America/New_York'), 102.60999999999979), (Timestamp('2025-08-21 12:30:00-0400', tz='America/New_York'), 102.64999999999975), (Timestamp('2025-08-22 13:15:00-0400', tz='America/New_York'), 101.96999999999974), (Timestamp('2025-08-25 15:45:00-0400', tz='America/New_York'), 101.48999999999972), (Timestamp('2025-08-26 12:15:00-0400', tz='America/New_York'), 101.06999999999971), (Timestamp('2025-08-27 13:30:00-0400', tz='America/New_York'), 105.62999999999965), (Timestamp('2025-08-28 10:15:00-0400', tz='America/New_York'), 104.62999999999965), (Timestamp('2025-08-29 14:30:00-0400', tz='America/New_York'), 107.56999999999954), (Timestamp('2025-09-02 10:15:00-0400', tz='America/New_York'), 108.40999999999946), (Timestamp('2025-09-03 11:15:00-0400', tz='America/New_York'), 107.96999999999946), (Timestamp('2025-09-04 11:00:00-0400', tz='America/New_York'), 108.02999999999952), (Timestamp('2025-09-08 11:30:00-0400', tz='America/New_York'), 108.32999999999947), (Timestamp('2025-09-09 11:30:00-0400', tz='America/New_York'), 108.58999999999946), (Timestamp('2025-09-11 11:30:00-0400', tz='America/New_York'), 106.55999999999943), (Timestamp('2025-09-12 10:15:00-0400', tz='America/New_York'), 106.81999999999942)]
+Sortino Ratio: 13.149061385944984
+Calmar Ratio: 0.18025084534358518
+Avg Holding Time: 0 days 00:37:48.750000
+Max Consecutive Wins: 5
+Max Consecutive Losses: 3
+Avg Win: 0.7599999999999808
+Avg Loss: 0.7230000000000019
+Gross Profit: 21.27999999999946
+Gross Loss: 14.460000000000036
+Sl Hits: 20
+Tp Hits: 28
+Biggest Profit: 4.559999999999945
+Biggest Loss: -2.0300000000000296
+
+--- Backtesting Symbol: TSLA ---
+
+--- Starting Backtest for TSLA from 2025-06-16 11:06:14.105844+00:00 to 2025-09-14 11:06:14.105844+00:00 ---
+Successfully connected to account #40775569 on Deriv-Demo
+Shutting down MT5 connection.
+Opening Range for 2025-06-16 at 09:30: ORH=331.97, ORL=326.43
+Opening Range for 2025-06-17 at 09:30: ORH=326.09, ORL=320.76
+Opening Range for 2025-06-18 at 09:30: ORH=322.0, ORL=315.46
+Opening Range for 2025-06-20 at 09:30: ORH=332.1, ORL=325.46
+Opening Range for 2025-06-23 at 09:30: ORH=336.64, ORL=327.42
+Opening Range for 2025-06-24 at 09:30: ORH=356.13, ORL=345.11
+Opening Range for 2025-06-25 at 09:30: ORH=342.79, ORL=336.22
+Opening Range for 2025-06-26 at 09:30: ORH=330.86, ORL=324.47
+Opening Range for 2025-06-27 at 09:30: ORH=324.68, ORL=320.07
+Opening Range for 2025-06-30 at 09:30: ORH=325.42, ORL=319.23
+Opening Range for 2025-07-01 at 09:30: ORH=298.82, ORL=293.29
+Opening Range for 2025-07-02 at 09:30: ORH=312.52, ORL=307.16
+Opening Range for 2025-07-03 at 09:30: ORH=317.99, ORL=314.82
+Opening Range for 2025-07-07 at 09:30: ORH=294.6, ORL=289.5
+Opening Range for 2025-07-08 at 09:30: ORH=300.31, ORL=295.66
+Opening Range for 2025-07-09 at 09:30: ORH=299.95, ORL=296.14
+Opening Range for 2025-07-10 at 09:30: ORH=307.83, ORL=299.99
+Opening Range for 2025-07-11 at 09:30: ORH=308.65, ORL=305.67
+Opening Range for 2025-07-14 at 09:30: ORH=322.48, ORL=315.01
+Opening Range for 2025-07-15 at 09:30: ORH=321.06, ORL=317.71
+Opening Range for 2025-07-16 at 09:30: ORH=316.72, ORL=312.71
+Opening Range for 2025-07-17 at 09:30: ORH=323.85, ORL=320.23
+Opening Range for 2025-07-18 at 09:30: ORH=326.04, ORL=321.42
+Opening Range for 2025-07-21 at 09:30: ORH=337.88, ORL=330.47
+Opening Range for 2025-07-22 at 09:30: ORH=330.31, ORL=326.9
+Opening Range for 2025-07-23 at 09:30: ORH=333.15, ORL=329.11
+Opening Range for 2025-07-24 at 09:30: ORH=310.0, ORL=301.2
+Opening Range for 2025-07-25 at 09:30: ORH=312.68, ORL=308.06
+Opening Range for 2025-07-28 at 09:30: ORH=319.22, ORL=315.7
+Opening Range for 2025-07-29 at 09:30: ORH=326.06, ORL=320.04
+Opening Range for 2025-07-30 at 09:30: ORH=324.33, ORL=320.03
+Opening Range for 2025-07-31 at 09:30: ORH=321.27, ORL=318.6
+Opening Range for 2025-08-01 at 09:30: ORH=308.56, ORL=302.14
+Opening Range for 2025-08-04 at 09:30: ORH=310.46, ORL=305.58
+Opening Range for 2025-08-05 at 09:30: ORH=309.78, ORL=305.52
+Opening Range for 2025-08-06 at 09:30: ORH=313.32, ORL=306.93
+Opening Range for 2025-08-07 at 09:30: ORH=321.73, ORL=318.19
+Opening Range for 2025-08-08 at 09:30: ORH=329.29, ORL=321.09
+Opening Range for 2025-08-11 at 09:30: ORH=341.22, ORL=334.15
+Opening Range for 2025-08-12 at 09:30: ORH=345.13, ORL=339.69
+Opening Range for 2025-08-13 at 09:30: ORH=347.66, ORL=340.22
+Opening Range for 2025-08-14 at 09:30: ORH=337.69, ORL=334.79
+Opening Range for 2025-08-15 at 09:30: ORH=339.14, ORL=334.3
+Opening Range for 2025-08-18 at 09:30: ORH=333.54, ORL=329.6
+Opening Range for 2025-08-19 at 09:30: ORH=337.23, ORL=333.32
+Opening Range for 2025-08-20 at 09:30: ORH=331.3, ORL=327.18
+Opening Range for 2025-08-21 at 09:30: ORH=324.85, ORL=321.69
+Opening Range for 2025-08-22 at 09:30: ORH=324.9, ORL=319.78
+Opening Range for 2025-08-25 at 09:30: ORH=341.15, ORL=336.71
+Opening Range for 2025-08-26 at 09:30: ORH=348.62, ORL=344.5
+Opening Range for 2025-08-27 at 09:30: ORH=355.21, ORL=351.15
+Opening Range for 2025-08-28 at 09:30: ORH=353.39, ORL=349.58
+Opening Range for 2025-08-29 at 09:30: ORH=348.54, ORL=344.8
+Opening Range for 2025-09-02 at 09:30: ORH=331.69, ORL=325.71
+Opening Range for 2025-09-03 at 09:30: ORH=335.15, ORL=328.51
+Opening Range for 2025-09-04 at 09:30: ORH=337.51, ORL=333.03
+Opening Range for 2025-09-05 at 09:30: ORH=354.47, ORL=330.61
+Opening Range for 2025-09-08 at 09:30: ORH=358.29, ORL=351.89
+Opening Range for 2025-09-09 at 09:30: ORH=350.1, ORL=346.85
+Opening Range for 2025-09-10 at 09:30: ORH=352.15, ORL=346.07
+Opening Range for 2025-09-11 at 09:30: ORH=351.25, ORL=347.6
+Opening Range for 2025-09-12 at 09:30: ORH=379.42, ORL=370.55
+
+--- Backtest Performance Summary ---
+Total Trades: 40
+Wins: 18
+Losses: 22
+Win Rate: 45.0
+Profit Factor: 0.46365105008077084
+Max Drawdown Pct: -21.100000000000023
+Max Drawdown Dollars: -21.100000000000023
+Sharpe Ratio: -7.2149178620262155
+Pnl: -19.920000000000073
+Equity Curve: [(datetime.datetime(2025, 6, 16, 11, 6, 14, 105844, tzinfo=<UTC>), 100.0), (Timestamp('2025-06-17 12:45:00-0400', tz='America/New_York'), 97.49000000000001), (Timestamp('2025-06-18 13:15:00-0400', tz='America/New_York'), 98.50999999999999), (Timestamp('2025-06-20 13:00:00-0400', tz='America/New_York'), 99.26999999999998), (Timestamp('2025-06-27 11:15:00-0400', tz='America/New_York'), 99.92999999999995), (Timestamp('2025-06-30 14:15:00-0400', tz='America/New_York'), 99.09999999999997), (Timestamp('2025-07-01 11:00:00-0400', tz='America/New_York'), 97.5), (Timestamp('2025-07-02 11:00:00-0400', tz='America/New_York'), 93.86000000000001), (Timestamp('2025-07-09 10:45:00-0400', tz='America/New_York'), 94.62), (Timestamp('2025-07-11 12:15:00-0400', tz='America/New_York'), 93.04000000000002), (Timestamp('2025-07-14 11:00:00-0400', tz='America/New_York'), 93.57999999999998), (Timestamp('2025-07-16 10:30:00-0400', tz='America/New_York'), 89.5), (Timestamp('2025-07-18 10:45:00-0400', tz='America/New_York'), 90.54000000000008), (Timestamp('2025-07-21 10:15:00-0400', tz='America/New_York'), 90.74000000000001), (Timestamp('2025-07-22 10:15:00-0400', tz='America/New_York'), 90.03999999999996), (Timestamp('2025-07-23 10:30:00-0400', tz='America/New_York'), 89.83999999999997), (Timestamp('2025-07-25 10:45:00-0400', tz='America/New_York'), 90.94), (Timestamp('2025-07-29 10:45:00-0400', tz='America/New_York'), 89.66000000000003), (Timestamp('2025-07-31 10:15:00-0400', tz='America/New_York'), 90.59999999999997), (Timestamp('2025-08-01 10:15:00-0400', tz='America/New_York'), 89.67999999999995), (Timestamp('2025-08-04 12:45:00-0400', tz='America/New_York'), 93.21999999999997), (Timestamp('2025-08-05 14:00:00-0400', tz='America/New_York'), 92.67000000000002), (Timestamp('2025-08-06 10:15:00-0400', tz='America/New_York'), 92.96999999999997), (Timestamp('2025-08-07 11:15:00-0400', tz='America/New_York'), 92.63999999999999), (Timestamp('2025-08-08 13:15:00-0400', tz='America/New_York'), 92.01999999999998), (Timestamp('2025-08-11 10:45:00-0400', tz='America/New_York'), 93.86000000000001), (Timestamp('2025-08-12 13:00:00-0400', tz='America/New_York'), 94.53999999999996), (Timestamp('2025-08-13 14:00:00-0400', tz='America/New_York'), 92.32999999999998), (Timestamp('2025-08-14 10:30:00-0400', tz='America/New_York'), 90.19), (Timestamp('2025-08-18 11:00:00-0400', tz='America/New_York'), 89.0), (Timestamp('2025-08-19 10:15:00-0400', tz='America/New_York'), 89.34000000000003), (Timestamp('2025-08-21 12:45:00-0400', tz='America/New_York'), 86.20000000000005), (Timestamp('2025-08-25 11:15:00-0400', tz='America/New_York'), 84.87), (Timestamp('2025-08-26 15:30:00-0400', tz='America/New_York'), 85.43000000000006), (Timestamp('2025-08-27 10:30:00-0400', tz='America/New_York'), 83.63000000000005), (Timestamp('2025-09-02 10:30:00-0400', tz='America/New_York'), 83.07000000000005), (Timestamp('2025-09-03 14:45:00-0400', tz='America/New_York'), 83.87), (Timestamp('2025-09-08 10:45:00-0400', tz='America/New_York'), 82.09000000000003), (Timestamp('2025-09-09 10:45:00-0400', tz='America/New_York'), 83.04999999999995), (Timestamp('2025-09-10 15:15:00-0400', tz='America/New_York'), 78.89999999999998), (Timestamp('2025-09-11 10:15:00-0400', tz='America/New_York'), 80.07999999999993)]
+Sortino Ratio: -8.781186534149517
+Calmar Ratio: -0.09370287804873546
+Avg Holding Time: 0 days 00:34:30
+Max Consecutive Wins: 3
+Max Consecutive Losses: 3
+Avg Win: 0.9566666666666523
+Avg Loss: 1.6881818181818098
+Gross Profit: 17.219999999999743
+Gross Loss: 37.139999999999816
+Sl Hits: 22
+Tp Hits: 18
+Biggest Profit: 3.5400000000000205
+Biggest Loss: -4.149999999999977
+
+--- Backtesting Symbol: AMZN ---
+
+--- Starting Backtest for AMZN from 2025-06-16 11:06:14.105844+00:00 to 2025-09-14 11:06:14.105844+00:00 ---
+Successfully connected to account #40775569 on Deriv-Demo
+Shutting down MT5 connection.
+Opening Range for 2025-06-16 at 09:30: ORH=213.35, ORL=211.6
+Opening Range for 2025-06-17 at 09:30: ORH=216.61, ORL=214.97
+Opening Range for 2025-06-18 at 09:30: ORH=216.7, ORL=215.02
+Opening Range for 2025-06-20 at 09:30: ORH=214.83, ORL=213.56
+Opening Range for 2025-06-23 at 09:30: ORH=209.92, ORL=207.42
+Opening Range for 2025-06-24 at 09:30: ORH=213.43, ORL=211.1
+Opening Range for 2025-06-25 at 09:30: ORH=215.95, ORL=213.48
+Opening Range for 2025-06-26 at 09:30: ORH=213.62, ORL=212.44
+Opening Range for 2025-06-27 at 09:30: ORH=221.41, ORL=219.74
+Opening Range for 2025-06-30 at 09:30: ORH=223.76, ORL=221.85
+Opening Range for 2025-07-01 at 09:30: ORH=220.29, ORL=218.67
+Opening Range for 2025-07-02 at 09:30: ORH=220.02, ORL=219.06
+Opening Range for 2025-07-03 at 09:30: ORH=223.99, ORL=221.64
+Opening Range for 2025-07-07 at 09:30: ORH=223.76, ORL=222.38
+Opening Range for 2025-07-08 at 09:30: ORH=223.9, ORL=222.57
+Opening Range for 2025-07-09 at 09:30: ORH=222.45, ORL=220.63
+Opening Range for 2025-07-10 at 09:30: ORH=222.28, ORL=221.15
+Opening Range for 2025-07-11 at 09:30: ORH=224.74, ORL=222.36
+Opening Range for 2025-07-14 at 09:30: ORH=225.83, ORL=224.41
+Opening Range for 2025-07-15 at 09:30: ORH=227.1, ORL=225.46
+Opening Range for 2025-07-16 at 09:30: ORH=225.99, ORL=223.91
+Opening Range for 2025-07-17 at 09:30: ORH=223.87, ORL=222.64
+Opening Range for 2025-07-18 at 09:30: ORH=225.29, ORL=224.54
+Opening Range for 2025-07-21 at 09:30: ORH=227.77, ORL=225.77
+Opening Range for 2025-07-22 at 09:30: ORH=229.97, ORL=228.98
+Opening Range for 2025-07-23 at 09:30: ORH=228.75, ORL=227.75
+Opening Range for 2025-07-24 at 09:30: ORH=231.82, ORL=228.65
+Opening Range for 2025-07-25 at 09:30: ORH=232.17, ORL=231.32
+Opening Range for 2025-07-28 at 09:30: ORH=234.21, ORL=232.26
+Opening Range for 2025-07-29 at 09:30: ORH=234.66, ORL=232.5
+Opening Range for 2025-07-30 at 09:30: ORH=231.63, ORL=230.59
+Opening Range for 2025-07-31 at 09:30: ORH=235.8, ORL=231.46
+Opening Range for 2025-08-01 at 09:30: ORH=220.24, ORL=215.36
+Opening Range for 2025-08-04 at 09:30: ORH=217.36, ORL=214.39
+Opening Range for 2025-08-05 at 09:30: ORH=215.92, ORL=212.91
+Opening Range for 2025-08-06 at 09:30: ORH=214.65, ORL=213.83
+Opening Range for 2025-08-07 at 09:30: ORH=224.51, ORL=220.82
+Opening Range for 2025-08-08 at 09:30: ORH=223.71, ORL=222.5
+Opening Range for 2025-08-11 at 09:30: ORH=222.99, ORL=221.05
+Opening Range for 2025-08-12 at 09:30: ORH=223.45, ORL=221.24
+Opening Range for 2025-08-13 at 09:30: ORH=224.7, ORL=222.0
+Opening Range for 2025-08-14 at 09:30: ORH=230.46, ORL=227.1
+Opening Range for 2025-08-15 at 09:30: ORH=233.98, ORL=231.34
+Opening Range for 2025-08-18 at 09:30: ORH=230.85, ORL=229.25
+Opening Range for 2025-08-19 at 09:30: ORH=230.42, ORL=229.04
+Opening Range for 2025-08-20 at 09:30: ORH=227.19, ORL=225.2
+Opening Range for 2025-08-21 at 09:30: ORH=222.69, ORL=221.03
+Opening Range for 2025-08-22 at 09:30: ORH=222.97, ORL=221.65
+Opening Range for 2025-08-25 at 09:30: ORH=229.1, ORL=227.25
+Opening Range for 2025-08-26 at 09:30: ORH=228.0, ORL=226.94
+Opening Range for 2025-08-27 at 09:30: ORH=229.85, ORL=227.83
+Opening Range for 2025-08-28 at 09:30: ORH=230.8, ORL=228.9
+Opening Range for 2025-08-29 at 09:30: ORH=231.7, ORL=230.65
+Opening Range for 2025-09-02 at 09:30: ORH=225.34, ORL=223.29
+Opening Range for 2025-09-03 at 09:30: ORH=227.13, ORL=224.91
+Opening Range for 2025-09-04 at 09:30: ORH=234.83, ORL=230.8
+Opening Range for 2025-09-05 at 09:30: ORH=235.13, ORL=234.03
+Opening Range for 2025-09-08 at 09:30: ORH=235.47, ORL=233.82
+Opening Range for 2025-09-09 at 09:30: ORH=236.29, ORL=235.12
+Opening Range for 2025-09-10 at 09:30: ORH=237.3, ORL=231.86
+Opening Range for 2025-09-11 at 09:30: ORH=231.43, ORL=229.53
+Opening Range for 2025-09-12 at 09:30: ORH=230.68, ORL=228.51
+
+--- Backtest Performance Summary ---
+Total Trades: 38
+Wins: 22
+Losses: 16
+Win Rate: 57.89473684210527
+Profit Factor: 1.836609336609361
+Max Drawdown Pct: -4.099999999999966
+Max Drawdown Dollars: -4.099999999999966
+Sharpe Ratio: 1.914003294563237
+Pnl: 6.810000000000116
+Equity Curve: [(datetime.datetime(2025, 6, 16, 11, 6, 14, 105844, tzinfo=<UTC>), 100.0), (Timestamp('2025-06-17 12:45:00-0400', tz='America/New_York'), 99.44), (Timestamp('2025-06-18 11:15:00-0400', tz='America/New_York'), 99.51999999999998), (Timestamp('2025-06-24 11:45:00-0400', tz='America/New_York'), 99.38999999999999), (Timestamp('2025-06-27 11:30:00-0400', tz='America/New_York'), 99.48999999999995), (Timestamp('2025-06-30 10:45:00-0400', tz='America/New_York'), 99.15999999999997), (Timestamp('2025-07-02 10:30:00-0400', tz='America/New_York'), 99.33999999999997), (Timestamp('2025-07-07 10:45:00-0400', tz='America/New_York'), 99.07999999999998), (Timestamp('2025-07-09 11:30:00-0400', tz='America/New_York'), 98.34), (Timestamp('2025-07-10 11:15:00-0400', tz='America/New_York'), 97.93), (Timestamp('2025-07-11 11:30:00-0400', tz='America/New_York'), 97.00000000000003), (Timestamp('2025-07-14 10:45:00-0400', tz='America/New_York'), 95.90000000000003), (Timestamp('2025-07-16 12:00:00-0400', tz='America/New_York'), 96.00000000000006), (Timestamp('2025-07-17 15:30:00-0400', tz='America/New_York'), 97.29000000000008), (Timestamp('2025-07-18 10:15:00-0400', tz='America/New_York'), 97.37000000000012), (Timestamp('2025-07-21 10:45:00-0400', tz='America/New_York'), 97.47000000000014), (Timestamp('2025-07-23 11:00:00-0400', tz='America/New_York'), 97.25000000000014), (Timestamp('2025-07-24 12:15:00-0400', tz='America/New_York'), 97.35000000000011), (Timestamp('2025-07-25 12:30:00-0400', tz='America/New_York'), 97.4900000000001), (Timestamp('2025-07-30 10:30:00-0400', tz='America/New_York'), 97.6100000000001), (Timestamp('2025-08-01 12:45:00-0400', tz='America/New_York'), 96.7300000000001), (Timestamp('2025-08-04 10:30:00-0400', tz='America/New_York'), 97.37000000000015), (Timestamp('2025-08-06 12:45:00-0400', tz='America/New_York'), 101.87000000000015), (Timestamp('2025-08-07 12:00:00-0400', tz='America/New_York'), 103.70000000000019), (Timestamp('2025-08-08 14:15:00-0400', tz='America/New_York'), 103.1300000000002), (Timestamp('2025-08-11 13:45:00-0400', tz='America/New_York'), 102.6600000000002), (Timestamp('2025-08-12 11:45:00-0400', tz='America/New_York'), 102.2500000000002), (Timestamp('2025-08-18 15:30:00-0400', tz='America/New_York'), 104.44000000000017), (Timestamp('2025-08-19 10:30:00-0400', tz='America/New_York'), 104.82000000000016), (Timestamp('2025-08-21 13:30:00-0400', tz='America/New_York'), 104.86000000000018), (Timestamp('2025-08-26 11:00:00-0400', tz='America/New_York'), 104.88000000000017), (Timestamp('2025-08-28 11:00:00-0400', tz='America/New_York'), 105.38000000000017), (Timestamp('2025-09-02 15:45:00-0400', tz='America/New_York'), 107.6000000000002), (Timestamp('2025-09-03 15:30:00-0400', tz='America/New_York'), 107.5600000000002), (Timestamp('2025-09-04 15:45:00-0400', tz='America/New_York'), 107.6200000000002), (Timestamp('2025-09-05 10:15:00-0400', tz='America/New_York'), 107.78000000000017), (Timestamp('2025-09-09 10:45:00-0400', tz='America/New_York'), 107.10000000000016), (Timestamp('2025-09-10 12:30:00-0400', tz='America/New_York'), 107.22000000000011), (Timestamp('2025-09-12 13:30:00-0400', tz='America/New_York'), 106.81000000000012)]
+Sortino Ratio: 4.413782564314253
+Calmar Ratio: 0.05059308779836495
+Avg Holding Time: 0 days 01:00:47.368421052
+Max Consecutive Wins: 6
+Max Consecutive Losses: 5
+Avg Win: 0.6795454545454553
+Avg Loss: 0.5087499999999938
+Gross Profit: 14.950000000000017
+Gross Loss: 8.139999999999901
+Sl Hits: 16
+Tp Hits: 22
+Biggest Profit: 4.5
+Biggest Loss: -1.0999999999999943
+
+--- Backtesting Symbol: Germany 40 ---
+
+--- Starting Backtest for Germany 40 from 2025-06-16 11:06:14.105844+00:00 to 2025-09-14 11:06:14.105844+00:00 ---
+Successfully connected to account #40775569 on Deriv-Demo
+Shutting down MT5 connection.
+Opening Range for 2025-06-17 at 03:00: ORH=23517.95, ORL=23396.65
+Opening Range for 2025-06-18 at 03:00: ORH=23454.35, ORL=23417.05
+Opening Range for 2025-06-19 at 03:00: ORH=23219.05, ORL=23157.75
+Opening Range for 2025-06-20 at 03:00: ORH=23240.65, ORL=23174.35
+Opening Range for 2025-06-23 at 03:00: ORH=23283.15, ORL=23185.2
+Opening Range for 2025-06-24 at 03:00: ORH=23748.75, ORL=23679.75
+Opening Range for 2025-06-25 at 03:00: ORH=23732.95, ORL=23650.95
+Opening Range for 2025-06-26 at 03:00: ORH=23660.25, ORL=23605.55
+Opening Range for 2025-06-27 at 03:00: ORH=23871.05, ORL=23801.05
+Opening Range for 2025-06-30 at 03:00: ORH=24172.05, ORL=24068.0
+Opening Range for 2025-07-01 at 03:00: ORH=23986.05, ORL=23899.0
+Opening Range for 2025-07-02 at 03:00: ORH=23838.25, ORL=23724.95
+Opening Range for 2025-07-03 at 03:00: ORH=23896.35, ORL=23855.35
+Opening Range for 2025-07-04 at 03:00: ORH=23871.7, ORL=23794.65
+Opening Range for 2025-07-07 at 03:00: ORH=23893.65, ORL=23833.65
+Opening Range for 2025-07-08 at 03:00: ORH=24154.55, ORL=24070.6
+Opening Range for 2025-07-09 at 03:00: ORH=24314.15, ORL=24256.15
+Opening Range for 2025-07-10 at 03:00: ORH=24652.55, ORL=24607.55
+Opening Range for 2025-07-11 at 03:00: ORH=24370.95, ORL=24286.95
+Opening Range for 2025-07-14 at 03:00: ORH=24077.95, ORL=23986.95
+Opening Range for 2025-07-15 at 03:00: ORH=24237.75, ORL=24190.75
+Opening Range for 2025-07-16 at 03:00: ORH=24045.95, ORL=23962.95
+Opening Range for 2025-07-17 at 03:00: ORH=24263.95, ORL=24206.95
+Opening Range for 2025-07-18 at 03:00: ORH=24502.05, ORL=24433.75
+Opening Range for 2025-07-21 at 03:00: ORH=24343.55, ORL=24299.25
+Opening Range for 2025-07-22 at 03:00: ORH=24251.85, ORL=24198.55
+Opening Range for 2025-07-23 at 03:00: ORH=24323.15, ORL=24197.05
+Opening Range for 2025-07-24 at 03:00: ORH=24524.95, ORL=24448.15
+Opening Range for 2025-07-25 at 03:00: ORH=24182.35, ORL=24079.05
+Opening Range for 2025-07-28 at 03:00: ORH=24518.85, ORL=24376.05
+Opening Range for 2025-07-29 at 03:00: ORH=24122.15, ORL=24044.15
+Opening Range for 2025-07-30 at 03:00: ORH=24214.65, ORL=24140.95
+Opening Range for 2025-07-31 at 03:00: ORH=24416.25, ORL=24316.25
+Opening Range for 2025-08-01 at 03:00: ORH=23849.55, ORL=23747.55
+Opening Range for 2025-08-04 at 03:00: ORH=23563.55, ORL=23504.85
+Opening Range for 2025-08-05 at 03:00: ORH=23940.65, ORL=23881.85
+Opening Range for 2025-08-06 at 03:00: ORH=24007.05, ORL=23948.25
+Opening Range for 2025-08-07 at 03:00: ORH=23968.65, ORL=23903.55
+Opening Range for 2025-08-08 at 03:00: ORH=24198.25, ORL=24117.45
+Opening Range for 2025-08-11 at 03:00: ORH=24274.75, ORL=24188.75
+Opening Range for 2025-08-12 at 03:00: ORH=24173.05, ORL=24124.25
+Opening Range for 2025-08-13 at 03:00: ORH=24186.35, ORL=24139.85
+Opening Range for 2025-08-14 at 03:00: ORH=24240.35, ORL=24194.15
+Opening Range for 2025-08-15 at 03:00: ORH=24544.75, ORL=24452.15
+Opening Range for 2025-08-18 at 03:00: ORH=24375.75, ORL=24286.25
+Opening Range for 2025-08-19 at 03:00: ORH=24381.35, ORL=24312.75
+Opening Range for 2025-08-20 at 03:00: ORH=24269.95, ORL=24211.9
+Opening Range for 2025-08-21 at 03:00: ORH=24308.75, ORL=24252.75
+Opening Range for 2025-08-22 at 03:00: ORH=24273.85, ORL=24226.05
+Opening Range for 2025-08-25 at 03:00: ORH=24278.55, ORL=24224.55
+Opening Range for 2025-08-26 at 03:00: ORH=24154.85, ORL=24043.85
+Opening Range for 2025-08-27 at 03:00: ORH=24209.25, ORL=24168.45
+Opening Range for 2025-08-28 at 03:00: ORH=24211.35, ORL=24135.35
+Opening Range for 2025-08-29 at 03:00: ORH=24057.55, ORL=23922.25
+Opening Range for 2025-09-01 at 03:00: ORH=24032.45, ORL=23978.65
+Opening Range for 2025-09-02 at 03:00: ORH=24010.05, ORL=23837.05
+Opening Range for 2025-09-03 at 03:00: ORH=23642.55, ORL=23580.35
+Opening Range for 2025-09-04 at 03:00: ORH=23668.55, ORL=23613.35
+Opening Range for 2025-09-05 at 03:00: ORH=23894.15, ORL=23800.15
+Opening Range for 2025-09-08 at 03:00: ORH=23788.55, ORL=23737.05
+Opening Range for 2025-09-09 at 03:00: ORH=23827.85, ORL=23773.05
+Opening Range for 2025-09-10 at 03:00: ORH=23857.15, ORL=23799.35
+Opening Range for 2025-09-11 at 03:00: ORH=23674.45, ORL=23614.65
+Opening Range for 2025-09-12 at 03:00: ORH=23801.95, ORL=23734.45
+
+--- Backtest Performance Summary ---
+Total Trades: 62
+Wins: 35
+Losses: 27
+Win Rate: 56.451612903225815
+Profit Factor: 1.5530047265361717
+Max Drawdown Pct: -160.59999999999854
+Max Drawdown Dollars: -172.89999999998327
+Sharpe Ratio: -0.42815659073777734
+Pnl: 409.5000000000291
+Equity Curve: [(datetime.datetime(2025, 6, 16, 11, 6, 14, 105844, tzinfo=<UTC>), 100.0), (Timestamp('2025-06-17 01:30:00-0400', tz='America/New_York'), 83.59999999999854), (Timestamp('2025-06-18 06:15:00-0400', tz='America/New_York'), 8.400000000001455), (Timestamp('2025-06-19 05:15:00-0400', tz='America/New_York'), -28.599999999998545), (Timestamp('2025-06-20 03:30:00-0400', tz='America/New_York'), -60.599999999998545), (Timestamp('2025-06-23 03:15:00-0400', tz='America/New_York'), 56.400000000001455), (Timestamp('2025-06-24 02:00:00-0400', tz='America/New_York'), 40.0), (Timestamp('2025-06-25 03:00:00-0400', tz='America/New_York'), 38.0), (Timestamp('2025-06-26 02:30:00-0400', tz='America/New_York'), 55.400000000001455), (Timestamp('2025-06-27 02:00:00-0400', tz='America/New_York'), 69.80000000000291), (Timestamp('2025-06-30 04:00:00-0400', tz='America/New_York'), 49.50000000000364), (Timestamp('2025-07-01 04:00:00-0400', tz='America/New_York'), 87.60000000000218), (Timestamp('2025-07-02 01:45:00-0400', tz='America/New_York'), 136.80000000000655), (Timestamp('2025-07-03 02:15:00-0400', tz='America/New_York'), 127.80000000000655), (Timestamp('2025-07-04 04:30:00-0400', tz='America/New_York'), 188.4000000000051), (Timestamp('2025-07-07 01:00:00-0400', tz='America/New_York'), 184.200000000008), (Timestamp('2025-07-08 02:00:00-0400', tz='America/New_York'), 192.5000000000109), (Timestamp('2025-07-09 03:45:00-0400', tz='America/New_York'), 279.5000000000109), (Timestamp('2025-07-10 04:00:00-0400', tz='America/New_York'), 249.5000000000109), (Timestamp('2025-07-11 04:15:00-0400', tz='America/New_York'), 367.7000000000153), (Timestamp('2025-07-14 01:30:00-0400', tz='America/New_York'), 370.3000000000138), (Timestamp('2025-07-15 00:45:00-0400', tz='America/New_York'), 393.10000000000946), (Timestamp('2025-07-16 04:00:00-0400', tz='America/New_York'), 407.10000000000946), (Timestamp('2025-07-17 01:45:00-0400', tz='America/New_York'), 446.10000000000946), (Timestamp('2025-07-21 03:30:00-0400', tz='America/New_York'), 423.10000000000946), (Timestamp('2025-07-22 00:30:00-0400', tz='America/New_York'), 424.5000000000109), (Timestamp('2025-07-23 10:00:00-0400', tz='America/New_York'), 361.5000000000109), (Timestamp('2025-07-24 01:30:00-0400', tz='America/New_York'), 361.7000000000153), (Timestamp('2025-07-25 02:45:00-0400', tz='America/New_York'), 365.7000000000153), (Timestamp('2025-07-28 02:15:00-0400', tz='America/New_York'), 368.3000000000138), (Timestamp('2025-07-29 03:45:00-0400', tz='America/New_York'), 506.3000000000138), (Timestamp('2025-07-30 05:00:00-0400', tz='America/New_York'), 470.900000000016), (Timestamp('2025-07-31 03:00:00-0400', tz='America/New_York'), 554.3000000000138), (Timestamp('2025-08-01 02:45:00-0400', tz='America/New_York'), 542.3000000000138), (Timestamp('2025-08-04 01:15:00-0400', tz='America/New_York'), 518.3000000000138), (Timestamp('2025-08-05 02:00:00-0400', tz='America/New_York'), 534.3000000000138), (Timestamp('2025-08-06 01:30:00-0400', tz='America/New_York'), 609.3000000000138), (Timestamp('2025-08-07 00:30:00-0400', tz='America/New_York'), 617.5000000000182), (Timestamp('2025-08-08 02:15:00-0400', tz='America/New_York'), 576.5000000000182), (Timestamp('2025-08-12 01:00:00-0400', tz='America/New_York'), 590.1000000000167), (Timestamp('2025-08-13 04:00:00-0400', tz='America/New_York'), 578.1000000000167), (Timestamp('2025-08-14 03:00:00-0400', tz='America/New_York'), 575.1000000000167), (Timestamp('2025-08-15 01:00:00-0400', tz='America/New_York'), 590.1000000000167), (Timestamp('2025-08-18 03:15:00-0400', tz='America/New_York'), 679.5000000000146), (Timestamp('2025-08-19 03:45:00-0400', tz='America/New_York'), 657.900000000016), (Timestamp('2025-08-20 03:15:00-0400', tz='America/New_York'), 621.6000000000167), (Timestamp('2025-08-21 00:30:00-0400', tz='America/New_York'), 623.2000000000153), (Timestamp('2025-08-22 02:00:00-0400', tz='America/New_York'), 662.2000000000153), (Timestamp('2025-08-25 02:15:00-0400', tz='America/New_York'), 658.2000000000153), (Timestamp('2025-08-26 00:30:00-0400', tz='America/New_York'), 681.0000000000109), (Timestamp('2025-08-27 02:00:00-0400', tz='America/New_York'), 682.4000000000124), (Timestamp('2025-08-28 04:30:00-0400', tz='America/New_York'), 653.4000000000124), (Timestamp('2025-08-29 04:45:00-0400', tz='America/New_York'), 601.9000000000124), (Timestamp('2025-09-01 02:00:00-0400', tz='America/New_York'), 564.7000000000153), (Timestamp('2025-09-02 00:45:00-0400', tz='America/New_York'), 568.3000000000138), (Timestamp('2025-09-03 01:30:00-0400', tz='America/New_York'), 575.1000000000167), (Timestamp('2025-09-04 01:00:00-0400', tz='America/New_York'), 602.7000000000189), (Timestamp('2025-09-05 08:30:00-0400', tz='America/New_York'), 533.7000000000189), (Timestamp('2025-09-08 02:15:00-0400', tz='America/New_York'), 537.7000000000189), (Timestamp('2025-09-09 01:15:00-0400', tz='America/New_York'), 540.9000000000233), (Timestamp('2025-09-10 04:15:00-0400', tz='America/New_York'), 545.5000000000291), (Timestamp('2025-09-11 02:00:00-0400', tz='America/New_York'), 520.5000000000291), (Timestamp('2025-09-12 00:45:00-0400', tz='America/New_York'), 509.5000000000291)]
+Sortino Ratio: -0.30457298903993496
+Calmar Ratio: -0.02942745423159043
+Avg Holding Time: 0 days 00:48:37.741935483
+Max Consecutive Wins: 5
+Max Consecutive Losses: 4
+Avg Win: 32.85714285714338
+Avg Loss: 27.425925925925522
+Gross Profit: 1150.0000000000182
+Gross Loss: 740.4999999999891
+Sl Hits: 27
+Tp Hits: 35
+Biggest Profit: 138.0
+Biggest Loss: -75.19999999999709
+
+--- Backtesting Symbol: UK 100 ---
+
+--- Starting Backtest for UK 100 from 2025-06-16 11:06:14.105844+00:00 to 2025-09-14 11:06:14.105844+00:00 ---
+Successfully connected to account #40775569 on Deriv-Demo
+Shutting down MT5 connection.
+Opening Range for 2025-06-17 at 03:00: ORH=8841.7, ORL=8827.2
+Opening Range for 2025-06-18 at 03:00: ORH=8857.2, ORL=8844.4
+Opening Range for 2025-06-19 at 03:00: ORH=8821.7, ORL=8805.9
+Opening Range for 2025-06-20 at 03:00: ORH=8828.7, ORL=8816.2
+Opening Range for 2025-06-23 at 03:00: ORH=8765.7, ORL=8740.7
+Opening Range for 2025-06-24 at 03:00: ORH=8826.6, ORL=8797.3
+Opening Range for 2025-06-25 at 03:00: ORH=8786.9, ORL=8767.6
+Opening Range for 2025-06-26 at 03:00: ORH=8737.0, ORL=8705.5
+Opening Range for 2025-06-27 at 03:00: ORH=8769.9, ORL=8747.6
+Opening Range for 2025-06-30 at 03:00: ORH=8820.4, ORL=8796.4
+Opening Range for 2025-07-01 at 03:00: ORH=8790.1, ORL=8773.6
+Opening Range for 2025-07-02 at 03:00: ORH=8821.6, ORL=8798.6
+Opening Range for 2025-07-03 at 03:00: ORH=8814.6, ORL=8796.1
+Opening Range for 2025-07-04 at 03:00: ORH=8800.5, ORL=8791.5
+Opening Range for 2025-07-07 at 03:00: ORH=8825.1, ORL=8809.3
+Opening Range for 2025-07-08 at 03:00: ORH=8818.6, ORL=8799.1
+Opening Range for 2025-07-09 at 03:00: ORH=8886.4, ORL=8866.4
+Opening Range for 2025-07-10 at 03:00: ORH=8940.6, ORL=8920.1
+Opening Range for 2025-07-11 at 03:00: ORH=8984.9, ORL=8971.9
+Opening Range for 2025-07-14 at 03:00: ORH=8971.6, ORL=8931.1
+Opening Range for 2025-07-15 at 03:00: ORH=9021.1, ORL=9001.1
+Opening Range for 2025-07-16 at 03:00: ORH=8951.5, ORL=8924.2
+Opening Range for 2025-07-17 at 03:00: ORH=8979.5, ORL=8945.5
+Opening Range for 2025-07-18 at 03:00: ORH=9012.7, ORL=8979.7
+Opening Range for 2025-07-21 at 03:00: ORH=9011.7, ORL=8994.2
+Opening Range for 2025-07-22 at 03:00: ORH=9032.2, ORL=9002.7
+Opening Range for 2025-07-23 at 03:00: ORH=9081.6, ORL=9054.6
+Opening Range for 2025-07-24 at 03:00: ORH=9123.0, ORL=9102.7
+Opening Range for 2025-07-25 at 03:00: ORH=9140.9, ORL=9099.4
+Opening Range for 2025-07-28 at 03:00: ORH=9177.4, ORL=9151.4
+Opening Range for 2025-07-29 at 03:00: ORH=9099.4, ORL=9089.9
+Opening Range for 2025-07-30 at 03:00: ORH=9125.1, ORL=9096.6
+Opening Range for 2025-07-31 at 03:00: ORH=9170.6, ORL=9138.6
+Opening Range for 2025-08-01 at 03:00: ORH=9102.2, ORL=9082.2
+Opening Range for 2025-08-04 at 03:00: ORH=9101.2, ORL=9083.7
+Opening Range for 2025-08-05 at 03:00: ORH=9185.7, ORL=9152.7
+Opening Range for 2025-08-06 at 03:00: ORH=9180.7, ORL=9154.4
+Opening Range for 2025-08-07 at 03:00: ORH=9144.65, ORL=9135.65
+Opening Range for 2025-08-08 at 03:00: ORH=9123.0, ORL=9110.0
+Opening Range for 2025-08-11 at 03:00: ORH=9123.0, ORL=9107.5
+Opening Range for 2025-08-12 at 03:00: ORH=9166.6, ORL=9142.3
+Opening Range for 2025-08-13 at 03:00: ORH=9183.1, ORL=9166.1
+Opening Range for 2025-08-14 at 03:00: ORH=9151.5, ORL=9135.7
+Opening Range for 2025-08-15 at 03:00: ORH=9228.7, ORL=9202.7
+Opening Range for 2025-08-18 at 03:00: ORH=9167.4, ORL=9142.9
+Opening Range for 2025-08-19 at 03:00: ORH=9175.4, ORL=9161.9
+Opening Range for 2025-08-20 at 03:00: ORH=9191.9, ORL=9173.4
+Opening Range for 2025-08-21 at 03:00: ORH=9304.8, ORL=9291.3
+Opening Range for 2025-08-22 at 03:00: ORH=9305.9, ORL=9287.9
+Opening Range for 2025-08-26 at 03:00: ORH=9290.3, ORL=9254.1
+Opening Range for 2025-08-27 at 03:00: ORH=9311.9, ORL=9291.4
+Opening Range for 2025-08-28 at 03:00: ORH=9272.5, ORL=9262.5
+Opening Range for 2025-08-29 at 03:00: ORH=9221.3, ORL=9206.5
+Opening Range for 2025-09-01 at 03:00: ORH=9231.3, ORL=9210.8
+Opening Range for 2025-09-02 at 03:00: ORH=9190.2, ORL=9164.7
+Opening Range for 2025-09-03 at 03:00: ORH=9144.2, ORL=9128.7
+Opening Range for 2025-09-04 at 03:00: ORH=9184.3, ORL=9157.8
+Opening Range for 2025-09-05 at 03:00: ORH=9246.4, ORL=9221.9
+Opening Range for 2025-09-08 at 03:00: ORH=9245.5, ORL=9225.5
+Opening Range for 2025-09-09 at 03:00: ORH=9249.7, ORL=9235.0
+Opening Range for 2025-09-10 at 03:00: ORH=9275.7, ORL=9263.2
+Opening Range for 2025-09-11 at 03:00: ORH=9272.7, ORL=9261.2
+Opening Range for 2025-09-12 at 03:00: ORH=9334.5, ORL=9315.0
+
+--- Backtest Performance Summary ---
+Total Trades: 60
+Wins: 34
+Losses: 26
+Win Rate: 56.666666666666664
+Profit Factor: 1.7124968055200263
+Max Drawdown Pct: -18.5
+Max Drawdown Dollars: -36.25
+Sharpe Ratio: 1.934378070758372
+Pnl: 139.39999999999418
+Equity Curve: [(datetime.datetime(2025, 6, 16, 11, 6, 14, 105844, tzinfo=<UTC>), 100.0), (Timestamp('2025-06-17 07:30:00-0400', tz='America/New_York'), 83.0), (Timestamp('2025-06-18 02:00:00-0400', tz='America/New_York'), 92.0), (Timestamp('2025-06-19 05:30:00-0400', tz='America/New_York'), 81.5), (Timestamp('2025-06-20 02:45:00-0400', tz='America/New_York'), 92.0), (Timestamp('2025-06-23 18:15:00-0400', tz='America/New_York'), 137.0), (Timestamp('2025-06-24 03:00:00-0400', tz='America/New_York'), 160.25), (Timestamp('2025-06-25 02:45:00-0400', tz='America/New_York'), 156.25), (Timestamp('2025-06-26 01:00:00-0400', tz='America/New_York'), 153.75), (Timestamp('2025-06-27 00:30:00-0400', tz='America/New_York'), 155.34999999999854), (Timestamp('2025-06-30 01:15:00-0400', tz='America/New_York'), 155.84999999999854), (Timestamp('2025-07-01 01:00:00-0400', tz='America/New_York'), 160.34999999999854), (Timestamp('2025-07-02 03:15:00-0400', tz='America/New_York'), 152.59999999999854), (Timestamp('2025-07-03 01:30:00-0400', tz='America/New_York'), 150.34999999999854), (Timestamp('2025-07-04 00:30:00-0400', tz='America/New_York'), 148.09999999999854), (Timestamp('2025-07-07 00:30:00-0400', tz='America/New_York'), 150.20000000000073), (Timestamp('2025-07-08 02:45:00-0400', tz='America/New_York'), 146.20000000000073), (Timestamp('2025-07-09 03:00:00-0400', tz='America/New_York'), 164.20000000000073), (Timestamp('2025-07-10 03:00:00-0400', tz='America/New_York'), 182.20000000000073), (Timestamp('2025-07-11 04:00:00-0400', tz='America/New_York'), 166.95000000000073), (Timestamp('2025-07-14 02:45:00-0400', tz='America/New_York'), 167.95000000000073), (Timestamp('2025-07-15 02:30:00-0400', tz='America/New_York'), 168.95000000000073), (Timestamp('2025-07-16 04:15:00-0400', tz='America/New_York'), 196.84999999999854), (Timestamp('2025-07-17 10:00:00-0400', tz='America/New_York'), 185.34999999999854), (Timestamp('2025-07-18 02:00:00-0400', tz='America/New_York'), 183.09999999999854), (Timestamp('2025-07-21 02:00:00-0400', tz='America/New_York'), 185.59999999999854), (Timestamp('2025-07-22 09:45:00-0400', tz='America/New_York'), 214.09999999999854), (Timestamp('2025-07-23 06:15:00-0400', tz='America/New_York'), 217.09999999999854), (Timestamp('2025-07-25 03:00:00-0400', tz='America/New_York'), 236.59999999999854), (Timestamp('2025-07-29 03:45:00-0400', tz='America/New_York'), 230.59999999999854), (Timestamp('2025-07-30 10:00:00-0400', tz='America/New_York'), 208.9499999999971), (Timestamp('2025-07-31 00:45:00-0400', tz='America/New_York'), 209.4499999999971), (Timestamp('2025-08-01 02:00:00-0400', tz='America/New_York'), 210.84999999999854), (Timestamp('2025-08-04 01:00:00-0400', tz='America/New_York'), 214.84999999999854), (Timestamp('2025-08-05 10:30:00-0400', tz='America/New_York'), 208.34999999999854), (Timestamp('2025-08-06 02:15:00-0400', tz='America/New_York'), 204.34999999999854), (Timestamp('2025-08-07 00:45:00-0400', tz='America/New_York'), 202.84999999999854), (Timestamp('2025-08-08 02:45:00-0400', tz='America/New_York'), 200.34999999999854), (Timestamp('2025-08-11 03:45:00-0400', tz='America/New_York'), 222.84999999999854), (Timestamp('2025-08-12 00:30:00-0400', tz='America/New_York'), 225.84999999999854), (Timestamp('2025-08-13 03:15:00-0400', tz='America/New_York'), 240.84999999999854), (Timestamp('2025-08-14 03:45:00-0400', tz='America/New_York'), 244.14999999999782), (Timestamp('2025-08-18 00:30:00-0400', tz='America/New_York'), 245.64999999999782), (Timestamp('2025-08-19 04:45:00-0400', tz='America/New_York'), 262.1499999999978), (Timestamp('2025-08-20 04:45:00-0400', tz='America/New_York'), 269.6499999999978), (Timestamp('2025-08-21 02:30:00-0400', tz='America/New_York'), 265.6499999999978), (Timestamp('2025-08-22 02:30:00-0400', tz='America/New_York'), 263.1499999999978), (Timestamp('2025-08-26 08:15:00-0400', tz='America/New_York'), 246.14999999999782), (Timestamp('2025-08-27 00:30:00-0400', tz='America/New_York'), 244.64999999999782), (Timestamp('2025-08-28 01:00:00-0400', tz='America/New_York'), 246.14999999999782), (Timestamp('2025-08-29 03:45:00-0400', tz='America/New_York'), 246.74999999999636), (Timestamp('2025-09-01 02:30:00-0400', tz='America/New_York'), 249.74999999999636), (Timestamp('2025-09-02 01:30:00-0400', tz='America/New_York'), 245.99999999999636), (Timestamp('2025-09-03 02:30:00-0400', tz='America/New_York'), 238.49999999999636), (Timestamp('2025-09-04 01:45:00-0400', tz='America/New_York'), 239.99999999999636), (Timestamp('2025-09-05 04:00:00-0400', tz='America/New_York'), 236.99999999999636), (Timestamp('2025-09-08 02:30:00-0400', tz='America/New_York'), 238.99999999999636), (Timestamp('2025-09-09 03:30:00-0400', tz='America/New_York'), 251.89999999999418), (Timestamp('2025-09-10 06:30:00-0400', tz='America/New_York'), 239.39999999999418), (Timestamp('2025-09-11 06:45:00-0400', tz='America/New_York'), 261.8999999999942), (Timestamp('2025-09-12 09:30:00-0400', tz='America/New_York'), 239.39999999999418)]
+Sortino Ratio: 3.330241333214297
+Calmar Ratio: 0.11825032129693408
+Avg Holding Time: 0 days 01:31:15
+Max Consecutive Wins: 7
+Max Consecutive Losses: 4
+Avg Win: 9.854411764705754
+Avg Loss: 7.525000000000056
+Gross Profit: 335.04999999999563
+Gross Loss: 195.65000000000146
+Sl Hits: 26
+Tp Hits: 34
+Biggest Profit: 45.0
+Biggest Loss: -22.5
+
+--- Backtesting Symbol: USDMXN ---
+
+--- Starting Backtest for USDMXN from 2025-06-16 11:06:14.105844+00:00 to 2025-09-14 11:06:14.105844+00:00 ---
+Successfully connected to account #40775569 on Deriv-Demo
+Shutting down MT5 connection.
+No trades were executed during the backtest period.
+
+--- Backtesting Symbol: BTCUSD ---
+
+--- Starting Backtest for BTCUSD from 2025-06-16 11:06:14.105844+00:00 to 2025-09-14 11:06:14.105844+00:00 ---
+Successfully connected to account #40775569 on Deriv-Demo
+Shutting down MT5 connection.
+No trades were executed during the backtest period.
+
+--- Backtesting Symbol: XAUUSD ---
+
+--- Starting Backtest for XAUUSD from 2025-06-16 11:06:14.105844+00:00 to 2025-09-14 11:06:14.105844+00:00 ---
+Successfully connected to account #40775569 on Deriv-Demo
+Shutting down MT5 connection.
+No trades were executed during the backtest period.
+
+--- Backtesting Symbol: XAGUSD ---
+
+--- Starting Backtest for XAGUSD from 2025-06-16 11:06:14.105844+00:00 to 2025-09-14 11:06:14.105844+00:00 ---
+Successfully connected to account #40775569 on Deriv-Demo
+Shutting down MT5 connection.
+No trades were executed during the backtest period.
+
+--- Backtesting Symbol: XPTUSD ---
+
+--- Starting Backtest for XPTUSD from 2025-06-16 11:06:14.105844+00:00 to 2025-09-14 11:06:14.105844+00:00 ---
+Successfully connected to account #40775569 on Deriv-Demo
+Shutting down MT5 connection.
+No trades were executed during the backtest period.
+
+--- Backtesting Symbol: NGAS ---
+
+--- Starting Backtest for NGAS from 2025-06-16 11:06:14.105844+00:00 to 2025-09-14 11:06:14.105844+00:00 ---
+Successfully connected to account #40775569 on Deriv-Demo
+Shutting down MT5 connection.
+No trades were executed during the backtest period.
+
+--- Backtesting Symbol: UK Brent Oil ---
+
+--- Starting Backtest for UK Brent Oil from 2025-06-16 11:06:14.105844+00:00 to 2025-09-14 11:06:14.105844+00:00 ---
+Successfully connected to account #40775569 on Deriv-Demo
+Shutting down MT5 connection.
+No trades were executed during the backtest period.
+
+--- Backtesting Symbol: US Oil ---
+
+--- Starting Backtest for US Oil from 2025-06-16 11:06:14.105844+00:00 to 2025-09-14 11:06:14.105844+00:00 ---
+Successfully connected to account #40775569 on Deriv-Demo
+Shutting down MT5 connection.
+No trades were executed during the backtest period.
+Generating Excel report to D:\Microsoft VS Code\Projects\2025\ORB_Outputs\ORB_portfolio_results.xlsx...
+Successfully saved Excel report: D:\Microsoft VS Code\Projects\2025\ORB_Outputs\ORB_portfolio_results.xlsx
+Generated backtest chart for Portfolio at D:\Microsoft VS Code\Projects\2025\ORB_Outputs\Portfolio_backtest_chart.png
+Generated P/L histogram for Portfolio: D:\Microsoft VS Code\Projects\2025\ORB_Outputs\Portfolio_pnl_histogram.png
