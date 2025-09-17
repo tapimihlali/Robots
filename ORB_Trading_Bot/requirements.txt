@@ -1,0 +1,11 @@
+
+pandas
+numpy
+pytz
+MetaTrader5
+matplotlib
+requests
+openpyxl
+pandas-ta
+numba
+xlsxwriter
