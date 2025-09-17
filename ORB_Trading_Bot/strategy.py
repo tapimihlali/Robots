@@ -4,6 +4,7 @@ Core trading strategy logic for the ORB Trading Bot.
 """
 
 from datetime import time
+import MetaTrader5 as mt5
 import config
 import pytz
 
@@ -42,13 +43,20 @@ def get_opening_range_24_hour(df_day, current_time):
     else:
         return None, None
 
-def check_trade_signals(df_day, orh, orl, bullish_break, bearish_break):
+def check_trade_signals(symbol, df_day, orh, orl, bullish_break, bearish_break):
     """Checks for ORB trade signals (Break and Retest, Reversal)."""
     
     signals = []
     
     if len(df_day) < 2:
         return signals, bullish_break, bearish_break
+
+    symbol_info = mt5.symbol_info(symbol)
+    if not symbol_info:
+        print(f"Could not get symbol info for {symbol}")
+        return signals, bullish_break, bearish_break
+        
+    point = symbol_info.point
 
     prev_candle = df_day.iloc[-2]
     current_candle = df_day.iloc[-1]
@@ -64,7 +72,8 @@ def check_trade_signals(df_day, orh, orl, bullish_break, bearish_break):
         entry_price = orh
         stop_loss = current_candle['Low']
         risk = entry_price - stop_loss
-        if risk > 0:
+        stop_loss_pips = risk / point
+        if risk > 0 and stop_loss_pips <= config.MAX_STOP_LOSS_PIPS:
             take_profit = entry_price + (risk * config.RISK_REWARD_RATIO_STANDARD)
             signals.append({'type': 'BUY', 'entry': entry_price, 'sl': stop_loss, 'tp': take_profit, 'strategy': 'Standard'})
 
@@ -72,7 +81,8 @@ def check_trade_signals(df_day, orh, orl, bullish_break, bearish_break):
         entry_price = orl
         stop_loss = current_candle['High']
         risk = stop_loss - entry_price
-        if risk > 0:
+        stop_loss_pips = risk / point
+        if risk > 0 and stop_loss_pips <= config.MAX_STOP_LOSS_PIPS:
             take_profit = entry_price - (risk * config.RISK_REWARD_RATIO_STANDARD)
             signals.append({'type': 'SELL', 'entry': entry_price, 'sl': stop_loss, 'tp': take_profit, 'strategy': 'Standard'})
 
@@ -82,7 +92,8 @@ def check_trade_signals(df_day, orh, orl, bullish_break, bearish_break):
             entry_price = current_candle['Close']
             stop_loss = current_candle['Low']
             risk = entry_price - stop_loss
-            if risk > 0:
+            stop_loss_pips = risk / point
+            if risk > 0 and stop_loss_pips <= config.MAX_STOP_LOSS_PIPS:
                 take_profit = entry_price + (risk * config.RISK_REWARD_RATIO_REVERSAL)
                 signals.append({'type': 'BUY', 'entry': entry_price, 'sl': stop_loss, 'tp': take_profit, 'strategy': 'Reversal'})
 
@@ -90,7 +101,8 @@ def check_trade_signals(df_day, orh, orl, bullish_break, bearish_break):
             entry_price = current_candle['Close']
             stop_loss = current_candle['High']
             risk = stop_loss - entry_price
-            if risk > 0:
+            stop_loss_pips = risk / point
+            if risk > 0 and stop_loss_pips <= config.MAX_STOP_LOSS_PIPS:
                 take_profit = entry_price - (risk * config.RISK_REWARD_RATIO_REVERSAL)
                 signals.append({'type': 'SELL', 'entry': entry_price, 'sl': stop_loss, 'tp': take_profit, 'strategy': 'Reversal'})
                 

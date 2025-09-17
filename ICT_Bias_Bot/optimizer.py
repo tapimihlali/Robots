@@ -1,3 +1,41 @@
+import sys
+import os
+
+# --- Start of logging setup ---
+class Tee:
+    def __init__(self, *files):
+        self.files = files
+    def write(self, obj):
+        for f in self.files:
+            f.write(obj)
+            f.flush()
+    def flush(self):
+        for f in self.files:
+            f.flush()
+
+output_dir = r'D:\Microsoft VS Code\Projects\2025\ICT_Bias_Outputs'
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+
+script_name = os.path.basename(__file__).replace('.py', '')
+output_filename_map = {
+    'main': 'ICT_Main_output.txt',
+    'backtest': 'ICT_backtest_output.txt',
+    'optimizer': 'ICT_optimizer_output.txt',
+    'optimizer_walk_forward': 'ICT_optimizer_walk_forward_output.txt'
+}
+output_file_name = output_filename_map.get(script_name, f'ICT_{script_name}_output.txt')
+output_file_path = os.path.join(output_dir, output_file_name)
+
+log_file = open(output_file_path, 'w')
+
+original_stdout = sys.stdout
+original_stderr = sys.stderr
+
+sys.stdout = Tee(original_stdout, log_file)
+sys.stderr = Tee(original_stderr, log_file)
+# --- End of logging setup ---
+
 import pandas as pd
 import numpy as np
 from itertools import product
@@ -5,8 +43,6 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta
 import pytz
-import sys
-import os
 
 # Import the refactored backtest runner
 from backtest import run_backtest
@@ -14,19 +50,6 @@ import config
 
 WFO_START_DATE = datetime(2024, 1, 1, tzinfo=pytz.UTC)
 WFO_END_DATE = datetime(2025, 12, 31, tzinfo=pytz.UTC)
-
-class Tee:
-    def __init__(self, *files):
-        self.files = files
-    def write(self, obj):
-        for f in self.files:
-        
-            f.write(obj)
-            f.flush()  # Ensure timely output
-    def flush(self):
-        
-        for f in self.files:
-            f.flush()
 
 # --- OPTIMIZATION CONFIGURATION ---
 
@@ -186,76 +209,64 @@ def run_optimization():
     """
     Runs a grid search optimization, saves results incrementally, and provides a data-driven summary.
     """
-    original_stdout = sys.stdout
-    output_dir = config.OUTPUT_PATH
-    os.makedirs(output_dir, exist_ok=True)
-    output_file_path = os.path.join(output_dir, 'optimizer_output.txt')
-    log_file = open(output_file_path, 'w')
+    print("--- STARTING STANDARD PARAMETER OPTIMIZATION ---")
     
-    sys.stdout = Tee(original_stdout, log_file)
-
+    csv_output_path = os.path.join(config.OUTPUT_PATH, "ICT_optimization_raw_results.csv")
     try:
-        print("--- STARTING STANDARD PARAMETER OPTIMIZATION ---")
+        all_results_df = pd.read_csv(csv_output_path)
+        print("Loaded existing optimization results.")
+    except FileNotFoundError:
+        all_results_df = pd.DataFrame()
+        print("No existing results found. Starting fresh.")
+
+    total_symbols = len(OPTIMIZATION_PARAMS)
+    symbol_count = 0
+
+    for symbol, params in OPTIMIZATION_PARAMS.items():
+        symbol_count += 1
+        param_combinations = list(product(*params.values()))
+        tasks = [dict(zip(params.keys(), combo)) for combo in param_combinations]
         
-        csv_output_path = os.path.join(output_dir, "ICT_optimization_raw_results.csv")
-        try:
-            all_results_df = pd.read_csv(csv_output_path)
-            print("Loaded existing optimization results.")
-        except FileNotFoundError:
-            all_results_df = pd.DataFrame()
-            print("No existing results found. Starting fresh.")
+        print(f"\n--- Optimizing Symbol {symbol_count}/{total_symbols}: {symbol} ({len(tasks)} combinations) ---")
 
-        total_symbols = len(OPTIMIZATION_PARAMS)
-        symbol_count = 0
+        with ThreadPoolExecutor(max_workers=8) as executor:
+            futures = [executor.submit(_run_single_backtest, symbol, param_dict, WFO_START_DATE, WFO_END_DATE) for param_dict in tasks]
+            symbol_results = [future.result() for future in futures if future.result() is not None]
 
-        for symbol, params in OPTIMIZATION_PARAMS.items():
-            symbol_count += 1
-            param_combinations = list(product(*params.values()))
-            tasks = [dict(zip(params.keys(), combo)) for combo in param_combinations]
-            
-            print(f"\n--- Optimizing Symbol {symbol_count}/{total_symbols}: {symbol} ({len(tasks)} combinations) ---")
+        if not symbol_results:
+            print(f"No results generated for {symbol}. Skipping save.")
+            continue
 
-            with ThreadPoolExecutor(max_workers=8) as executor:
-                futures = [executor.submit(_run_single_backtest, symbol, param_dict, WFO_START_DATE, WFO_END_DATE) for param_dict in tasks]
-                symbol_results = [future.result() for future in futures if future.result() is not None]
+        new_results_df = pd.DataFrame(symbol_results)
+        if not all_results_df.empty and 'Symbol' in all_results_df.columns:
+            all_results_df = all_results_df[all_results_df['Symbol'] != symbol]
+        
+        all_results_df = pd.concat([all_results_df, new_results_df], ignore_index=True)
+        all_results_df.to_csv(csv_output_path, index=False)
+        print(f"Saved results for {symbol} to {csv_output_path}")
 
-            if not symbol_results:
-                print(f"No results generated for {symbol}. Skipping save.")
-                continue
+    if not all_results_df.empty:
+        print("\n--- OPTIMIZATION COMPLETE ---")
+        final_df = analyze_and_suggest(all_results_df)
+        final_df = final_df.sort_values(by=['Symbol', 'Rank'])
 
-            new_results_df = pd.DataFrame(symbol_results)
-            if not all_results_df.empty and 'Symbol' in all_results_df.columns:
-                all_results_df = all_results_df[all_results_df['Symbol'] != symbol]
-            
-            all_results_df = pd.concat([all_results_df, new_results_df], ignore_index=True)
-            all_results_df.to_csv(csv_output_path, index=False)
-            print(f"Saved results for {symbol} to {csv_output_path}")
+        best_params_summary = final_df.loc[final_df.groupby('Symbol')['Overall Score'].idxmax()]
 
-        if not all_results_df.empty:
-            print("\n--- OPTIMIZATION COMPLETE ---")
-            final_df = analyze_and_suggest(all_results_df)
-            final_df = final_df.sort_values(by=['Symbol', 'Rank'])
+        excel_output_path = os.path.join(config.OUTPUT_PATH, "ICT_optimization_results.xlsx")
+        with pd.ExcelWriter(excel_output_path, engine='openpyxl') as writer:
+            best_params_summary.to_excel(writer, sheet_name='Best Parameters Summary', index=False)
+            final_df.to_excel(writer, sheet_name='Full Optimization Results', index=False)
+        
+        print(f"Data-driven optimization summary and full results saved to {excel_output_path}")
+        print("\n--- TOP 3 PICKS PER SYMBOL ---")
+        for symbol in final_df['Symbol'].unique():
+            print(f"\n--- {symbol} ---")
+            top_3 = final_df[final_df['Symbol'] == symbol].head(3)
+            print(top_3[['Rank', 'Suggestion', 'MAX_SL_PIPS', 'SL_BUFFER_PIPS', 'TP_RULE', 'Net Profit', 'Sharpe Ratio', 'Max Drawdown (%)']].to_string(index=False))
 
-            best_params_summary = final_df.loc[final_df.groupby('Symbol')['Overall Score'].idxmax()]
-
-            excel_output_path = os.path.join(output_dir, "ICT_optimization_results.xlsx")
-            with pd.ExcelWriter(excel_output_path, engine='openpyxl') as writer:
-                best_params_summary.to_excel(writer, sheet_name='Best Parameters Summary', index=False)
-                final_df.to_excel(writer, sheet_name='Full Optimization Results', index=False)
-            
-            print(f"Data-driven optimization summary and full results saved to {excel_output_path}")
-            print("\n--- TOP 3 PICKS PER SYMBOL ---")
-            for symbol in final_df['Symbol'].unique():
-                print(f"\n--- {symbol} ---")
-                top_3 = final_df[final_df['Symbol'] == symbol].head(3)
-                print(top_3[['Rank', 'Suggestion', 'MAX_SL_PIPS', 'SL_BUFFER_PIPS', 'TP_RULE', 'Net Profit', 'Sharpe Ratio', 'Max Drawdown (%)']].to_string(index=False))
-
-        else:
-            print("\n--- OPTIMIZATION COMPLETE ---")
-            print("No results were generated during the optimization.")
-    finally:
-        sys.stdout = original_stdout
-        log_file.close()
+    else:
+        print("\n--- OPTIMIZATION COMPLETE ---")
+        print("No results were generated during the optimization.")
 
 if __name__ == "__main__":
     run_optimization()

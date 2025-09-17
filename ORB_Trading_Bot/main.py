@@ -87,7 +87,7 @@ def run_live(client):
                     if len(live_df) < 2:
                         continue
                     
-                    signals, state['bullish_break'], state['bearish_break'] = strategy.check_trade_signals(live_df, state['orh'], state['orl'], state['bullish_break'], state['bearish_break'])
+                    signals, state['bullish_break'], state['bearish_break'] = strategy.check_trade_signals(symbol, live_df, state['orh'], state['orl'], state['bullish_break'], state['bearish_break'])
 
                     if signals:
                         for signal in signals:

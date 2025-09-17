@@ -1,3 +1,41 @@
+import sys
+import os
+
+# --- Start of logging setup ---
+class Tee:
+    def __init__(self, *files):
+        self.files = files
+    def write(self, obj):
+        for f in self.files:
+            f.write(obj)
+            f.flush()
+    def flush(self):
+        for f in self.files:
+            f.flush()
+
+output_dir = r'D:\Microsoft VS Code\Projects\2025\ICT_Bias_Outputs'
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+
+script_name = os.path.basename(__file__).replace('.py', '')
+output_filename_map = {
+    'main': 'ICT_Main_output.txt',
+    'backtest': 'ICT_backtest_output.txt',
+    'optimizer': 'ICT_optimizer_output.txt',
+    'optimizer_walk_forward': 'ICT_optimizer_walk_forward_output.txt'
+}
+output_file_name = output_filename_map.get(script_name, f'ICT_{script_name}_output.txt')
+output_file_path = os.path.join(output_dir, output_file_name)
+
+log_file = open(output_file_path, 'w')
+
+original_stdout = sys.stdout
+original_stderr = sys.stderr
+
+sys.stdout = Tee(original_stdout, log_file)
+sys.stderr = Tee(original_stderr, log_file)
+# --- End of logging setup ---
+
 import pandas as pd
 import numpy as np
 from itertools import product
@@ -5,23 +43,10 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta
 import pytz
-import sys
-import os
 
 # Import the refactored backtest runner
 from backtest import run_backtest
 import config
-
-class Tee:
-    def __init__(self, *files):
-        self.files = files
-    def write(self, obj):
-        for f in self.files:
-            f.write(obj)
-            f.flush()  # Ensure timely output
-    def flush(self):
-        for f in self.files:
-            f.flush()
 
 # --- WALK-FORWARD OPTIMIZATION CONFIGURATION ---
 # Overall period for Walk-Forward Optimization 2024, 1, 1,
@@ -240,141 +265,126 @@ def run_walk_forward_optimization():
     """
     Runs a walk-forward optimization, saves results to CSV and Excel, and prints summaries.
     """
-    original_stdout = sys.stdout
-    output_dir = config.OUTPUT_PATH
-    os.makedirs(output_dir, exist_ok=True)
-    output_file_path = os.path.join(output_dir, 'optimizer_output.txt')
-    log_file = open(output_file_path, 'w')
+    print("--- STARTING WALK-FORWARD OPTIMIZATION ---")
     
-    # Redirect stdout to both console and file
-    sys.stdout = Tee(original_stdout, log_file)
-
+    temp_results_file = os.path.join(config.OUTPUT_PATH, "ICT_walk_forward_results_temp.csv")
     try:
-        print("--- STARTING WALK-FORWARD OPTIMIZATION ---")
-        
-        temp_results_file = os.path.join(output_dir, "ICT_walk_forward_results_temp.csv")
-        try:
-            all_wfo_results_df = pd.read_csv(temp_results_file)
-            all_wfo_results = all_wfo_results_df.to_dict('records')
-            # Resume from the last completed step
-            last_oos_end_str = all_wfo_results[-1]['WFO_OOS_End']
-            # Correctly parse the date string which might be in 'YYYY-MM-DD HH:MM:SS' format
-            last_oos_end = pd.to_datetime(last_oos_end_str).tz_localize('UTC')
-            current_wfo_start = last_oos_end - timedelta(days=OOS_WINDOW_DAYS - STEP_DAYS)
-            print(f"Loaded {len(all_wfo_results)} existing walk-forward results. Resuming from {current_wfo_start.strftime('%Y-%m-%d')}.")
-        except (FileNotFoundError, KeyError, IndexError):
-            all_wfo_results = []
-            current_wfo_start = WFO_START_DATE
-            print("No existing temporary results found. Starting fresh.")
+        all_wfo_results_df = pd.read_csv(temp_results_file)
+        all_wfo_results = all_wfo_results_df.to_dict('records')
+        # Resume from the last completed step
+        last_oos_end_str = all_wfo_results[-1]['WFO_OOS_End']
+        # Correctly parse the date string which might be in 'YYYY-MM-DD HH:MM:SS' format
+        last_oos_end = pd.to_datetime(last_oos_end_str).tz_localize('UTC')
+        current_wfo_start = last_oos_end - timedelta(days=OOS_WINDOW_DAYS - STEP_DAYS)
+        print(f"Loaded {len(all_wfo_results)} existing walk-forward results. Resuming from {current_wfo_start.strftime('%Y-%m-%d')}.")
+    except (FileNotFoundError, KeyError, IndexError):
+        all_wfo_results = []
+        current_wfo_start = WFO_START_DATE
+        print("No existing temporary results found. Starting fresh.")
 
-        while current_wfo_start + timedelta(days=IS_WINDOW_DAYS + OOS_WINDOW_DAYS) <= WFO_END_DATE:
-            is_start = current_wfo_start
-            is_end = is_start + timedelta(days=IS_WINDOW_DAYS)
-            oos_start = is_end
-            oos_end = oos_start + timedelta(days=OOS_WINDOW_DAYS)
+    while current_wfo_start + timedelta(days=IS_WINDOW_DAYS + OOS_WINDOW_DAYS) <= WFO_END_DATE:
+        is_start = current_wfo_start
+        is_end = is_start + timedelta(days=IS_WINDOW_DAYS)
+        oos_start = is_end
+        oos_end = oos_start + timedelta(days=OOS_WINDOW_DAYS)
 
-            if oos_end > WFO_END_DATE:
-                print(f"Skipping WFO step: OOS window ({oos_start.strftime('%Y-%m-%d')} to {oos_end.strftime('%Y-%m-%d')}) exceeds WFO_END_DATE.")
-                break
+        if oos_end > WFO_END_DATE:
+            print(f"Skipping WFO step: OOS window ({oos_start.strftime('%Y-%m-%d')} to {oos_end.strftime('%Y-%m-%d')}) exceeds WFO_END_DATE.")
+            break
 
-            print(f"\n--- WFO Step: IS [{is_start.strftime('%Y-%m-%d')} - {is_end.strftime('%Y-%m-%d')}] | OOS [{oos_start.strftime('%Y-%m-%d')} - {oos_end.strftime('%Y-%m-%d')}] ---")
-        
-            # --- IN-SAMPLE OPTIMIZATION ---
-            is_results_df = pd.DataFrame()
-            for symbol, params in OPTIMIZATION_PARAMS.items():
-                param_combinations = list(product(*params.values()))
-                tasks = [dict(zip(params.keys(), combo)) for combo in param_combinations]
-                
-                print(f"Optimizing {symbol} for IS period...")
-                with ThreadPoolExecutor(max_workers=8) as executor:
-                    futures = [executor.submit(_run_single_backtest, symbol, param_dict, is_start, is_end) for param_dict in tasks]
-                    symbol_is_results = [future.result() for future in futures if future.result() is not None]
-                
-                if symbol_is_results:
-                    is_results_df = pd.concat([is_results_df, pd.DataFrame(symbol_is_results)], ignore_index=True)
+        print(f"\n--- WFO Step: IS [{is_start.strftime('%Y-%m-%d')} - {is_end.strftime('%Y-%m-%d')}] | OOS [{oos_start.strftime('%Y-%m-%d')} - {oos_end.strftime('%Y-%m-%d')}] ---")
+    
+        # --- IN-SAMPLE OPTIMIZATION ---
+        is_results_df = pd.DataFrame()
+        for symbol, params in OPTIMIZATION_PARAMS.items():
+            param_combinations = list(product(*params.values()))
+            tasks = [dict(zip(params.keys(), combo)) for combo in param_combinations]
             
-            if is_results_df.empty:
-                print(f"No IS results for this WFO step. Advancing window.")
-                current_wfo_start += timedelta(days=STEP_DAYS)
-                continue
-
-            # Analyze IS results to find best parameters
-            is_results_df = analyze_and_suggest(is_results_df)
-            best_params_per_symbol = is_results_df.loc[is_results_df.groupby('Symbol')['Overall Score'].idxmax()]
-
-            # --- OUT-OF-SAMPLE TESTING ---
-            for index, row in best_params_per_symbol.iterrows():
-                symbol = row['Symbol']
-                best_param_dict = {k: row[k] for k in OPTIMIZATION_PARAMS[symbol].keys()}
-                
-                print(f"Testing {symbol} OOS with best IS params...")
-                oos_summary = _run_single_backtest(symbol, best_param_dict, oos_start, oos_end)
-                if oos_summary:
-                    oos_summary['WFO_IS_Start'] = is_start
-                    oos_summary['WFO_IS_End'] = is_end
-                    oos_summary['WFO_OOS_Start'] = oos_start
-                    oos_summary['WFO_OOS_End'] = oos_end
-                    all_wfo_results.append(oos_summary)
-                    # --- Incremental Save ---
-                    pd.DataFrame(all_wfo_results).to_csv(temp_results_file, index=False)
-                    print(f"Incrementally saved {len(all_wfo_results)} results to {temp_results_file}")
+            print(f"Optimizing {symbol} for IS period...")
+            with ThreadPoolExecutor(max_workers=8) as executor:
+                futures = [executor.submit(_run_single_backtest, symbol, param_dict, is_start, is_end) for param_dict in tasks]
+                symbol_is_results = [future.result() for future in futures if future.result() is not None]
             
+            if symbol_is_results:
+                is_results_df = pd.concat([is_results_df, pd.DataFrame(symbol_is_results)], ignore_index=True)
+        
+        if is_results_df.empty:
+            print(f"No IS results for this WFO step. Advancing window.")
             current_wfo_start += timedelta(days=STEP_DAYS)
+            continue
+
+        # Analyze IS results to find best parameters
+        is_results_df = analyze_and_suggest(is_results_df)
+        best_params_per_symbol = is_results_df.loc[is_results_df.groupby('Symbol')['Overall Score'].idxmax()]
+
+        # --- OUT-OF-SAMPLE TESTING ---
+        for index, row in best_params_per_symbol.iterrows():
+            symbol = row['Symbol']
+            best_param_dict = {k: row[k] for k in OPTIMIZATION_PARAMS[symbol].keys()}
+            
+            print(f"Testing {symbol} OOS with best IS params...")
+            oos_summary = _run_single_backtest(symbol, best_param_dict, oos_start, oos_end)
+            if oos_summary:
+                oos_summary['WFO_IS_Start'] = is_start
+                oos_summary['WFO_IS_End'] = is_end
+                oos_summary['WFO_OOS_Start'] = oos_start
+                oos_summary['WFO_OOS_End'] = oos_end
+                all_wfo_results.append(oos_summary)
+                # --- Incremental Save ---
+                pd.DataFrame(all_wfo_results).to_csv(temp_results_file, index=False)
+                print(f"Incrementally saved {len(all_wfo_results)} results to {temp_results_file}")
         
-        if all_wfo_results:
-            final_wfo_df = pd.DataFrame(all_wfo_results)
-            
-            # --- SAVE RAW RESULTS ---
-            final_wfo_df.to_csv(os.path.join(output_dir, "ICT_walk_forward_results.csv"), index=False)
-            print(f"\nDetailed WFO results saved to {os.path.join(output_dir, "ICT_walk_forward_results.csv")}")
+        current_wfo_start += timedelta(days=STEP_DAYS)
+    
+    if all_wfo_results:
+        final_wfo_df = pd.DataFrame(all_wfo_results)
+        
+        # --- SAVE RAW RESULTS ---
+        final_wfo_df.to_csv(os.path.join(config.OUTPUT_PATH, "ICT_walk_forward_results.csv"), index=False)
+        print(f"\nDetailed WFO results saved to {os.path.join(config.OUTPUT_PATH, "ICT_walk_forward_results.csv")}")
 
-            # --- AGGREGATE AND ANALYZE OOS RESULTS ---
-            overall_oos_profit = final_wfo_df['Net Profit'].sum()
-            overall_oos_trades = final_wfo_df['Total Trades'].sum()
-            print(f"\n--- WALK-FORWARD OPTIMIZATION COMPLETE ---")
-            print(f"Total OOS Net Profit: ${overall_oos_profit:.2f}")
-            print(f"Total OOS Trades: {overall_oos_trades}")
+        # --- AGGREGATE AND ANALYZE OOS RESULTS ---
+        overall_oos_profit = final_wfo_df['Net Profit'].sum()
+        overall_oos_trades = final_wfo_df['Total Trades'].sum()
+        print(f"\n--- WALK-FORWARD OPTIMIZATION COMPLETE ---")
+        print(f"Total OOS Net Profit: ${overall_oos_profit:.2f}")
+        print(f"Total OOS Trades: {overall_oos_trades}")
 
-            analyzed_wfo_df = analyze_and_suggest(final_wfo_df.copy())
-            analyzed_wfo_df = analyzed_wfo_df.sort_values(by=['Symbol', 'Rank'])
+        analyzed_wfo_df = analyze_and_suggest(final_wfo_df.copy())
+        analyzed_wfo_df = analyzed_wfo_df.sort_values(by=['Symbol', 'Rank'])
 
-            best_params_overall = analyzed_wfo_df.sort_values(by='Overall Score', ascending=False)
+        best_params_overall = analyzed_wfo_df.sort_values(by='Overall Score', ascending=False)
 
-            # --- SAVE TO EXCEL ---
-            excel_final_wfo_df = final_wfo_df.copy()
-            for col in ['WFO_IS_Start', 'WFO_IS_End', 'WFO_OOS_Start', 'WFO_OOS_End']:
-                if col in excel_final_wfo_df.columns:
-                    excel_final_wfo_df[col] = pd.to_datetime(excel_final_wfo_df[col]).dt.tz_localize(None)
+        # --- SAVE TO EXCEL ---
+        excel_final_wfo_df = final_wfo_df.copy()
+        for col in ['WFO_IS_Start', 'WFO_IS_End', 'WFO_OOS_Start', 'WFO_OOS_End']:
+            if col in excel_final_wfo_df.columns:
+                excel_final_wfo_df[col] = pd.to_datetime(excel_final_wfo_df[col]).dt.tz_localize(None)
 
-            excel_analyzed_wfo_df = analyzed_wfo_df.copy()
-            for col in ['WFO_IS_Start', 'WFO_IS_End', 'WFO_OOS_Start', 'WFO_OOS_End']:
-                if col in excel_analyzed_wfo_df.columns:
-                    excel_analyzed_wfo_df[col] = pd.to_datetime(excel_analyzed_wfo_df[col]).dt.tz_localize(None)
+        excel_analyzed_wfo_df = analyzed_wfo_df.copy()
+        for col in ['WFO_IS_Start', 'WFO_IS_End', 'WFO_OOS_Start', 'WFO_OOS_End']:
+            if col in excel_analyzed_wfo_df.columns:
+                excel_analyzed_wfo_df[col] = pd.to_datetime(excel_analyzed_wfo_df[col]).dt.tz_localize(None)
 
-            excel_best_params_overall = best_params_overall.copy()
-            for col in ['WFO_IS_Start', 'WFO_IS_End', 'WFO_OOS_Start', 'WFO_OOS_End']:
-                if col in excel_best_params_overall.columns:
-                    excel_best_params_overall[col] = pd.to_datetime(excel_best_params_overall[col]).dt.tz_localize(None)
+        excel_best_params_overall = best_params_overall.copy()
+        for col in ['WFO_IS_Start', 'WFO_IS_End', 'WFO_OOS_Start', 'WFO_OOS_End']:
+            if col in excel_best_params_overall.columns:
+                excel_best_params_overall[col] = pd.to_datetime(excel_best_params_overall[col]).dt.tz_localize(None)
 
-            excel_output_path = os.path.join(output_dir, "ICT_walk_forward_results.xlsx")
-            with pd.ExcelWriter(excel_output_path, engine='openpyxl') as writer:
-                excel_final_wfo_df.to_excel(writer, sheet_name='Walk-Forward Raw Results', index=False)
-                excel_analyzed_wfo_df.to_excel(writer, sheet_name='Optimization Analysis', index=False)
-                excel_best_params_overall.to_excel(writer, sheet_name='Best Parameters Overall', index=False)
-            
-            print("Walk-Forward results, analysis, and best parameters saved to ICT_walk_forward_results.xlsx")
-            # --- CLEANUP ---
-            if os.path.exists(temp_results_file):
-                os.remove(temp_results_file)
-                print(f"Removed temporary results file: {temp_results_file}")
+        excel_output_path = os.path.join(config.OUTPUT_PATH, "ICT_walk_forward_results.xlsx")
+        with pd.ExcelWriter(excel_output_path, engine='openpyxl') as writer:
+            excel_final_wfo_df.to_excel(writer, sheet_name='Walk-Forward Raw Results', index=False)
+            excel_analyzed_wfo_df.to_excel(writer, sheet_name='Optimization Analysis', index=False)
+            excel_best_params_overall.to_excel(writer, sheet_name='Best Parameters Overall', index=False)
+        
+        print("Walk-Forward results, analysis, and best parameters saved to ICT_walk_forward_results.xlsx")
+        # --- CLEANUP ---
+        if os.path.exists(temp_results_file):
+            os.remove(temp_results_file)
+            print(f"Removed temporary results file: {temp_results_file}")
 
-        else:
-            print("No Walk-Forward Optimization results were generated.")
-
-    finally:
-        # Restore original stdout and close the file
-        sys.stdout = original_stdout
-        log_file.close()
+    else:
+        print("No Walk-Forward Optimization results were generated.")
 
 if __name__ == "__main__":
     run_walk_forward_optimization()

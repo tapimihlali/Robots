@@ -211,4 +211,4 @@ TELEGRAM_BOT_TOKEN = "8358145860:AAE4moHg8RUjk__uj0kZs_rKrCt5wFySWy8" # Replace 
 TELEGRAM_CHAT_ID = "5116546179"       # Replace with your chat ID
 
 # --- OUTPUT SETTINGS ---
-OUTPUT_PATH = "D:\Microsoft VS Code\Projects\2025\ICT_Bias_Outputs" # Base directory for all generated output files
+OUTPUT_PATH = r"D:\Microsoft VS Code\Projects\2025\ICT_Bias_Outputs" # Base directory for all generated output files

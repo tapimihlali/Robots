@@ -1,3 +1,41 @@
+import sys
+import os
+
+# --- Start of logging setup ---
+class Tee:
+    def __init__(self, *files):
+        self.files = files
+    def write(self, obj):
+        for f in self.files:
+            f.write(obj)
+            f.flush()
+    def flush(self):
+        for f in self.files:
+            f.flush()
+
+output_dir = r'D:\Microsoft VS Code\Projects\2025\ICT_Bias_Outputs'
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+
+script_name = os.path.basename(__file__).replace('.py', '')
+output_filename_map = {
+    'main': 'ICT_Main_output.txt',
+    'backtest': 'ICT_backtest_output.txt',
+    'optimizer': 'ICT_optimizer_output.txt',
+    'optimizer_walk_forward': 'ICT_optimizer_walk_forward_output.txt'
+}
+output_file_name = output_filename_map.get(script_name, f'ICT_{script_name}_output.txt')
+output_file_path = os.path.join(output_dir, output_file_name)
+
+log_file = open(output_file_path, 'w')
+
+original_stdout = sys.stdout
+original_stderr = sys.stderr
+
+sys.stdout = Tee(original_stdout, log_file)
+sys.stderr = Tee(original_stderr, log_file)
+# --- End of logging setup ---
+
 import time
 from datetime import datetime
 import pytz

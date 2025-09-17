@@ -97,7 +97,7 @@ def plot_trades_on_price_chart(price_data, trades_df, symbol):
         marker = '^' if trade_type == 'BUY' else 'v'
 
         # Plot entry marker
-        ax.plot(open_time, entry_price, marker=marker, color=color, markersize=4, label=f'{trade_type} Entry')
+        ax.plot(open_time, entry_price, marker=marker, color=color, markersize=1, label=f'{trade_type} Entry')
 
         # Plot SL and TP lines
         ax.hlines(sl_price, open_time, close_time, color='red', linestyle='--', linewidth=1, label='Stop Loss')
