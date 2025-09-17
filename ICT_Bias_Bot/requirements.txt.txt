@@ -1,0 +1,14 @@
+# Data Handling and Time
+pandas
+numpy
+pytz
+scipy
+# API Integration (Example: Replace with your actual broker API)
+MetaTrader5
+# Configuration
+python-dotenv
+# Plotting
+matplotlib
+openpyxl
+# Notifications
+requests
