@@ -1,0 +1,118 @@
+Trade_visualizations:
+d:\Microsoft VS Code\Projects\2025\trade_visualizations
+
+Plotting Mode:
+python "d:\Microsoft VS Code\Projects\2025\Setup_folder\Setup_folder\deriv_mt5_bot.py" --mode plot --symbol "Volatility 75 (1s) Index" --marker_size 25
+
+Backtesting Mode:
+python "d:\Microsoft VS Code\Projects\2025\Setup_folder\Setup_folder\deriv_mt5_bot_v2.py" --mode backtest --days 30
+python "d:\Microsoft VS Code\Projects\2025\Setup_folder\Setup_folder\deriv_mt5_bot_v2.py" --mode backtest --symbol "Volatility 75 Index" --days 30
+
+Optimization Mode:
+python "d:\Microsoft VS Code\Projects\2025\Setup_folder\Setup_folder\deriv_mt5_bot_v2.py" --mode optimize --days 30
+
+run the commands independently:
+
+* For Live Trading:
+python deriv_mt5_bot_v2.py --mode live
+* For a Single Backtest:
+python "d:\Microsoft VS Code\Projects\2025\Setup_folder\Setup_folder\deriv_mt5_bot_v2.py" --mode backtest --symbol "YourSymbol" --days X
+* Portfolio Backtesting
+python "d:\Microsoft VS Code\Projects\2025\Setup_folder\Setup_folder\deriv_mt5_bot_v2.py" --mode portfolio_backtest --portfolio_days 3
+* For Optimization:
+python strategy_optimizer.py
+
+* Read Terminal output file
+read the file d:\Microsoft VS Code\Projects\2025\backtest_log.txt
+
+* Invalidation Analyzer
+python -m ICT_Bias_Bot.invalidation_analyzer
+
+
+    'US SP 500': {
+        'MAX_SL_PIPS': [50, 100, 150, 200, 250, 300],
+        'SL_BUFFER_PIPS': [10, 15, 20],
+        'TP_RULE': ['1:2', '1:3', 'PDH/PDL']
+    },
+    'US SP 500': {
+        'MAX_SL_PIPS': [50, 100, 150, 200, 250, 300],
+        'SL_BUFFER_PIPS': [10, 15, 20],
+        'TP_RULE': ['1:2', '1:3', 'PDH/PDL']
+    },
+    'UK 100': {
+        'MAX_SL_PIPS': [50, 100, 150, 200, 250, 300],
+        'SL_BUFFER_PIPS': [10, 15, 20],
+        'TP_RULE': ['1:2', '1:3', 'PDH/PDL']
+    },
+    'AMZN': {
+        'MAX_SL_PIPS': [50, 100, 150, 200, 250, 300],
+        'SL_BUFFER_PIPS': [10, 15, 20],
+        'TP_RULE': ['1:2', '1:3', 'PDH/PDL']
+    },
+    'AAPL': {
+        'MAX_SL_PIPS': [50, 100, 150, 200, 250, 300],
+        'SL_BUFFER_PIPS': [10, 15, 20],
+        'TP_RULE': ['1:2', '1:3', 'PDH/PDL']
+    },
+    'TSLA': {
+        'MAX_SL_PIPS': [50, 100, 150, 200, 250, 300],
+        'SL_BUFFER_PIPS': [10, 15, 20],
+        'TP_RULE': ['1:2', '1:3', 'PDH/PDL']
+    },
+    'MSFT': {
+        'MAX_SL_PIPS': [50, 100, 150, 200, 250, 300],
+        'SL_BUFFER_PIPS': [10, 15, 20],
+        'TP_RULE': ['1:2', '1:3', 'PDH/PDL']
+    },
+    'NGAS': {
+        'MAX_SL_PIPS': [50, 100, 150, 200, 250, 300],
+        'SL_BUFFER_PIPS': [10, 15, 20],
+        'TP_RULE': ['1:2', '1:3', 'PDH/PDL']
+    },
+    'US Oil': {
+        'MAX_SL_PIPS': [50, 100, 150, 200, 250, 300],
+        'SL_BUFFER_PIPS': [10, 15, 20],
+        'TP_RULE': ['1:2', '1:3', 'PDH/PDL']
+    },
+
+    'USDJPY': {
+        'MAX_SL_PIPS': [10, 15, 20, 25, 30, 40, 45, 50],
+        'SL_BUFFER_PIPS': [5, 8, 10],
+        'TP_RULE': ['1:2', '1:3', 'PDH/PDL']
+    },
+    'NZDUSD': {
+        'MAX_SL_PIPS': [10, 15, 20, 25, 30, 40, 45, 50],
+        'SL_BUFFER_PIPS': [5, 8, 10],
+        'TP_RULE': ['1:2', '1:3', 'PDH/PDL']
+    },
+    'GBPUSD': {
+        'MAX_SL_PIPS': [10, 15, 20, 25, 30, 40, 45, 50],
+        'SL_BUFFER_PIPS': [5, 8, 10],
+        'TP_RULE': ['1:2', '1:3', 'PDH/PDL']
+    },
+    'EURUSD': {
+        'MAX_SL_PIPS': [10, 15, 20, 25, 30, 40, 45, 50],
+        'SL_BUFFER_PIPS': [5, 8, 10],
+        'TP_RULE': ['1:2', '1:3', 'PDH/PDL']
+    },
+    'AUDUSD': {
+        'MAX_SL_PIPS': [10, 15, 20, 25, 30, 40, 45, 50],
+        'SL_BUFFER_PIPS': [5, 8, 10],
+        'TP_RULE': ['1:2', '1:3', 'PDH/PDL']
+    },
+    'USDCAD': {
+        'MAX_SL_PIPS': [10, 15, 20, 25, 30, 40, 45, 50],
+        'SL_BUFFER_PIPS': [5, 8, 10],
+        'TP_RULE': ['1:2', '1:3', 'PDH/PDL']
+    },
+    'USDCHF': {
+        'MAX_SL_PIPS': [10, 15, 20, 25, 30, 40, 45, 50],
+        'SL_BUFFER_PIPS': [5, 8, 10],
+        'TP_RULE': ['1:2', '1:3', 'PDH/PDL']
+    },
+    'USDMXN': {
+        'MAX_SL_PIPS': [10, 15, 20, 25, 30, 40, 45, 50],
+        'SL_BUFFER_PIPS': [5, 8, 10],
+        'TP_RULE': ['1:2', '1:3', 'PDH/PDL']
+    },
+

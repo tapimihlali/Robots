@@ -1,0 +1,34 @@
+********** DERIV MT5 BOT *******************
+* deriv_mt5_bot_config.py
+        "user": 40682668,
+        "password": "R0sycheeks@1",
+        "server": "Deriv-Demo",
+        "path": r"C:\Program Files\MetaTrader 5 Terminal\terminal64.exe"
+
+# --- TELEGRAM NOTIFICATIONS ---
+        "bot_token": "8233000695:AAH1qiEa4uaD4dJ_dpioK6-RUepfFZ00c4g",
+        "chat_id": "5116546179"
+
+
+********* ICT Bias Bot *********************
+* settings.py
+    User = 40682668
+    Pass = "R0sycheeks@1"
+    Server = "Deriv-Demo"
+    Path = r"C:\Program Files\MetaTrader 5 Terminal\terminal64.exe"
+
+* Config.py
+# --- TELEGRAM NOTIFICATIONS ---
+TELEGRAM_ENABLED = True # Set to False to disable notifications
+TELEGRAM_BOT_TOKEN = "8358145860:AAE4moHg8RUjk__uj0kZs_rKrCt5wFySWy8" # Replace with your bot token
+TELEGRAM_CHAT_ID = "5116546179"       # Replace with your chat ID
+
+
+The user wants a workflow for their trading bots, from optimization to live trading. I'll outline a six-step process:
+
+1. Single Symbol Backtesting: Validate the strategy on individual symbols, using --plot for visualization.
+2. Optimization: Tune parameters for promising symbols.
+3. Walk-Forward Optimization: Crucially, check parameter robustness against unseen data.
+4. Portfolio Backtesting: Evaluate overall strategy performance and diversification across multiple symbols.
+5. Demo Account Live Trading: Test in real-time market conditions without financial risk.
+6. Live Trading: Deploy with real capital only after thorough demo validation.
