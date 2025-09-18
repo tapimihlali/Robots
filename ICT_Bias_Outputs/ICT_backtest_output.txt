@@ -1,0 +1,982 @@
+--- Starting portfolio backtest ---
+Running backtest for individual symbol: EURUSD
+Initializing Backtest Client...
+Backtest will run from 2025-09-08 to ensure all symbols have data.
+--- Downloading data for EURUSD ---
+Pre-calculating daily biases...
+Daily bias pre-calculation complete.
+Historical data download complete.
+MT5 connection closed.
+Starting backtest from 2025-09-08 14:25:00+00:00 to 2025-09-18 14:20:00+00:00...
+DEBUG (LONG): sl_def_price=1.17017, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=1.17122, sl_price=1.16967, tp_price=1.178
+[2025-09-10 18:20:00+00:00] TRADE SIGNAL: EURUSD | LONG_REVERSAL on H1 -> M5
+--- TRADE OPENED (EURUSD) ---
+Time: 2025-09-10 18:20:00+00:00, Type: BUY, Entry: 1.17122, SL: 1.16967, TP: 1.17800, TP Rule: PDH/PDL
+--- TRADE CLOSED (EURUSD) --- Ticket: 1, Reason: SL Hit, Profit: -1.55
+DEBUG (SHORT): sl_def_price=1.174, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=1.17259, sl_price=1.1744999999999999, tp_price=1.16574
+DEBUG (SHORT): sl_def_price=1.174, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=1.17253, sl_price=1.1744999999999999, tp_price=1.16574
+DEBUG (SHORT): sl_def_price=1.174, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=1.17253, sl_price=1.1744999999999999, tp_price=1.16574
+DEBUG (SHORT): sl_def_price=1.174, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=1.17253, sl_price=1.1744999999999999, tp_price=1.16574
+DEBUG (SHORT): sl_def_price=1.17346, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=1.17253, sl_price=1.17396, tp_price=1.16574
+DEBUG (SHORT): sl_def_price=1.17346, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=1.17238, sl_price=1.17396, tp_price=1.16574
+DEBUG (SHORT): sl_def_price=1.17291, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=1.17241, sl_price=1.1734099999999998, tp_price=1.16574
+DEBUG (SHORT): sl_def_price=1.17291, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=1.17239, sl_price=1.1734099999999998, tp_price=1.16574
+DEBUG (SHORT): sl_def_price=1.17291, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=1.17238, sl_price=1.1734099999999998, tp_price=1.16574
+DEBUG (SHORT): sl_def_price=1.17276, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=1.1721, sl_price=1.17326, tp_price=1.16574
+DEBUG (SHORT): sl_def_price=1.17276, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=1.1721, sl_price=1.17326, tp_price=1.16574
+DEBUG (SHORT): sl_def_price=1.17276, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=1.1721, sl_price=1.17326, tp_price=1.16574
+DEBUG (SHORT): sl_def_price=1.17478, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=1.17251, sl_price=1.1752799999999999, tp_price=1.16574
+[2025-09-12 08:15:00+00:00] TRADE SIGNAL: EURUSD | SHORT_REVERSAL on H4 -> M15
+--- TRADE OPENED (EURUSD) ---
+Time: 2025-09-12 08:15:00+00:00, Type: SELL, Entry: 1.17251, SL: 1.17528, TP: 1.16574, TP Rule: PDH/PDL
+--- TRADE CLOSED (EURUSD) --- Ticket: 2, Reason: SL Hit, Profit: -2.77
+DEBUG (SHORT): sl_def_price=1.18596, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=1.1843, sl_price=1.1864599999999998, tp_price=1.17574
+[2025-09-17 07:10:00+00:00] TRADE SIGNAL: EURUSD | SHORT_REVERSAL on H4 -> M15
+--- TRADE OPENED (EURUSD) ---
+Time: 2025-09-17 07:10:00+00:00, Type: SELL, Entry: 1.18430, SL: 1.18646, TP: 1.17574, TP Rule: PDH/PDL
+--- TRADE CLOSED (EURUSD) --- Ticket: 3, Reason: SL Hit, Profit: -2.16
+DEBUG (SHORT): sl_def_price=1.18402, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=1.18199, sl_price=1.18452, tp_price=1.18069
+[2025-09-18 11:45:00+00:00] TRADE SIGNAL: EURUSD | SHORT_CONTINUATION on H1 -> M5
+--- TRADE OPENED (EURUSD) ---
+Time: 2025-09-18 11:45:00+00:00, Type: SELL, Entry: 1.18199, SL: 1.18452, TP: 1.18069, TP Rule: PDH/PDL
+--- TRADE CLOSED (EURUSD) --- Ticket: 4, Reason: TP Hit, Profit: 1.30
+--- BACKTEST COMPLETE ---
+Period: 2025-09-08 to 2025-09-18 (10 days)
+Trailing Stoploss: Off
+Invalidation Exit: On
+Report Generated: 2025-09-18 16:24:02
+Symbols Tested: ['EURUSD']
+Initial Equity: $100.00
+Final Equity: $94.82
+Total Net Profit: $-5.18
+Performance summary and trade history saved to ICT_backtest_results_EURUSD.xlsx
+Running backtest for individual symbol: GBPUSD
+Initializing Backtest Client...
+Backtest will run from 2025-09-08 to ensure all symbols have data.
+--- Downloading data for GBPUSD ---
+Pre-calculating daily biases...
+Daily bias pre-calculation complete.
+Historical data download complete.
+MT5 connection closed.
+Starting backtest from 2025-09-08 14:25:00+00:00 to 2025-09-18 14:20:00+00:00...
+DEBUG (LONG): sl_def_price=1.35275, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=1.35415, sl_price=1.35225, tp_price=1.35903
+[2025-09-10 18:20:00+00:00] TRADE SIGNAL: GBPUSD | LONG_REVERSAL on H1 -> M5
+--- TRADE OPENED (GBPUSD) ---
+Time: 2025-09-10 18:20:00+00:00, Type: BUY, Entry: 1.35415, SL: 1.35225, TP: 1.35903, TP Rule: PDH/PDL
+--- TRADE CLOSED (GBPUSD) --- Ticket: 1, Reason: SL Hit, Profit: -1.90
+DEBUG (LONG): sl_def_price=1.36421, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=1.36542, sl_price=1.36371, tp_price=1.36199
+--- BACKTEST COMPLETE ---
+Period: 2025-09-08 to 2025-09-18 (10 days)
+Trailing Stoploss: Off
+Invalidation Exit: On
+Report Generated: 2025-09-18 16:24:03
+Symbols Tested: ['GBPUSD']
+Initial Equity: $100.00
+Final Equity: $98.10
+Total Net Profit: $-1.90
+Performance summary and trade history saved to ICT_backtest_results_GBPUSD.xlsx
+Running backtest for individual symbol: USDJPY
+Initializing Backtest Client...
+Backtest will run from 2025-09-08 to ensure all symbols have data.
+--- Downloading data for USDJPY ---
+Pre-calculating daily biases...
+Daily bias pre-calculation complete.
+Historical data download complete.
+MT5 connection closed.
+Starting backtest from 2025-09-08 14:25:00+00:00 to 2025-09-18 14:20:00+00:00...
+DEBUG (LONG): sl_def_price=146.369, sl_buffer_pips=10, sl_buffer_price_units=0.1, entry_price=146.608, sl_price=146.269, tp_price=147.538
+[2025-09-17 07:10:00+00:00] TRADE SIGNAL: USDJPY | LONG_REVERSAL on H4 -> M15
+--- TRADE OPENED (USDJPY) ---
+Time: 2025-09-17 07:10:00+00:00, Type: BUY, Entry: 146.60800, SL: 146.26900, TP: 147.53800, TP Rule: PDH/PDL
+--- TRADE CLOSED (USDJPY) --- Ticket: 1, Reason: SL Hit, Profit: -2.29
+--- BACKTEST COMPLETE ---
+Period: 2025-09-08 to 2025-09-18 (10 days)
+Trailing Stoploss: Off
+Invalidation Exit: On
+Report Generated: 2025-09-18 16:24:04
+Symbols Tested: ['USDJPY']
+Initial Equity: $100.00
+Final Equity: $97.71
+Total Net Profit: $-2.29
+Performance summary and trade history saved to ICT_backtest_results_USDJPY.xlsx
+Running backtest for individual symbol: AUDUSD
+Initializing Backtest Client...
+Backtest will run from 2025-09-08 to ensure all symbols have data.
+--- Downloading data for AUDUSD ---
+Pre-calculating daily biases...
+Daily bias pre-calculation complete.
+Historical data download complete.
+MT5 connection closed.
+Starting backtest from 2025-09-08 14:25:00+00:00 to 2025-09-18 14:20:00+00:00...
+DEBUG (SHORT): sl_def_price=0.66606, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=0.66526, sl_price=0.6665599999999999, tp_price=0.65898
+[2025-09-12 06:00:00+00:00] TRADE SIGNAL: AUDUSD | SHORT_REVERSAL on H4 -> M15
+--- TRADE OPENED (AUDUSD) ---
+Time: 2025-09-12 06:00:00+00:00, Type: SELL, Entry: 0.66526, SL: 0.66656, TP: 0.65898, TP Rule: PDH/PDL
+--- TRADE CLOSED (AUDUSD) --- Ticket: 1, Reason: SL Hit, Profit: -1.30
+DEBUG (SHORT): sl_def_price=0.66658, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=0.66499, sl_price=0.6670799999999999, tp_price=0.65898
+[2025-09-12 08:10:00+00:00] TRADE SIGNAL: AUDUSD | SHORT_REVERSAL on H4 -> M15
+--- TRADE OPENED (AUDUSD) ---
+Time: 2025-09-12 08:10:00+00:00, Type: SELL, Entry: 0.66499, SL: 0.66708, TP: 0.65898, TP Rule: PDH/PDL
+--- TRADE CLOSED (AUDUSD) --- Ticket: 2, Reason: SL Hit, Profit: -2.09
+DEBUG (SHORT): sl_def_price=0.6642, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=0.66281, sl_price=0.6647, tp_price=0.66413
+DEBUG (SHORT): sl_def_price=0.6658, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=0.66495, sl_price=0.6662999999999999, tp_price=0.66413
+[2025-09-18 11:40:00+00:00] TRADE SIGNAL: AUDUSD | SHORT_CONTINUATION on H1 -> M5
+--- TRADE OPENED (AUDUSD) ---
+Time: 2025-09-18 11:40:00+00:00, Type: SELL, Entry: 0.66495, SL: 0.66630, TP: 0.66413, TP Rule: PDH/PDL
+--- TRADE CLOSED (AUDUSD) --- Ticket: 3, Reason: TP Hit, Profit: 0.82
+DEBUG (SHORT): sl_def_price=0.66496, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=0.6634, sl_price=0.6654599999999999, tp_price=0.66413
+DEBUG (SHORT): sl_def_price=0.66496, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=0.66309, sl_price=0.6654599999999999, tp_price=0.66413
+--- BACKTEST COMPLETE ---
+Period: 2025-09-08 to 2025-09-18 (10 days)
+Trailing Stoploss: Off
+Invalidation Exit: On
+Report Generated: 2025-09-18 16:24:05
+Symbols Tested: ['AUDUSD']
+Initial Equity: $100.00
+Final Equity: $97.43
+Total Net Profit: $-2.57
+Performance summary and trade history saved to ICT_backtest_results_AUDUSD.xlsx
+Running backtest for individual symbol: USDCHF
+Initializing Backtest Client...
+Backtest will run from 2025-09-08 to ensure all symbols have data.
+--- Downloading data for USDCHF ---
+Pre-calculating daily biases...
+Daily bias pre-calculation complete.
+Historical data download complete.
+MT5 connection closed.
+Starting backtest from 2025-09-08 14:25:00+00:00 to 2025-09-18 14:20:00+00:00...
+DEBUG (LONG): sl_def_price=0.78582, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=0.78668, sl_price=0.78482, tp_price=0.7904000000000002
+DEBUG (LONG): sl_def_price=0.78582, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=0.78668, sl_price=0.78482, tp_price=0.7904000000000002
+DEBUG (LONG): sl_def_price=0.78688, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=0.78788, sl_price=0.78588, tp_price=0.79188
+[2025-09-17 08:00:00+00:00] TRADE SIGNAL: USDCHF | LONG_REVERSAL on H4 -> M15
+--- TRADE OPENED (USDCHF) ---
+Time: 2025-09-17 08:00:00+00:00, Type: BUY, Entry: 0.78788, SL: 0.78588, TP: 0.79188, TP Rule: 1:2
+--- TRADE CLOSED (USDCHF) --- Ticket: 1, Reason: SL Hit, Profit: -2.52
+DEBUG (LONG): sl_def_price=0.7829, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=0.78935, sl_price=0.7819, tp_price=0.8042499999999999
+[2025-09-17 18:50:00+00:00] TRADE SIGNAL: USDCHF | LONG_REVERSAL on H1 -> M5
+--- TRADE OPENED (USDCHF) ---
+Time: 2025-09-17 18:50:00+00:00, Type: BUY, Entry: 0.78935, SL: 0.78190, TP: 0.80425, TP Rule: 1:2
+--- BACKTEST COMPLETE ---
+Period: 2025-09-08 to 2025-09-18 (10 days)
+Trailing Stoploss: Off
+Invalidation Exit: On
+Report Generated: 2025-09-18 16:24:05
+Symbols Tested: ['USDCHF']
+Initial Equity: $100.00
+Final Equity: $101.07
+Total Net Profit: $1.07
+Performance summary and trade history saved to ICT_backtest_results_USDCHF.xlsx
+Running backtest for individual symbol: USDCAD
+Initializing Backtest Client...
+Backtest will run from 2025-09-08 to ensure all symbols have data.
+--- Downloading data for USDCAD ---
+Pre-calculating daily biases...
+Daily bias pre-calculation complete.
+Historical data download complete.
+MT5 connection closed.
+Starting backtest from 2025-09-08 14:25:00+00:00 to 2025-09-18 14:20:00+00:00...
+DEBUG (LONG): sl_def_price=1.37683, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=1.37839, sl_price=1.37583, tp_price=1.37872
+DEBUG (LONG): sl_def_price=1.37683, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=1.37839, sl_price=1.37583, tp_price=1.37872
+DEBUG (LONG): sl_def_price=1.37683, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=1.37852, sl_price=1.37583, tp_price=1.37872
+DEBUG (LONG): sl_def_price=1.37683, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=1.37852, sl_price=1.37583, tp_price=1.37872
+DEBUG (LONG): sl_def_price=1.37683, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=1.37852, sl_price=1.37583, tp_price=1.37872
+DEBUG (LONG): sl_def_price=1.37764, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=1.38089, sl_price=1.37664, tp_price=1.37872
+--- BACKTEST COMPLETE ---
+Period: 2025-09-08 to 2025-09-18 (10 days)
+Trailing Stoploss: Off
+Invalidation Exit: On
+Report Generated: 2025-09-18 16:24:06
+Symbols Tested: ['USDCAD']
+Initial Equity: $100.00
+Final Equity: $100.00
+Total Net Profit: $0.00
+No trades were executed.
+No trades generated for USDCAD in portfolio backtest.
+Running backtest for individual symbol: NZDUSD
+Initializing Backtest Client...
+Backtest will run from 2025-09-08 to ensure all symbols have data.
+--- Downloading data for NZDUSD ---
+Pre-calculating daily biases...
+Daily bias pre-calculation complete.
+Historical data download complete.
+MT5 connection closed.
+Starting backtest from 2025-09-08 14:25:00+00:00 to 2025-09-18 14:20:00+00:00...
+DEBUG (SHORT): sl_def_price=0.59464, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=0.5934, sl_price=0.5951399999999999, tp_price=0.59186
+[2025-09-10 08:30:00+00:00] TRADE SIGNAL: NZDUSD | SHORT_REVERSAL on H1 -> M5
+--- TRADE OPENED (NZDUSD) ---
+Time: 2025-09-10 08:30:00+00:00, Type: SELL, Entry: 0.59340, SL: 0.59514, TP: 0.59186, TP Rule: PDH/PDL
+--- TRADE CLOSED (NZDUSD) --- Ticket: 1, Reason: SL Hit, Profit: -1.74
+DEBUG (SHORT): sl_def_price=0.59519, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=0.59328, sl_price=0.5956899999999999, tp_price=0.59186
+--- BACKTEST COMPLETE ---
+Period: 2025-09-08 to 2025-09-18 (10 days)
+Trailing Stoploss: Off
+Invalidation Exit: On
+Report Generated: 2025-09-18 16:24:06
+Symbols Tested: ['NZDUSD']
+Initial Equity: $100.00
+Final Equity: $98.26
+Total Net Profit: $-1.74
+Performance summary and trade history saved to ICT_backtest_results_NZDUSD.xlsx
+Running backtest for individual symbol: Wall Street 30
+Initializing Backtest Client...
+Backtest will run from 2025-09-08 to ensure all symbols have data.
+--- Downloading data for Wall Street 30 ---
+Pre-calculating daily biases...
+Daily bias pre-calculation complete.
+Historical data download complete.
+MT5 connection closed.
+Starting backtest from 2025-09-08 14:25:00+00:00 to 2025-09-18 14:20:00+00:00...
+DEBUG (LONG): sl_def_price=45856.35, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=45894.35, sl_price=45856.348, tp_price=46008.356
+[2025-09-18 14:24:06.792538+00:00] Trade on Wall Street 30 invalidated: SL of 380020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=45856.35, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=45897.35, sl_price=45856.348, tp_price=46020.356
+[2025-09-18 14:24:06.793540+00:00] Trade on Wall Street 30 invalidated: SL of 410020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=45856.35, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=45897.35, sl_price=45856.348, tp_price=46020.356
+[2025-09-18 14:24:06.794540+00:00] Trade on Wall Street 30 invalidated: SL of 410020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=45856.35, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=45897.35, sl_price=45856.348, tp_price=46020.356
+[2025-09-18 14:24:06.796458+00:00] Trade on Wall Street 30 invalidated: SL of 410020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=45856.35, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=45899.35, sl_price=45856.348, tp_price=46028.356
+[2025-09-18 14:24:06.800178+00:00] Trade on Wall Street 30 invalidated: SL of 430020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=45856.35, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=45899.35, sl_price=45856.348, tp_price=46028.356
+[2025-09-18 14:24:06.800178+00:00] Trade on Wall Street 30 invalidated: SL of 430020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=45856.35, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=45899.35, sl_price=45856.348, tp_price=46028.356
+[2025-09-18 14:24:06.801191+00:00] Trade on Wall Street 30 invalidated: SL of 430020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=45781.5, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=45832.5, sl_price=45781.498, tp_price=45985.506
+[2025-09-18 14:24:06.921145+00:00] Trade on Wall Street 30 invalidated: SL of 510020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=45782.5, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=45833.5, sl_price=45782.498, tp_price=45986.506
+[2025-09-18 14:24:06.925243+00:00] Trade on Wall Street 30 invalidated: SL of 510020.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=46221.0, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=46159.35, sl_price=46221.002, tp_price=45974.39399999999
+[2025-09-18 14:24:07.044641+00:00] Trade on Wall Street 30 invalidated: SL of 616520.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=46190.35, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=46153.35, sl_price=46190.352, tp_price=46042.344
+[2025-09-18 14:24:07.045646+00:00] Trade on Wall Street 30 invalidated: SL of 370020.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=46190.35, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=46134.35, sl_price=46190.352, tp_price=45966.344
+[2025-09-18 14:24:07.046645+00:00] Trade on Wall Street 30 invalidated: SL of 560020.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=46190.35, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=46132.35, sl_price=46190.352, tp_price=45958.344
+[2025-09-18 14:24:07.046645+00:00] Trade on Wall Street 30 invalidated: SL of 580020.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=46209.35, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=46162.0, sl_price=46209.352, tp_price=46019.944
+[2025-09-18 14:24:07.063767+00:00] Trade on Wall Street 30 invalidated: SL of 473520.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=46209.35, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=46160.35, sl_price=46209.352, tp_price=46013.344
+[2025-09-18 14:24:07.064768+00:00] Trade on Wall Street 30 invalidated: SL of 490020.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=46193.35, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=46149.35, sl_price=46193.352, tp_price=46017.344
+[2025-09-18 14:24:07.068852+00:00] Trade on Wall Street 30 invalidated: SL of 440020.00 pips exceeds max of 1000 pips.
+--- BACKTEST COMPLETE ---
+Period: 2025-09-08 to 2025-09-18 (10 days)
+Trailing Stoploss: Off
+Invalidation Exit: On
+Report Generated: 2025-09-18 16:24:07
+Symbols Tested: ['Wall Street 30']
+Initial Equity: $100.00
+Final Equity: $100.00
+Total Net Profit: $0.00
+No trades were executed.
+No trades generated for Wall Street 30 in portfolio backtest.
+Running backtest for individual symbol: US SP 500
+Initializing Backtest Client...
+Backtest will run from 2025-09-08 to ensure all symbols have data.
+--- Downloading data for US SP 500 ---
+Pre-calculating daily biases...
+Daily bias pre-calculation complete.
+Historical data download complete.
+MT5 connection closed.
+Starting backtest from 2025-09-08 14:25:00+00:00 to 2025-09-18 14:20:00+00:00...
+DEBUG (SHORT): sl_def_price=6595.42, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=6584.17, sl_price=6595.4220000000005, tp_price=6550.413999999999
+[2025-09-18 14:24:07.330029+00:00] Trade on US SP 500 invalidated: SL of 112520.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=6591.47, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=6579.22, sl_price=6591.472000000001, tp_price=6542.463999999999
+[2025-09-18 14:24:07.331526+00:00] Trade on US SP 500 invalidated: SL of 122520.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=6591.47, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=6579.22, sl_price=6591.472000000001, tp_price=6542.463999999999
+[2025-09-18 14:24:07.332526+00:00] Trade on US SP 500 invalidated: SL of 122520.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=6591.47, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=6579.22, sl_price=6591.472000000001, tp_price=6542.463999999999
+[2025-09-18 14:24:07.333532+00:00] Trade on US SP 500 invalidated: SL of 122520.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=6591.47, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=6576.17, sl_price=6591.472000000001, tp_price=6530.263999999998
+[2025-09-18 14:24:07.334525+00:00] Trade on US SP 500 invalidated: SL of 153020.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=6591.47, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=6576.17, sl_price=6591.472000000001, tp_price=6530.263999999998
+[2025-09-18 14:24:07.335580+00:00] Trade on US SP 500 invalidated: SL of 153020.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=6591.47, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=6576.17, sl_price=6591.472000000001, tp_price=6530.263999999998
+[2025-09-18 14:24:07.335580+00:00] Trade on US SP 500 invalidated: SL of 153020.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=6643.02, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=6636.22, sl_price=6643.022000000001, tp_price=6615.8139999999985
+[2025-09-18 14:24:07.519955+00:00] Trade on US SP 500 invalidated: SL of 68020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=6617.84, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=6621.1, sl_price=6617.838, tp_price=6630.886000000002
+[2025-09-18 14:24:07.578340+00:00] Trade on US SP 500 invalidated: SL of 32620.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=6617.84, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=6621.1, sl_price=6617.838, tp_price=6630.886000000002
+[2025-09-18 14:24:07.579540+00:00] Trade on US SP 500 invalidated: SL of 32620.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=6610.09, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=6616.1, sl_price=6610.088, tp_price=6634.136000000002
+[2025-09-18 14:24:07.609769+00:00] Trade on US SP 500 invalidated: SL of 60120.00 pips exceeds max of 1000 pips.
+--- BACKTEST COMPLETE ---
+Period: 2025-09-08 to 2025-09-18 (10 days)
+Trailing Stoploss: Off
+Invalidation Exit: On
+Report Generated: 2025-09-18 16:24:07
+Symbols Tested: ['US SP 500']
+Initial Equity: $100.00
+Final Equity: $100.00
+Total Net Profit: $0.00
+No trades were executed.
+No trades generated for US SP 500 in portfolio backtest.
+Running backtest for individual symbol: US Tech 100
+Initializing Backtest Client...
+Backtest will run from 2025-09-08 to ensure all symbols have data.
+--- Downloading data for US Tech 100 ---
+Pre-calculating daily biases...
+Daily bias pre-calculation complete.
+Historical data download complete.
+MT5 connection closed.
+Starting backtest from 2025-09-08 14:25:00+00:00 to 2025-09-18 14:20:00+00:00...
+DEBUG (LONG): sl_def_price=24289.4, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=24305.15, sl_price=24289.398, tp_price=24352.406000000003
+[2025-09-18 14:24:08.221043+00:00] Trade on US Tech 100 invalidated: SL of 157520.00 pips exceeds max of 1000 pips.
+--- BACKTEST COMPLETE ---
+Period: 2025-09-08 to 2025-09-18 (10 days)
+Trailing Stoploss: Off
+Invalidation Exit: On
+Report Generated: 2025-09-18 16:24:08
+Symbols Tested: ['US Tech 100']
+Initial Equity: $100.00
+Final Equity: $100.00
+Total Net Profit: $0.00
+No trades were executed.
+No trades generated for US Tech 100 in portfolio backtest.
+Running backtest for individual symbol: Germany 40
+Initializing Backtest Client...
+Backtest will run from 2025-09-08 to ensure all symbols have data.
+--- Downloading data for Germany 40 ---
+Pre-calculating daily biases...
+Daily bias pre-calculation complete.
+Historical data download complete.
+MT5 connection closed.
+Starting backtest from 2025-09-08 14:25:00+00:00 to 2025-09-18 14:20:00+00:00...
+DEBUG (SHORT): sl_def_price=23846.45, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23823.85, sl_price=23846.452, tp_price=23756.04399999999
+[2025-09-18 14:24:08.396618+00:00] Trade on Germany 40 invalidated: SL of 226020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23624.45, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23687.45, sl_price=23624.448, tp_price=23876.456000000002
+[2025-09-18 14:24:08.539060+00:00] Trade on Germany 40 invalidated: SL of 630020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23655.45, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23690.45, sl_price=23655.448, tp_price=23795.456000000002
+[2025-09-18 14:24:08.541893+00:00] Trade on Germany 40 invalidated: SL of 350020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23655.45, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23700.45, sl_price=23655.448, tp_price=23835.456000000002
+[2025-09-18 14:24:08.542949+00:00] Trade on Germany 40 invalidated: SL of 450020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23655.45, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23700.45, sl_price=23655.448, tp_price=23835.456000000002
+[2025-09-18 14:24:08.544898+00:00] Trade on Germany 40 invalidated: SL of 450020.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=23414.35, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23408.35, sl_price=23414.352, tp_price=23390.343999999997
+[2025-09-18 14:24:08.796180+00:00] Trade on Germany 40 invalidated: SL of 60020.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=23413.36, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23411.65, sl_price=23413.362, tp_price=23406.514000000003
+[2025-09-18 14:24:08.802900+00:00] Trade on Germany 40 invalidated: SL of 17120.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=23413.36, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23409.65, sl_price=23413.362, tp_price=23398.514000000003
+[2025-09-18 14:24:08.803898+00:00] Trade on Germany 40 invalidated: SL of 37120.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=23413.36, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23409.65, sl_price=23413.362, tp_price=23398.514000000003
+[2025-09-18 14:24:08.805196+00:00] Trade on Germany 40 invalidated: SL of 37120.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=23413.36, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23404.65, sl_price=23413.362, tp_price=23378.514000000003
+[2025-09-18 14:24:08.807200+00:00] Trade on Germany 40 invalidated: SL of 87120.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23404.65, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23416.65, sl_price=23404.648, tp_price=23452.656000000003
+[2025-09-18 14:24:08.811019+00:00] Trade on Germany 40 invalidated: SL of 120020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23404.65, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23419.65, sl_price=23404.648, tp_price=23464.656000000003
+[2025-09-18 14:24:08.811019+00:00] Trade on Germany 40 invalidated: SL of 150020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23404.65, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23420.65, sl_price=23404.648, tp_price=23468.656000000003
+[2025-09-18 14:24:08.812095+00:00] Trade on Germany 40 invalidated: SL of 160020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23395.65, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23416.65, sl_price=23395.648, tp_price=23479.656000000003
+[2025-09-18 14:24:08.815765+00:00] Trade on Germany 40 invalidated: SL of 210020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23387.65, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23405.65, sl_price=23387.648, tp_price=23459.656000000003
+[2025-09-18 14:24:08.827327+00:00] Trade on Germany 40 invalidated: SL of 180020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23387.65, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23405.85, sl_price=23387.648, tp_price=23460.45599999999
+[2025-09-18 14:24:08.829323+00:00] Trade on Germany 40 invalidated: SL of 182020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23387.65, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23407.65, sl_price=23387.648, tp_price=23467.656000000003
+[2025-09-18 14:24:08.829323+00:00] Trade on Germany 40 invalidated: SL of 200020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23394.25, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23414.65, sl_price=23394.248, tp_price=23475.856000000007
+[2025-09-18 14:24:08.830836+00:00] Trade on Germany 40 invalidated: SL of 204020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23394.25, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23414.65, sl_price=23394.248, tp_price=23475.856000000007
+[2025-09-18 14:24:08.831853+00:00] Trade on Germany 40 invalidated: SL of 204020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23394.25, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23413.65, sl_price=23394.248, tp_price=23471.856000000007
+[2025-09-18 14:24:08.831853+00:00] Trade on Germany 40 invalidated: SL of 194020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23394.25, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23410.65, sl_price=23394.248, tp_price=23459.856000000007
+[2025-09-18 14:24:08.832853+00:00] Trade on Germany 40 invalidated: SL of 164020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23384.65, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23406.65, sl_price=23384.648, tp_price=23472.656000000003
+[2025-09-18 14:24:08.836974+00:00] Trade on Germany 40 invalidated: SL of 220020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23384.65, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23411.65, sl_price=23384.648, tp_price=23492.656000000003
+[2025-09-18 14:24:08.838974+00:00] Trade on Germany 40 invalidated: SL of 270020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23384.65, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23418.65, sl_price=23384.648, tp_price=23520.656000000003
+[2025-09-18 14:24:08.839970+00:00] Trade on Germany 40 invalidated: SL of 340020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23384.65, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23434.25, sl_price=23384.648, tp_price=23583.055999999997
+[2025-09-18 14:24:08.843065+00:00] Trade on Germany 40 invalidated: SL of 496020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23384.65, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23434.25, sl_price=23384.648, tp_price=23583.055999999997
+[2025-09-18 14:24:08.843065+00:00] Trade on Germany 40 invalidated: SL of 496020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23385.45, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23449.75, sl_price=23385.448, tp_price=23642.656
+[2025-09-18 14:24:08.847168+00:00] Trade on Germany 40 invalidated: SL of 643020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23385.45, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23449.75, sl_price=23385.448, tp_price=23642.656
+[2025-09-18 14:24:08.848111+00:00] Trade on Germany 40 invalidated: SL of 643020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23385.45, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23449.75, sl_price=23385.448, tp_price=23642.656
+[2025-09-18 14:24:08.848111+00:00] Trade on Germany 40 invalidated: SL of 643020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23385.45, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23466.15, sl_price=23385.448, tp_price=23708.256000000005
+[2025-09-18 14:24:08.849063+00:00] Trade on Germany 40 invalidated: SL of 807020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23385.45, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23466.15, sl_price=23385.448, tp_price=23708.256000000005
+[2025-09-18 14:24:08.850065+00:00] Trade on Germany 40 invalidated: SL of 807020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23385.45, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23466.15, sl_price=23385.448, tp_price=23708.256000000005
+[2025-09-18 14:24:08.851062+00:00] Trade on Germany 40 invalidated: SL of 807020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23385.45, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23474.15, sl_price=23385.448, tp_price=23740.256000000005
+[2025-09-18 14:24:08.851564+00:00] Trade on Germany 40 invalidated: SL of 887020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23385.45, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23474.15, sl_price=23385.448, tp_price=23740.256000000005
+[2025-09-18 14:24:08.852566+00:00] Trade on Germany 40 invalidated: SL of 887020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23385.45, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23474.15, sl_price=23385.448, tp_price=23740.256000000005
+[2025-09-18 14:24:08.852566+00:00] Trade on Germany 40 invalidated: SL of 887020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23325.95, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23458.95, sl_price=23325.948, tp_price=23857.956000000002
+[2025-09-18 14:24:08.876242+00:00] Trade on Germany 40 invalidated: SL of 1330020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23325.95, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23458.95, sl_price=23325.948, tp_price=23857.956000000002
+[2025-09-18 14:24:08.877234+00:00] Trade on Germany 40 invalidated: SL of 1330020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23325.95, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23458.95, sl_price=23325.948, tp_price=23857.956000000002
+[2025-09-18 14:24:08.878242+00:00] Trade on Germany 40 invalidated: SL of 1330020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23381.15, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23433.45, sl_price=23381.148, tp_price=23590.356
+[2025-09-18 14:24:08.914924+00:00] Trade on Germany 40 invalidated: SL of 523020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23381.15, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23433.45, sl_price=23381.148, tp_price=23590.356
+[2025-09-18 14:24:08.915962+00:00] Trade on Germany 40 invalidated: SL of 523020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23381.15, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23448.45, sl_price=23381.148, tp_price=23650.356
+[2025-09-18 14:24:08.917028+00:00] Trade on Germany 40 invalidated: SL of 673020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23381.15, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23448.45, sl_price=23381.148, tp_price=23650.356
+[2025-09-18 14:24:08.917980+00:00] Trade on Germany 40 invalidated: SL of 673020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23381.15, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23448.45, sl_price=23381.148, tp_price=23650.356
+[2025-09-18 14:24:08.918959+00:00] Trade on Germany 40 invalidated: SL of 673020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23381.15, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23465.45, sl_price=23381.148, tp_price=23718.356
+[2025-09-18 14:24:08.920006+00:00] Trade on Germany 40 invalidated: SL of 843020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23381.15, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23465.45, sl_price=23381.148, tp_price=23718.356
+[2025-09-18 14:24:08.920108+00:00] Trade on Germany 40 invalidated: SL of 843020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23381.15, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23465.45, sl_price=23381.148, tp_price=23718.356
+[2025-09-18 14:24:08.921198+00:00] Trade on Germany 40 invalidated: SL of 843020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23381.15, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23469.45, sl_price=23381.148, tp_price=23734.356
+[2025-09-18 14:24:08.922269+00:00] Trade on Germany 40 invalidated: SL of 883020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23381.15, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23469.45, sl_price=23381.148, tp_price=23734.356
+[2025-09-18 14:24:08.924206+00:00] Trade on Germany 40 invalidated: SL of 883020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23381.15, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23469.45, sl_price=23381.148, tp_price=23734.356
+[2025-09-18 14:24:08.924206+00:00] Trade on Germany 40 invalidated: SL of 883020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23401.65, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23504.45, sl_price=23401.648, tp_price=23812.856
+[2025-09-18 14:24:08.933820+00:00] Trade on Germany 40 invalidated: SL of 1028020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=23401.65, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=23513.05, sl_price=23401.648, tp_price=23847.255999999994
+[2025-09-18 14:24:08.933820+00:00] Trade on Germany 40 invalidated: SL of 1114020.00 pips exceeds max of 1000 pips.
+--- BACKTEST COMPLETE ---
+Period: 2025-09-08 to 2025-09-18 (10 days)
+Trailing Stoploss: Off
+Invalidation Exit: On
+Report Generated: 2025-09-18 16:24:08
+Symbols Tested: ['Germany 40']
+Initial Equity: $100.00
+Final Equity: $100.00
+Total Net Profit: $0.00
+No trades were executed.
+No trades generated for Germany 40 in portfolio backtest.
+Running backtest for individual symbol: UK 100
+Initializing Backtest Client...
+Backtest will run from 2025-09-08 to ensure all symbols have data.
+--- Downloading data for UK 100 ---
+Pre-calculating daily biases...
+Daily bias pre-calculation complete.
+Historical data download complete.
+MT5 connection closed.
+Starting backtest from 2025-09-08 14:25:00+00:00 to 2025-09-18 14:20:00+00:00...
+DEBUG (SHORT): sl_def_price=9273.95, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=9266.45, sl_price=9273.951000000001, tp_price=9218.75
+[2025-09-18 14:24:09.029973+00:00] Trade on UK 100 invalidated: SL of 75010.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=9273.95, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=9265.95, sl_price=9273.951000000001, tp_price=9218.75
+[2025-09-18 14:24:09.029973+00:00] Trade on UK 100 invalidated: SL of 80010.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=9219.6, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=9223.85, sl_price=9219.599, tp_price=9297.6
+[2025-09-18 14:24:09.335907+00:00] Trade on UK 100 invalidated: SL of 42510.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=9220.3, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=9227.6, sl_price=9220.298999999999, tp_price=9297.6
+[2025-09-18 14:24:09.357738+00:00] Trade on UK 100 invalidated: SL of 73010.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=9220.3, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=9227.6, sl_price=9220.298999999999, tp_price=9297.6
+[2025-09-18 14:24:09.358733+00:00] Trade on UK 100 invalidated: SL of 73010.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=9216.35, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=9234.1, sl_price=9216.349, tp_price=9297.6
+[2025-09-18 14:24:09.359132+00:00] Trade on UK 100 invalidated: SL of 177510.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=9220.3, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=9231.6, sl_price=9220.298999999999, tp_price=9297.6
+[2025-09-18 14:24:09.360786+00:00] Trade on UK 100 invalidated: SL of 113010.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=9216.35, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=9234.1, sl_price=9216.349, tp_price=9297.6
+[2025-09-18 14:24:09.362174+00:00] Trade on UK 100 invalidated: SL of 177510.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=9220.3, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=9233.1, sl_price=9220.298999999999, tp_price=9297.6
+[2025-09-18 14:24:09.362174+00:00] Trade on UK 100 invalidated: SL of 128010.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=9216.35, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=9234.1, sl_price=9216.349, tp_price=9297.6
+[2025-09-18 14:24:09.364111+00:00] Trade on UK 100 invalidated: SL of 177510.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=9220.3, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=9234.1, sl_price=9220.298999999999, tp_price=9297.6
+[2025-09-18 14:24:09.365099+00:00] Trade on UK 100 invalidated: SL of 138010.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=9218.6, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=9229.6, sl_price=9218.599, tp_price=9297.6
+[2025-09-18 14:24:09.386711+00:00] Trade on UK 100 invalidated: SL of 110010.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=9218.6, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=9231.6, sl_price=9218.599, tp_price=9297.6
+[2025-09-18 14:24:09.387726+00:00] Trade on UK 100 invalidated: SL of 130010.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=9218.6, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=9231.6, sl_price=9218.599, tp_price=9297.6
+[2025-09-18 14:24:09.388764+00:00] Trade on UK 100 invalidated: SL of 130010.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=9218.6, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=9235.6, sl_price=9218.599, tp_price=9297.6
+[2025-09-18 14:24:09.395642+00:00] Trade on UK 100 invalidated: SL of 170010.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=9218.6, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=9235.6, sl_price=9218.599, tp_price=9297.6
+[2025-09-18 14:24:09.396700+00:00] Trade on UK 100 invalidated: SL of 170010.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=9218.6, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=9235.6, sl_price=9218.599, tp_price=9297.6
+[2025-09-18 14:24:09.397721+00:00] Trade on UK 100 invalidated: SL of 170010.00 pips exceeds max of 1000 pips.
+--- BACKTEST COMPLETE ---
+Period: 2025-09-08 to 2025-09-18 (10 days)
+Trailing Stoploss: Off
+Invalidation Exit: On
+Report Generated: 2025-09-18 16:24:09
+Symbols Tested: ['UK 100']
+Initial Equity: $100.00
+Final Equity: $100.00
+Total Net Profit: $0.00
+No trades were executed.
+No trades generated for UK 100 in portfolio backtest.
+Running backtest for individual symbol: BTCUSD
+Initializing Backtest Client...
+Backtest will run from 2025-09-08 to ensure all symbols have data.
+--- Downloading data for BTCUSD ---
+Pre-calculating daily biases...
+Daily bias pre-calculation complete.
+Historical data download complete.
+MT5 connection closed.
+Starting backtest from 2025-09-08 14:25:00+00:00 to 2025-09-18 14:20:00+00:00...
+DEBUG (LONG): sl_def_price=110877.038, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=111429.586, sl_price=110877.037, tp_price=113087.233
+[2025-09-18 14:24:09.515906+00:00] Trade on BTCUSD invalidated: SL of 5525490.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=110877.038, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=111498.738, sl_price=110877.037, tp_price=113363.841
+[2025-09-18 14:24:09.517896+00:00] Trade on BTCUSD invalidated: SL of 6217010.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=110877.038, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=111498.738, sl_price=110877.037, tp_price=113363.841
+[2025-09-18 14:24:09.518915+00:00] Trade on BTCUSD invalidated: SL of 6217010.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=110877.038, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=111505.1, sl_price=110877.037, tp_price=113389.28900000003
+[2025-09-18 14:24:09.519952+00:00] Trade on BTCUSD invalidated: SL of 6280630.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=110877.038, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=111505.1, sl_price=110877.037, tp_price=113389.28900000003
+[2025-09-18 14:24:09.519952+00:00] Trade on BTCUSD invalidated: SL of 6280630.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=110877.038, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=111505.1, sl_price=110877.037, tp_price=113389.28900000003
+[2025-09-18 14:24:09.520906+00:00] Trade on BTCUSD invalidated: SL of 6280630.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=113109.601, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=113415.3, sl_price=113109.59999999999, tp_price=114332.40000000004
+[2025-09-18 14:24:09.585467+00:00] Trade on BTCUSD invalidated: SL of 3057000.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=114832.335, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=115030.8, sl_price=114832.334, tp_price=115626.198
+[2025-09-18 14:24:09.728094+00:00] Trade on BTCUSD invalidated: SL of 1984660.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=114877.836, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=115106.338, sl_price=114877.83499999999, tp_price=115791.84700000004
+[2025-09-18 14:24:09.738367+00:00] Trade on BTCUSD invalidated: SL of 2285030.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=114852.491, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=115021.919, sl_price=114852.48999999999, tp_price=115530.206
+[2025-09-18 14:24:09.740872+00:00] Trade on BTCUSD invalidated: SL of 1694290.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=115391.804, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=115226.403, sl_price=115391.80500000001, tp_price=114730.197
+[2025-09-18 14:24:09.839916+00:00] Trade on BTCUSD invalidated: SL of 1654020.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=116865.426, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=116499.341, sl_price=116865.42700000001, tp_price=115401.08299999997
+[2025-09-18 14:24:10.009548+00:00] Trade on BTCUSD invalidated: SL of 3660860.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=116719.4, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=116407.441, sl_price=116719.401, tp_price=115471.56100000003
+[2025-09-18 14:24:10.019307+00:00] Trade on BTCUSD invalidated: SL of 3119600.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=116719.4, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=116378.138, sl_price=116719.401, tp_price=115354.34900000003
+[2025-09-18 14:24:10.020810+00:00] Trade on BTCUSD invalidated: SL of 3412630.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=116719.4, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=116378.138, sl_price=116719.401, tp_price=115354.34900000003
+[2025-09-18 14:24:10.021818+00:00] Trade on BTCUSD invalidated: SL of 3412630.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=116719.4, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=116378.138, sl_price=116719.401, tp_price=115354.34900000003
+[2025-09-18 14:24:10.022815+00:00] Trade on BTCUSD invalidated: SL of 3412630.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=116719.4, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=116315.561, sl_price=116719.401, tp_price=115104.04100000001
+[2025-09-18 14:24:10.023815+00:00] Trade on BTCUSD invalidated: SL of 4038400.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=116719.4, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=116315.561, sl_price=116719.401, tp_price=115104.04100000001
+[2025-09-18 14:24:10.024814+00:00] Trade on BTCUSD invalidated: SL of 4038400.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=116719.4, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=116315.561, sl_price=116719.401, tp_price=115104.04100000001
+[2025-09-18 14:24:10.025815+00:00] Trade on BTCUSD invalidated: SL of 4038400.00 pips exceeds max of 1000 pips.
+--- BACKTEST COMPLETE ---
+Period: 2025-09-08 to 2025-09-18 (10 days)
+Trailing Stoploss: Off
+Invalidation Exit: On
+Report Generated: 2025-09-18 16:24:10
+Symbols Tested: ['BTCUSD']
+Initial Equity: $100.00
+Final Equity: $100.00
+Total Net Profit: $0.00
+No trades were executed.
+No trades generated for BTCUSD in portfolio backtest.
+Running backtest for individual symbol: AAPL
+Initializing Backtest Client...
+Backtest will run from 2025-09-08 to ensure all symbols have data.
+--- Downloading data for AAPL ---
+Pre-calculating daily biases...
+Daily bias pre-calculation complete.
+Historical data download complete.
+MT5 connection closed.
+Starting backtest from 2025-09-08 14:25:00+00:00 to 2025-09-18 14:20:00+00:00...
+DEBUG (SHORT): sl_def_price=240.96, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=238.28, sl_price=240.96200000000002, tp_price=235.02
+[2025-09-18 14:24:10.287333+00:00] Trade on AAPL invalidated: SL of 26820.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=239.34, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=238.58, sl_price=239.342, tp_price=235.02
+[2025-09-18 14:24:10.298923+00:00] Trade on AAPL invalidated: SL of 7620.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=239.34, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=238.31, sl_price=239.342, tp_price=235.02
+[2025-09-18 14:24:10.299922+00:00] Trade on AAPL invalidated: SL of 10320.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=239.34, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=238.21, sl_price=239.342, tp_price=235.02
+[2025-09-18 14:24:10.300922+00:00] Trade on AAPL invalidated: SL of 11320.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=239.34, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=238.12, sl_price=239.342, tp_price=235.02
+[2025-09-18 14:24:10.301427+00:00] Trade on AAPL invalidated: SL of 12220.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=239.09, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=238.62, sl_price=239.092, tp_price=235.02
+[2025-09-18 14:24:10.314497+00:00] Trade on AAPL invalidated: SL of 4720.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=239.09, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=238.08, sl_price=239.092, tp_price=235.02
+[2025-09-18 14:24:10.315492+00:00] Trade on AAPL invalidated: SL of 10120.00 pips exceeds max of 1000 pips.
+--- BACKTEST COMPLETE ---
+Period: 2025-09-08 to 2025-09-18 (10 days)
+Trailing Stoploss: Off
+Invalidation Exit: On
+Report Generated: 2025-09-18 16:24:10
+Symbols Tested: ['AAPL']
+Initial Equity: $100.00
+Final Equity: $100.00
+Total Net Profit: $0.00
+No trades were executed.
+No trades generated for AAPL in portfolio backtest.
+Running backtest for individual symbol: MSFT
+Initializing Backtest Client...
+Backtest will run from 2025-09-08 to ensure all symbols have data.
+--- Downloading data for MSFT ---
+Pre-calculating daily biases...
+Daily bias pre-calculation complete.
+Historical data download complete.
+MT5 connection closed.
+Starting backtest from 2025-09-08 14:25:00+00:00 to 2025-09-18 14:20:00+00:00...
+DEBUG (SHORT): sl_def_price=513.67, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=509.31, sl_price=513.6709999999999, tp_price=500.58800000000014
+[2025-09-18 14:24:10.451718+00:00] Trade on MSFT invalidated: SL of 43610.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=513.67, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=509.31, sl_price=513.6709999999999, tp_price=500.58800000000014
+[2025-09-18 14:24:10.451966+00:00] Trade on MSFT invalidated: SL of 43610.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=513.67, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=508.74, sl_price=513.6709999999999, tp_price=498.87800000000016
+[2025-09-18 14:24:10.453120+00:00] Trade on MSFT invalidated: SL of 49310.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=513.67, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=508.74, sl_price=513.6709999999999, tp_price=498.87800000000016
+[2025-09-18 14:24:10.454546+00:00] Trade on MSFT invalidated: SL of 49310.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=513.67, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=508.74, sl_price=513.6709999999999, tp_price=498.87800000000016
+[2025-09-18 14:24:10.455638+00:00] Trade on MSFT invalidated: SL of 49310.00 pips exceeds max of 1000 pips.
+--- BACKTEST COMPLETE ---
+Period: 2025-09-08 to 2025-09-18 (10 days)
+Trailing Stoploss: Off
+Invalidation Exit: On
+Report Generated: 2025-09-18 16:24:10
+Symbols Tested: ['MSFT']
+Initial Equity: $100.00
+Final Equity: $100.00
+Total Net Profit: $0.00
+No trades were executed.
+No trades generated for MSFT in portfolio backtest.
+Running backtest for individual symbol: TSLA
+Initializing Backtest Client...
+Backtest will run from 2025-09-08 to ensure all symbols have data.
+--- Downloading data for TSLA ---
+Pre-calculating daily biases...
+Daily bias pre-calculation complete.
+Historical data download complete.
+MT5 connection closed.
+Starting backtest from 2025-09-08 14:25:00+00:00 to 2025-09-18 14:20:00+00:00...
+--- BACKTEST COMPLETE ---
+Period: 2025-09-08 to 2025-09-18 (10 days)
+Trailing Stoploss: Off
+Invalidation Exit: On
+Report Generated: 2025-09-18 16:24:10
+Symbols Tested: ['TSLA']
+Initial Equity: $100.00
+Final Equity: $100.00
+Total Net Profit: $0.00
+No trades were executed.
+No trades generated for TSLA in portfolio backtest.
+Running backtest for individual symbol: AMZN
+Initializing Backtest Client...
+Backtest will run from 2025-09-08 to ensure all symbols have data.
+--- Downloading data for AMZN ---
+Pre-calculating daily biases...
+Daily bias pre-calculation complete.
+Historical data download complete.
+MT5 connection closed.
+Starting backtest from 2025-09-08 14:25:00+00:00 to 2025-09-18 14:20:00+00:00...
+DEBUG (LONG): sl_def_price=230.33, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=233.39, sl_price=230.328, tp_price=239.51399999999995
+[2025-09-18 14:24:10.699085+00:00] Trade on AMZN invalidated: SL of 30620.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=230.33, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=233.7, sl_price=230.328, tp_price=240.44399999999996
+[2025-09-18 14:24:10.699361+00:00] Trade on AMZN invalidated: SL of 33720.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=230.33, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=233.7, sl_price=230.328, tp_price=240.44399999999996
+[2025-09-18 14:24:10.700923+00:00] Trade on AMZN invalidated: SL of 33720.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=230.33, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=233.7, sl_price=230.328, tp_price=240.44399999999996
+[2025-09-18 14:24:10.701989+00:00] Trade on AMZN invalidated: SL of 33720.00 pips exceeds max of 1000 pips.
+--- BACKTEST COMPLETE ---
+Period: 2025-09-08 to 2025-09-18 (10 days)
+Trailing Stoploss: Off
+Invalidation Exit: On
+Report Generated: 2025-09-18 16:24:10
+Symbols Tested: ['AMZN']
+Initial Equity: $100.00
+Final Equity: $100.00
+Total Net Profit: $0.00
+No trades were executed.
+No trades generated for AMZN in portfolio backtest.
+Running backtest for individual symbol: XAUUSD
+Initializing Backtest Client...
+Backtest will run from 2025-09-08 to ensure all symbols have data.
+--- Downloading data for XAUUSD ---
+Pre-calculating daily biases...
+Daily bias pre-calculation complete.
+Historical data download complete.
+MT5 connection closed.
+Starting backtest from 2025-09-08 14:25:00+00:00 to 2025-09-18 14:20:00+00:00...
+DEBUG (SHORT): sl_def_price=3672.37, sl_buffer_pips=20, sl_buffer_price_units=0.2, entry_price=3663.04, sl_price=3672.5699999999997, tp_price=3634.4500000000007
+[2025-09-18 12:55:00+00:00] TRADE SIGNAL: XAUUSD | SHORT_CONTINUATION on H1 -> M5
+--- TRADE OPENED (XAUUSD) ---
+Time: 2025-09-18 12:55:00+00:00, Type: SELL, Entry: 3663.04000, SL: 3672.57000, TP: 3634.45000, TP Rule: 1:3
+--- TRADE CLOSED (XAUUSD) --- Ticket: 1, Reason: TP Hit, Profit: 28.59
+--- BACKTEST COMPLETE ---
+Period: 2025-09-08 to 2025-09-18 (10 days)
+Trailing Stoploss: Off
+Invalidation Exit: On
+Report Generated: 2025-09-18 16:24:11
+Symbols Tested: ['XAUUSD']
+Initial Equity: $100.00
+Final Equity: $128.59
+Total Net Profit: $28.59
+Performance summary and trade history saved to ICT_backtest_results_XAUUSD.xlsx
+Running backtest for individual symbol: XAGUSD
+Initializing Backtest Client...
+Backtest will run from 2025-09-08 to ensure all symbols have data.
+--- Downloading data for XAGUSD ---
+Pre-calculating daily biases...
+Daily bias pre-calculation complete.
+Historical data download complete.
+MT5 connection closed.
+Starting backtest from 2025-09-08 14:25:00+00:00 to 2025-09-18 14:20:00+00:00...
+DEBUG (LONG): sl_def_price=40.753, sl_buffer_pips=10, sl_buffer_price_units=0.1, entry_price=41.019, sl_price=40.653, tp_price=41.477
+DEBUG (LONG): sl_def_price=40.753, sl_buffer_pips=10, sl_buffer_price_units=0.1, entry_price=41.019, sl_price=40.653, tp_price=41.477
+DEBUG (LONG): sl_def_price=40.753, sl_buffer_pips=10, sl_buffer_price_units=0.1, entry_price=41.019, sl_price=40.653, tp_price=41.477
+DEBUG (LONG): sl_def_price=40.753, sl_buffer_pips=10, sl_buffer_price_units=0.1, entry_price=41.026, sl_price=40.653, tp_price=41.477
+DEBUG (LONG): sl_def_price=40.753, sl_buffer_pips=10, sl_buffer_price_units=0.1, entry_price=41.026, sl_price=40.653, tp_price=41.477
+DEBUG (LONG): sl_def_price=40.753, sl_buffer_pips=10, sl_buffer_price_units=0.1, entry_price=41.026, sl_price=40.653, tp_price=41.477
+DEBUG (LONG): sl_def_price=40.977, sl_buffer_pips=10, sl_buffer_price_units=0.1, entry_price=41.037, sl_price=40.876999999999995, tp_price=41.477
+DEBUG (LONG): sl_def_price=40.977, sl_buffer_pips=10, sl_buffer_price_units=0.1, entry_price=41.037, sl_price=40.876999999999995, tp_price=41.477
+DEBUG (LONG): sl_def_price=40.977, sl_buffer_pips=10, sl_buffer_price_units=0.1, entry_price=41.037, sl_price=40.876999999999995, tp_price=41.477
+DEBUG (LONG): sl_def_price=40.977, sl_buffer_pips=10, sl_buffer_price_units=0.1, entry_price=41.041, sl_price=40.876999999999995, tp_price=41.477
+DEBUG (LONG): sl_def_price=40.977, sl_buffer_pips=10, sl_buffer_price_units=0.1, entry_price=41.041, sl_price=40.876999999999995, tp_price=41.477
+DEBUG (LONG): sl_def_price=40.977, sl_buffer_pips=10, sl_buffer_price_units=0.1, entry_price=41.041, sl_price=40.876999999999995, tp_price=41.477
+DEBUG (SHORT): sl_def_price=42.749, sl_buffer_pips=10, sl_buffer_price_units=0.1, entry_price=42.34, sl_price=42.849000000000004, tp_price=42.0
+--- BACKTEST COMPLETE ---
+Period: 2025-09-08 to 2025-09-18 (10 days)
+Trailing Stoploss: Off
+Invalidation Exit: On
+Report Generated: 2025-09-18 16:24:11
+Symbols Tested: ['XAGUSD']
+Initial Equity: $100.00
+Final Equity: $100.00
+Total Net Profit: $0.00
+No trades were executed.
+No trades generated for XAGUSD in portfolio backtest.
+Running backtest for individual symbol: XPTUSD
+Initializing Backtest Client...
+Backtest will run from 2025-09-08 to ensure all symbols have data.
+--- Downloading data for XPTUSD ---
+Pre-calculating daily biases...
+Daily bias pre-calculation complete.
+Historical data download complete.
+MT5 connection closed.
+Starting backtest from 2025-09-08 14:25:00+00:00 to 2025-09-18 14:20:00+00:00...
+DEBUG (SHORT): sl_def_price=1398.92, sl_buffer_pips=20, sl_buffer_price_units=0.2, entry_price=1395.79, sl_price=1399.1200000000001, tp_price=1389.1299999999997
+DEBUG (SHORT): sl_def_price=1373.57, sl_buffer_pips=20, sl_buffer_price_units=0.2, entry_price=1368.18, sl_price=1373.77, tp_price=1357.0000000000002
+DEBUG (SHORT): sl_def_price=1389.69, sl_buffer_pips=20, sl_buffer_price_units=0.2, entry_price=1384.4, sl_price=1389.89, tp_price=1373.42
+DEBUG (SHORT): sl_def_price=1389.69, sl_buffer_pips=20, sl_buffer_price_units=0.2, entry_price=1382.06, sl_price=1389.89, tp_price=1366.3999999999996
+--- BACKTEST COMPLETE ---
+Period: 2025-09-08 to 2025-09-18 (10 days)
+Trailing Stoploss: Off
+Invalidation Exit: On
+Report Generated: 2025-09-18 16:24:12
+Symbols Tested: ['XPTUSD']
+Initial Equity: $100.00
+Final Equity: $100.00
+Total Net Profit: $0.00
+No trades were executed.
+No trades generated for XPTUSD in portfolio backtest.
+Running backtest for individual symbol: NGAS
+Initializing Backtest Client...
+Backtest will run from 2025-09-08 to ensure all symbols have data.
+--- Downloading data for NGAS ---
+Pre-calculating daily biases...
+Daily bias pre-calculation complete.
+Historical data download complete.
+MT5 connection closed.
+Starting backtest from 2025-09-08 14:25:00+00:00 to 2025-09-18 14:20:00+00:00...
+DEBUG (SHORT): sl_def_price=3.009, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=3.0, sl_price=3.01, tp_price=2.968
+[2025-09-11 08:15:00+00:00] TRADE SIGNAL: NGAS | SHORT_CONTINUATION on H1 -> M5
+--- TRADE OPENED (NGAS) ---
+Time: 2025-09-11 08:15:00+00:00, Type: SELL, Entry: 3.00000, SL: 3.01000, TP: 2.96800, TP Rule: PDH/PDL
+--- TRADE CLOSED (NGAS) --- Ticket: 1, Reason: SL Hit, Profit: -0.00
+DEBUG (SHORT): sl_def_price=3.008, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=2.999, sl_price=3.009, tp_price=2.968
+DEBUG (SHORT): sl_def_price=3.014, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=2.998, sl_price=3.0149999999999997, tp_price=2.968
+[2025-09-11 11:55:00+00:00] TRADE SIGNAL: NGAS | SHORT_CONTINUATION on H1 -> M5
+--- TRADE OPENED (NGAS) ---
+Time: 2025-09-11 11:55:00+00:00, Type: SELL, Entry: 2.99800, SL: 3.01500, TP: 2.96800, TP Rule: PDH/PDL
+--- TRADE CLOSED (NGAS) --- Ticket: 2, Reason: TP Hit, Profit: 0.00
+DEBUG (LONG): sl_def_price=2.885, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=2.8890000000000002, sl_price=2.884, tp_price=3.025
+DEBUG (LONG): sl_def_price=2.885, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=2.8890000000000002, sl_price=2.884, tp_price=3.025
+DEBUG (LONG): sl_def_price=2.8689999999999998, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=2.9, sl_price=2.868, tp_price=3.025
+[2025-09-12 11:55:00+00:00] TRADE SIGNAL: NGAS | LONG_REVERSAL on H4 -> M15
+--- TRADE OPENED (NGAS) ---
+Time: 2025-09-12 11:55:00+00:00, Type: BUY, Entry: 2.90000, SL: 2.86800, TP: 3.02500, TP Rule: PDH/PDL
+--- TRADE CLOSED (NGAS) --- Ticket: 3, Reason: TP Hit, Profit: 0.01
+--- BACKTEST COMPLETE ---
+Period: 2025-09-08 to 2025-09-18 (10 days)
+Trailing Stoploss: Off
+Invalidation Exit: On
+Report Generated: 2025-09-18 16:24:12
+Symbols Tested: ['NGAS']
+Initial Equity: $100.00
+Final Equity: $100.01
+Total Net Profit: $0.01
+Performance summary and trade history saved to ICT_backtest_results_NGAS.xlsx
+Running backtest for individual symbol: UK Brent Oil
+Initializing Backtest Client...
+Backtest will run from 2025-09-08 to ensure all symbols have data.
+--- Downloading data for UK Brent Oil ---
+Pre-calculating daily biases...
+Daily bias pre-calculation complete.
+Historical data download complete.
+MT5 connection closed.
+Starting backtest from 2025-09-08 14:25:00+00:00 to 2025-09-18 14:20:00+00:00...
+DEBUG (LONG): sl_def_price=67.279, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=67.499, sl_price=67.27799999999999, tp_price=68.162
+[2025-09-18 14:24:13.031962+00:00] Trade on UK Brent Oil invalidated: SL of 2210.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=67.429, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=67.364, sl_price=67.43, tp_price=67.166
+DEBUG (SHORT): sl_def_price=67.479, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=67.264, sl_price=67.48, tp_price=66.61599999999997
+[2025-09-18 14:24:13.052914+00:00] Trade on UK Brent Oil invalidated: SL of 2160.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=67.479, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=67.264, sl_price=67.48, tp_price=66.61599999999997
+[2025-09-18 14:24:13.053410+00:00] Trade on UK Brent Oil invalidated: SL of 2160.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=67.479, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=67.256, sl_price=67.48, tp_price=66.58399999999999
+[2025-09-18 14:24:13.054736+00:00] Trade on UK Brent Oil invalidated: SL of 2240.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=67.479, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=67.256, sl_price=67.48, tp_price=66.58399999999999
+[2025-09-18 14:24:13.055733+00:00] Trade on UK Brent Oil invalidated: SL of 2240.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=67.299, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=67.196, sl_price=67.30000000000001, tp_price=66.88399999999996
+[2025-09-18 14:24:13.067209+00:00] Trade on UK Brent Oil invalidated: SL of 1040.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=67.299, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=67.196, sl_price=67.30000000000001, tp_price=66.88399999999996
+[2025-09-18 14:24:13.068209+00:00] Trade on UK Brent Oil invalidated: SL of 1040.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=67.299, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=67.196, sl_price=67.30000000000001, tp_price=66.88399999999996
+[2025-09-18 14:24:13.069294+00:00] Trade on UK Brent Oil invalidated: SL of 1040.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=67.127, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=67.393, sl_price=67.12599999999999, tp_price=68.19400000000003
+[2025-09-18 14:24:13.313433+00:00] Trade on UK Brent Oil invalidated: SL of 2670.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=67.127, sl_buffer_pips=10, sl_buffer_price_units=0.001, entry_price=67.399, sl_price=67.12599999999999, tp_price=68.21800000000003
+[2025-09-18 14:24:13.314100+00:00] Trade on UK Brent Oil invalidated: SL of 2730.00 pips exceeds max of 1000 pips.
+--- BACKTEST COMPLETE ---
+Period: 2025-09-08 to 2025-09-18 (10 days)
+Trailing Stoploss: Off
+Invalidation Exit: On
+Report Generated: 2025-09-18 16:24:13
+Symbols Tested: ['UK Brent Oil']
+Initial Equity: $100.00
+Final Equity: $100.00
+Total Net Profit: $0.00
+No trades were executed.
+No trades generated for UK Brent Oil in portfolio backtest.
+Running backtest for individual symbol: USDMXN
+Initializing Backtest Client...
+Backtest will run from 2025-09-08 to ensure all symbols have data.
+--- Downloading data for USDMXN ---
+Pre-calculating daily biases...
+Daily bias pre-calculation complete.
+Historical data download complete.
+MT5 connection closed.
+Starting backtest from 2025-09-08 14:25:00+00:00 to 2025-09-18 14:20:00+00:00...
+DEBUG (SHORT): sl_def_price=18.4528, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=18.44298, sl_price=18.4533, tp_price=18.41586
+DEBUG (SHORT): sl_def_price=18.45018, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=18.4438, sl_price=18.45068, tp_price=18.41586
+DEBUG (SHORT): sl_def_price=18.45018, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=18.44344, sl_price=18.45068, tp_price=18.41586
+DEBUG (SHORT): sl_def_price=18.45183, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=18.44311, sl_price=18.45233, tp_price=18.41586
+DEBUG (SHORT): sl_def_price=18.45183, sl_buffer_pips=5, sl_buffer_price_units=0.0005, entry_price=18.44308, sl_price=18.45233, tp_price=18.41586
+--- BACKTEST COMPLETE ---
+Period: 2025-09-08 to 2025-09-18 (10 days)
+Trailing Stoploss: Off
+Invalidation Exit: On
+Report Generated: 2025-09-18 16:24:13
+Symbols Tested: ['USDMXN']
+Initial Equity: $100.00
+Final Equity: $100.00
+Total Net Profit: $0.00
+No trades were executed.
+No trades generated for USDMXN in portfolio backtest.
+Running backtest for individual symbol: US Oil
+Initializing Backtest Client...
+Backtest will run from 2025-09-08 to ensure all symbols have data.
+--- Downloading data for US Oil ---
+Pre-calculating daily biases...
+Daily bias pre-calculation complete.
+Historical data download complete.
+MT5 connection closed.
+Starting backtest from 2025-09-08 14:25:00+00:00 to 2025-09-18 14:20:00+00:00...
+DEBUG (LONG): sl_def_price=63.352, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=63.542, sl_price=63.349999999999994, tp_price=63.267
+DEBUG (SHORT): sl_def_price=63.45, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=63.315, sl_price=63.452000000000005, tp_price=62.63
+[2025-09-18 14:24:13.999595+00:00] Trade on US Oil invalidated: SL of 1370.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=63.45, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=63.315, sl_price=63.452000000000005, tp_price=62.63
+[2025-09-18 14:24:14.001145+00:00] Trade on US Oil invalidated: SL of 1370.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=63.45, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=63.315, sl_price=63.452000000000005, tp_price=62.63
+[2025-09-18 14:24:14.003228+00:00] Trade on US Oil invalidated: SL of 1370.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=63.332, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=62.841, sl_price=63.334, tp_price=61.898
+[2025-09-18 14:24:14.131250+00:00] Trade on US Oil invalidated: SL of 4930.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=63.075, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=62.853, sl_price=63.077000000000005, tp_price=61.898
+[2025-09-18 14:24:14.136719+00:00] Trade on US Oil invalidated: SL of 2240.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=63.075, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=62.844, sl_price=63.077000000000005, tp_price=61.898
+[2025-09-18 14:24:14.137719+00:00] Trade on US Oil invalidated: SL of 2330.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=63.166, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=62.915, sl_price=63.168, tp_price=61.898
+[2025-09-18 14:24:14.142147+00:00] Trade on US Oil invalidated: SL of 2530.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=63.166, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=62.901, sl_price=63.168, tp_price=61.898
+[2025-09-18 14:24:14.143056+00:00] Trade on US Oil invalidated: SL of 2670.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=62.981, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=62.267, sl_price=62.983000000000004, tp_price=61.898
+[2025-09-18 14:24:14.148055+00:00] Trade on US Oil invalidated: SL of 7160.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=62.304, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=62.454, sl_price=62.302, tp_price=62.506
+[2025-09-18 14:24:14.163476+00:00] Trade on US Oil invalidated: SL of 1520.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=62.304, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=62.504, sl_price=62.302, tp_price=62.506
+[2025-09-18 14:24:14.164475+00:00] Trade on US Oil invalidated: SL of 2020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=62.304, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=62.544, sl_price=62.302, tp_price=62.506
+DEBUG (LONG): sl_def_price=62.464, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=62.524, sl_price=62.461999999999996, tp_price=62.506
+DEBUG (LONG): sl_def_price=62.464, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=62.549, sl_price=62.461999999999996, tp_price=62.506
+DEBUG (LONG): sl_def_price=62.464, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=62.549, sl_price=62.461999999999996, tp_price=62.506
+DEBUG (LONG): sl_def_price=63.264, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=63.496, sl_price=63.262, tp_price=64.29
+[2025-09-18 14:24:14.333004+00:00] Trade on US Oil invalidated: SL of 2340.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=63.264, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=63.506, sl_price=63.262, tp_price=64.29
+[2025-09-18 14:24:14.335299+00:00] Trade on US Oil invalidated: SL of 2440.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=63.264, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=63.516, sl_price=63.262, tp_price=64.29
+[2025-09-18 14:24:14.335721+00:00] Trade on US Oil invalidated: SL of 2540.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=63.264, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=63.536, sl_price=63.262, tp_price=64.29
+[2025-09-18 14:24:14.336734+00:00] Trade on US Oil invalidated: SL of 2740.00 pips exceeds max of 1000 pips.
+--- BACKTEST COMPLETE ---
+Period: 2025-09-08 to 2025-09-18 (10 days)
+Trailing Stoploss: Off
+Invalidation Exit: On
+Report Generated: 2025-09-18 16:24:14
+Symbols Tested: ['US Oil']
+Initial Equity: $100.00
+Final Equity: $100.00
+Total Net Profit: $0.00
+No trades were executed.
+No trades generated for US Oil in portfolio backtest.
+Running backtest for individual symbol: US Oil
+Initializing Backtest Client...
+Backtest will run from 2025-09-08 to ensure all symbols have data.
+--- Downloading data for US Oil ---
+Pre-calculating daily biases...
+Daily bias pre-calculation complete.
+Historical data download complete.
+MT5 connection closed.
+Starting backtest from 2025-09-08 14:25:00+00:00 to 2025-09-18 14:20:00+00:00...
+DEBUG (LONG): sl_def_price=63.352, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=63.542, sl_price=63.349999999999994, tp_price=63.267
+DEBUG (SHORT): sl_def_price=63.45, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=63.315, sl_price=63.452000000000005, tp_price=62.63
+[2025-09-18 14:24:14.547181+00:00] Trade on US Oil invalidated: SL of 1370.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=63.45, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=63.315, sl_price=63.452000000000005, tp_price=62.63
+[2025-09-18 14:24:14.548181+00:00] Trade on US Oil invalidated: SL of 1370.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=63.45, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=63.315, sl_price=63.452000000000005, tp_price=62.63
+[2025-09-18 14:24:14.549243+00:00] Trade on US Oil invalidated: SL of 1370.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=63.332, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=62.841, sl_price=63.334, tp_price=61.898
+[2025-09-18 14:24:14.677849+00:00] Trade on US Oil invalidated: SL of 4930.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=63.075, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=62.853, sl_price=63.077000000000005, tp_price=61.898
+[2025-09-18 14:24:14.684247+00:00] Trade on US Oil invalidated: SL of 2240.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=63.075, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=62.844, sl_price=63.077000000000005, tp_price=61.898
+[2025-09-18 14:24:14.685305+00:00] Trade on US Oil invalidated: SL of 2330.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=63.166, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=62.915, sl_price=63.168, tp_price=61.898
+[2025-09-18 14:24:14.688258+00:00] Trade on US Oil invalidated: SL of 2530.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=63.166, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=62.901, sl_price=63.168, tp_price=61.898
+[2025-09-18 14:24:14.690297+00:00] Trade on US Oil invalidated: SL of 2670.00 pips exceeds max of 1000 pips.
+DEBUG (SHORT): sl_def_price=62.981, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=62.267, sl_price=62.983000000000004, tp_price=61.898
+[2025-09-18 14:24:14.694722+00:00] Trade on US Oil invalidated: SL of 7160.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=62.304, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=62.454, sl_price=62.302, tp_price=62.506
+[2025-09-18 14:24:14.711287+00:00] Trade on US Oil invalidated: SL of 1520.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=62.304, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=62.504, sl_price=62.302, tp_price=62.506
+[2025-09-18 14:24:14.711287+00:00] Trade on US Oil invalidated: SL of 2020.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=62.304, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=62.544, sl_price=62.302, tp_price=62.506
+DEBUG (LONG): sl_def_price=62.464, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=62.524, sl_price=62.461999999999996, tp_price=62.506
+DEBUG (LONG): sl_def_price=62.464, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=62.549, sl_price=62.461999999999996, tp_price=62.506
+DEBUG (LONG): sl_def_price=62.464, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=62.549, sl_price=62.461999999999996, tp_price=62.506
+DEBUG (LONG): sl_def_price=63.264, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=63.496, sl_price=63.262, tp_price=64.29
+[2025-09-18 14:24:14.880988+00:00] Trade on US Oil invalidated: SL of 2340.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=63.264, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=63.506, sl_price=63.262, tp_price=64.29
+[2025-09-18 14:24:14.882638+00:00] Trade on US Oil invalidated: SL of 2440.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=63.264, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=63.516, sl_price=63.262, tp_price=64.29
+[2025-09-18 14:24:14.883580+00:00] Trade on US Oil invalidated: SL of 2540.00 pips exceeds max of 1000 pips.
+DEBUG (LONG): sl_def_price=63.264, sl_buffer_pips=20, sl_buffer_price_units=0.002, entry_price=63.536, sl_price=63.262, tp_price=64.29
+[2025-09-18 14:24:14.884638+00:00] Trade on US Oil invalidated: SL of 2740.00 pips exceeds max of 1000 pips.
+--- BACKTEST COMPLETE ---
+Period: 2025-09-08 to 2025-09-18 (10 days)
+Trailing Stoploss: Off
+Invalidation Exit: On
+Report Generated: 2025-09-18 16:24:14
+Symbols Tested: ['US Oil']
+Initial Equity: $100.00
+Final Equity: $100.00
+Total Net Profit: $0.00
+No trades were executed.
+No trades generated for US Oil in portfolio backtest.
+Total trades in portfolio backtest: 15
+--- Portfolio Backtest Results ---
+Total Trades: 15
+Net PnL: $12.40
+Max Drawdown: $-18.31 (-18.31%)
+Generating Excel report to D:\Microsoft VS Code\Projects\2025\ICT_Bias_Outputs\ICT_portfolio_results.xlsx...
+Successfully saved Excel report: ICT_portfolio_results.xlsx

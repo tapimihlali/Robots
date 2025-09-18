@@ -347,7 +347,10 @@ def make_bars(tick_df: pd.DataFrame,
     Returns
     -------
     pd.DataFrame with columns [open, high, low, close, median_price, tick_volume, volume]
-    '''    
+    '''
+    if tick_df is None or tick_df.empty:
+        return pd.DataFrame()
+    
     if 'midprice' not in tick_df:
         tick_df['midprice'] = (tick_df['bid'] + tick_df['ask']) / 2
 
@@ -371,11 +374,11 @@ def make_bars(tick_df: pd.DataFrame,
     else:
         end_time =  bar_group['time'].last()
         ohlc_df.index = end_time + pd.Timedelta(microseconds=1) # ensure end time is after event
-	    # ohlc_df.drop('time', axis=1, inplace=True) # Remove 'time' column
+        # ohlc_df.drop('time', axis=1, inplace=True) # Remove 'time' column
 
 
         # drop last bar due to insufficient ticks
-        if len(tick_df) % bar_size_ > 0: 
+        if bar_size_ > 0 and len(tick_df) % bar_size_ > 0: 
             ohlc_df = ohlc_df.iloc[:-1]
 
     if verbose:
@@ -393,7 +396,7 @@ def make_bars(tick_df: pd.DataFrame,
     # ohlc_df = ohlc_df.tz_convert(None)
      
     # except:
-	#     pass
+    #     pass
     
     return ohlc_df
 
@@ -426,10 +429,11 @@ def collect_price(pair, days=5, granularity='M1',  timezone='Etc/GMT-2', price='
     # ap = data_api.DataApi()
     price = fetch_candles(pair,granularity=granularity,start_date=date_from,end_date=date_to,price=price)
     
-    if len(price) > 0:
-        final_df = price
-    elif len(price) == 0:
+    if price is None or len(price) == 0:
         print('ERROR', pair, granularity, date_from, date_to)
+        return pd.DataFrame()
+    
+    final_df = price
         
     # print(f'{pair} {granularity} {final_df.iloc[0].date} {final_df.iloc[-1].date}' )
     return final_df

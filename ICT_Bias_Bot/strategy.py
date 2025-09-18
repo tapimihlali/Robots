@@ -7,8 +7,13 @@ from numba import jit
 import config # Import configuration
 
 def get_symbol_specific_setting(setting_dict, symbol):
-    """Gets a symbol-specific setting from a dictionary, falling back to the default."""
-    return setting_dict.get(symbol, setting_dict.get('default'))
+    """
+    Retrieves a setting specific to a symbol from a dictionary.
+    If the setting is not a dictionary, it is returned directly.
+    """
+    if isinstance(setting_dict, dict):
+        return setting_dict.get(symbol, setting_dict.get('default'))
+    return setting_dict
 
 def get_pip_size(symbol):
     """Returns the pip size for a given symbol."""

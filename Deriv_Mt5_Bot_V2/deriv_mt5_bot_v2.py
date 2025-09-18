@@ -21,7 +21,7 @@ import deriv_mt5_bot_config as config
 from deriv_mt5_bot_config import get_optimized_risk_parameters, get_telegram_credentials
 
 # --- OUTPUT DIRECTORY ---
-OUTPUT_DIR = "D:\\Microsoft VS Code\\Projects\\2025\\Deriv_EMA_Outputs"
+OUTPUT_DIR = "D:\\Microsoft VS Code\\Projects\\2025\\Robots\\Deriv_EMA_Outputs"
 
 # --- CONFIGURATION ---
 credentials = config.get_credentials()

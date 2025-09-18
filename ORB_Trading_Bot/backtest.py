@@ -225,6 +225,7 @@ def calculate_performance_metrics(trades_df, equity_curve, initial_equity):
 
 def run_backtest(symbol, start_date, end_date, generate_plot=True, orb_timeframe=None, initial_equity=config.INITIAL_EQUITY_BACKTEST, rr_standard=None, rr_reversal=None):
     """Simulates the ORB strategy on historical data."""
+    print("GEMINI IS RUNNING THIS BACKTEST")
     print(f"\n--- Starting Backtest for {symbol} from {start_date} to {end_date} ---")
     
     timeframe = orb_timeframe if orb_timeframe is not None else config.ORB_TIMEFRAME
@@ -271,7 +272,7 @@ def run_backtest(symbol, start_date, end_date, generate_plot=True, orb_timeframe
                 break
             
             current_df = df_day.iloc[:i+1]
-            signals, bullish_break, bearish_break = strategy.check_trade_signals(current_df, orh, orl, bullish_break, bearish_break)
+            signals, bullish_break, bearish_break = strategy.check_trade_signals(symbol, current_df, orh, orl, bullish_break, bearish_break)
 
             if signals:
                 for signal in signals:

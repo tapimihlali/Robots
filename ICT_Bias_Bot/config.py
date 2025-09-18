@@ -171,9 +171,9 @@ FVG_LOCATION_RULE = {
 # On/Off switches for ICT killer timezone filter for each mode
 KILLER_ZONE_FILTER = {
     'live': False,
-    'backtest': True,
-    'optimizer': True,
-    'walk_forward': True
+    'backtest': False,
+    'optimizer': False,
+    'walk_forward': False
 }
 
 # --- TRADE MANAGEMENT ---

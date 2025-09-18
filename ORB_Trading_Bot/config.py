@@ -70,9 +70,9 @@ TRADE_REVERSAL_STRATEGY = True
 # --- RISK MANAGEMENT ---
 RISK_PER_TRADE_PERCENT = 1.0
 # Options: "FIXED", "RISK_PERCENT", "MIN_LOT"
-DEFAULT_LOT_SIZE_STRATEGY = "RISK_PERCENT" 
+DEFAULT_LOT_SIZE_STRATEGY = "MIN_LOT" 
 MAX_OPEN_TRADES_GLOBAL = 1
-DEFAULT_MAX_STOP_LOSS_PIPS = 100
+DEFAULT_MAX_STOP_LOSS_PIPS = 5000
 # Custom max stop loss pips for specific symbols (overrides the default)
 CUSTOM_MAX_STOP_LOSS_PIPS = {
     # "BTCUSD": 500,
@@ -110,7 +110,8 @@ OPTIMIZATION_PARAMS = {
 }
 
 # --- PRE-MARKET FETCH SETTINGS ---
-PRE_MARKET_FETCH_ENABLED = False
+PRE_MARKET_FETCH_ENABLED = True
+# Minutes of pre-market data to fetch before market open for each market type
 PRE_MARKET_FETCH_MINUTES = {
     'US': 10,
     'EUROPEAN': 10,

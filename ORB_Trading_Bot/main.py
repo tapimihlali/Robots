@@ -24,7 +24,7 @@ class Tee:
             f.flush()
 
 # --- Output Redirection Setup ---
-output_dir = r'D:\Microsoft VS Code\Projects\2025\ORB_Outputs'
+output_dir = r'D:\Microsoft VS Code\Projects\2025\Robots\ORB_Outputs'
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
