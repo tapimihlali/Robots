@@ -8,7 +8,7 @@ SYMBOLS = [
     'Wall Street 30', 'US SP 500', 'US Tech 100', 'Germany 40', 'UK 100',
     'BTCUSD', 'AAPL', 'MSFT', 'TSLA', 'AMZN',
     'XAUUSD', 'XAGUSD', 'XPTUSD',
-    'NGAS', 'UK Brent Oil', 'USDMXN', 'US Oil'
+    'NGAS', 'UK Brent Oil', 'USDMXN', 'US Oil', 'US Oil'
 ]
 DAILY_TIMEFRAME = "D1"  # Daily Candlestick for Bias
 ENTRY_TIMEFRAMES = ["H4", "H1"] # Higher Timeframes for FVG search

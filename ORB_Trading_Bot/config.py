@@ -49,7 +49,7 @@ SESSION_OPEN_TIMES = {
 
 FOREX_SYMBOLS = ['USDMXN']
 CRYPTO_SYMBOLS = ['BTCUSD']
-COMMODITY_SYMBOLS = ['XAUUSD', 'XAGUSD', 'XPTUSD', 'NGAS', 'UK Brent Oil', 'US Oil']
+COMMODITY_SYMBOLS = ['XAUUSD', 'XAGUSD', 'XPTUSD', 'UK Brent Oil', 'US Oil']
 
 # --- SYMBOL LIST CONSTRUCTION ---
 SYMBOLS = []
@@ -69,9 +69,20 @@ TRADE_REVERSAL_STRATEGY = True
 
 # --- RISK MANAGEMENT ---
 RISK_PER_TRADE_PERCENT = 1.0
-DEFAULT_LOT_SIZE_STRATEGY = "RISK_PERCENT"
+# Options: "FIXED", "RISK_PERCENT", "MIN_LOT"
+DEFAULT_LOT_SIZE_STRATEGY = "RISK_PERCENT" 
 MAX_OPEN_TRADES_GLOBAL = 1
-MAX_STOP_LOSS_PIPS = 100
+DEFAULT_MAX_STOP_LOSS_PIPS = 100
+# Custom max stop loss pips for specific symbols (overrides the default)
+CUSTOM_MAX_STOP_LOSS_PIPS = {
+    # "BTCUSD": 500,
+    # "US SP 500": 50
+}
+# Custom lot sizes for specific symbols (overrides the default strategy)
+CUSTOM_LOT_SIZES = {
+    # "BTCUSD": 0.01,
+    # "US SP 500": 0.1
+}
 
 # --- NOTIFICATIONS ---
 TELEGRAM_ENABLED = True
@@ -96,4 +107,12 @@ OPTIMIZATION_PARAMS = {
         'RISK_REWARD_RATIO_STANDARD': [2, 3, 4, 5],
         'RISK_REWARD_RATIO_REVERSAL': [2, 3, 4, 5],
     }
+}
+
+# --- PRE-MARKET FETCH SETTINGS ---
+PRE_MARKET_FETCH_ENABLED = False
+PRE_MARKET_FETCH_MINUTES = {
+    'US': 10,
+    'EUROPEAN': 10,
+    '24_HOUR': 10 # Before London, NY, and NY PM sessions
 }

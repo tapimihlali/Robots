@@ -5,11 +5,12 @@ Main entry point for the ORB Trading Bot.
 
 import argparse
 import time
-from datetime import datetime, time as time_obj
+from datetime import datetime, time as time_obj, timedelta
 import pytz
 from notifier import escape_markdown_v2
 import sys
 import os
+import MetaTrader5 as mt5
 
 class Tee:
     def __init__(self, *files):
@@ -46,17 +47,121 @@ def get_symbol_market_type(symbol):
         return '24_HOUR'
     return None
 
+def get_timeframe_in_seconds(timeframe):
+    """Converts an MT5 timeframe constant to seconds."""
+    if timeframe == mt5.TIMEFRAME_M1:
+        return 60
+    if timeframe == mt5.TIMEFRAME_M5:
+        return 300
+    if timeframe == mt5.TIMEFRAME_M15:
+        return 900
+    if timeframe == mt5.TIMEFRAME_M30:
+        return 1800
+    if timeframe == mt5.TIMEFRAME_H1:
+        return 3600
+    # Add other timeframes as needed
+    return 60 # Default to 1 minute
+
+def get_next_market_open(market_type, current_time):
+    """Gets the next market open time for a given market type."""
+    if market_type == 'US':
+        open_time = time_obj.fromisoformat(config.US_MARKET_OPEN_TIME)
+        next_open = current_time.replace(hour=open_time.hour, minute=open_time.minute, second=0, microsecond=0)
+        if current_time.time() >= open_time:
+            next_open += timedelta(days=1)
+        return next_open
+    elif market_type == 'EUROPEAN':
+        open_time = time_obj.fromisoformat(config.EUROPEAN_MARKET_OPEN_TIME)
+        next_open = current_time.replace(hour=open_time.hour, minute=open_time.minute, second=0, microsecond=0)
+        if current_time.time() >= open_time:
+            next_open += timedelta(days=1)
+        return next_open
+    elif market_type == '24_HOUR':
+        next_opens = []
+        for session, open_time_str in config.SESSION_OPEN_TIMES.items():
+            open_time = time_obj.fromisoformat(open_time_str)
+            next_open = current_time.replace(hour=open_time.hour, minute=open_time.minute, second=0, microsecond=0)
+            if current_time.time() >= open_time:
+                next_open += timedelta(days=1)
+            next_opens.append(next_open)
+        return min(next_opens)
+    return None
+
+def calculate_lot_size(symbol, stop_loss_pips):
+    """Calculates the lot size based on the configured strategy."""
+    # 1. Check for custom lot size
+    if symbol in config.CUSTOM_LOT_SIZES:
+        return config.CUSTOM_LOT_SIZES[symbol]
+
+    # 2. Global lot size strategy
+    if config.DEFAULT_LOT_SIZE_STRATEGY == "FIXED":
+        return config.LOT_SIZE
+    
+    elif config.DEFAULT_LOT_SIZE_STRATEGY == "MIN_LOT":
+        symbol_info = mt5.symbol_info(symbol)
+        if symbol_info:
+            return symbol_info.volume_min
+        else:
+            return config.LOT_SIZE # Fallback
+
+    elif config.DEFAULT_LOT_SIZE_STRATEGY == "RISK_PERCENT":
+        account_info = mt5.account_info()
+        if account_info:
+            equity = account_info.equity
+            risk_amount = equity * (config.RISK_PER_TRADE_PERCENT / 100)
+            
+            symbol_info = mt5.symbol_info(symbol)
+            if symbol_info:
+                tick_value = symbol_info.trade_tick_value
+                if tick_value > 0 and stop_loss_pips > 0:
+                    lot_size = risk_amount / (stop_loss_pips * tick_value)
+                    
+                    # Normalize and validate the lot size
+                    min_volume = symbol_info.volume_min
+                    max_volume = symbol_info.volume_max
+                    volume_step = symbol_info.volume_step
+                    
+                    if lot_size < min_volume:
+                        lot_size = min_volume
+                    if lot_size > max_volume:
+                        lot_size = max_volume
+                    
+                    lot_size = round(lot_size / volume_step) * volume_step
+                    return round(lot_size, 2)
+
+    return config.LOT_SIZE # Default fallback
+
 def run_live(client):
     """Runs the bot in a continuous loop for live trading."""
     print("\n--- Starting Live Trading Bot ---")
     
     states = {symbol: {'orh': None, 'orl': None, 'last_checked_day': None, 'trade_taken_today': False, 'bullish_break': False, 'bearish_break': False} for symbol in config.SYMBOLS}
-
+    
     while True:
         try:
             market_tz = pytz.timezone(config.MARKET_TIMEZONE)
-            current_market_time = datetime.now(market_tz)
-            
+            now = datetime.now(market_tz)
+
+            if config.PRE_MARKET_FETCH_ENABLED:
+                next_opens = []
+                if config.TRADE_US_MARKETS:
+                    next_opens.append(get_next_market_open('US', now))
+                if config.TRADE_EUROPEAN_MARKETS:
+                    next_opens.append(get_next_market_open('EUROPEAN', now))
+                if config.TRADE_24_HOUR_MARKETS:
+                    next_opens.append(get_next_market_open('24_HOUR', now))
+
+                if next_opens:
+                    next_market_open = min(next_opens)
+                    pre_market_start_time = next_market_open - timedelta(minutes=config.PRE_MARKET_FETCH_MINUTES.get(get_symbol_market_type(config.SYMBOLS[0]), 10))
+                    
+                    if now < pre_market_start_time:
+                        sleep_duration = (pre_market_start_time - now).total_seconds()
+                        if sleep_duration > 0:
+                            print(f"Sleeping for {sleep_duration:.2f} seconds until pre-market for the next session.")
+                            time.sleep(sleep_duration)
+                        now = datetime.now(market_tz) # Update time after sleeping
+
             for symbol in config.SYMBOLS:
                 state = states[symbol]
                 market_type = get_symbol_market_type(symbol)
@@ -64,14 +169,14 @@ def run_live(client):
                 if not market_type:
                     continue
 
-                if current_market_time.date() != state['last_checked_day']:
-                    state.update({'orh': None, 'orl': None, 'trade_taken_today': False, 'bullish_break': False, 'bearish_break': False, 'last_checked_day': current_market_time.date()})
+                if now.date() != state['last_checked_day']:
+                    state.update({'orh': None, 'orl': None, 'trade_taken_today': False, 'bullish_break': False, 'bearish_break': False, 'last_checked_day': now.date()})
 
                 if state['trade_taken_today']:
                     continue
 
                 if state['orh'] is None:
-                    start_of_day = datetime.combine(current_market_time.date(), time_obj(0, 0), tzinfo=market_tz)
+                    start_of_day = datetime.combine(now.date(), time_obj(0, 0), tzinfo=market_tz)
                     df_today = client.get_data(symbol, config.ORB_TIMEFRAME, start_of_day, datetime.now(pytz.utc))
                     
                     if not df_today.empty:
@@ -80,7 +185,7 @@ def run_live(client):
                         elif market_type == 'EUROPEAN':
                             state['orh'], state['orl'] = strategy.get_opening_range(df_today, config.EUROPEAN_MARKET_OPEN_TIME)
                         elif market_type == '24_HOUR':
-                            state['orh'], state['orl'] = strategy.get_opening_range_24_hour(df_today, current_market_time)
+                            state['orh'], state['orl'] = strategy.get_opening_range_24_hour(df_today, now)
 
                 if state['orh'] is not None and not state['trade_taken_today']:
                     live_df = client.get_data_from_pos(symbol, config.ORB_TIMEFRAME, 2)
@@ -91,12 +196,36 @@ def run_live(client):
 
                     if signals:
                         for signal in signals:
-                            client.execute_trade(signal['type'], symbol, config.LOT_SIZE, signal['entry'], signal['sl'], signal['tp'], config.MAGIC_NUMBER)
+                            stop_loss_pips = (signal['entry'] - signal['sl']) / mt5.symbol_info(symbol).point if signal['type'] == 'BUY' else (signal['sl'] - signal['entry']) / mt5.symbol_info(symbol).point
+                            lot_size = calculate_lot_size(symbol, stop_loss_pips)
+                            client.execute_trade(signal['type'], symbol, lot_size, signal['entry'], signal['sl'], signal['tp'], config.MAGIC_NUMBER)
                             state['trade_taken_today'] = True
                             break
+            
+            # --- Event-Driven Sleep Logic ---
+            timeframe_seconds = get_timeframe_in_seconds(config.ORB_TIMEFRAME)
+            now_utc = datetime.now(pytz.utc)
+            
+            # Find the most recent candle time across all symbols
+            last_candle_times = []
+            for symbol in config.SYMBOLS:
+                df = client.get_data_from_pos(symbol, config.ORB_TIMEFRAME, 1)
+                if not df.empty:
+                    last_candle_times.append(df.index[-1].to_pydatetime())
+            
+            if last_candle_times:
+                last_candle_time = max(last_candle_times)
+                next_candle_open = last_candle_time + timedelta(seconds=timeframe_seconds)
+                sleep_duration = (next_candle_open - now_utc).total_seconds() + 2
 
-            print("Waiting for next check...")
-            time.sleep(60)
+                if sleep_duration > 0:
+                    print(f"Sleeping for {sleep_duration:.2f} seconds until the next candle.")
+                    time.sleep(sleep_duration)
+                else:
+                    time.sleep(5)
+            else:
+                print("Waiting for 60 seconds before next check...")
+                time.sleep(60)
 
         except Exception as e:
             print(f"An error occurred in the main loop: {e}")

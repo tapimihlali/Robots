@@ -93,42 +93,75 @@ class BrokerClient:
         )
 
     def execute_trade(self, action, symbol, lot_size, price, stop_loss, take_profit, magic):
-        """Constructs and sends a trade request to MT5."""
-        
+        """
+        Constructs a trade request, validates it against broker rules,
+        and sends it to MT5.
+        """
+        # 1. Fetch Symbol Rules First
         symbol_info = mt5.symbol_info(symbol)
         if symbol_info is None:
             error_message = f"Symbol {symbol} not found."
             print(error_message)
-            self.notifier.send_message(f"⚠️ *Trade Failed* ⚠️\nSymbol: {escape_markdown_v2(symbol)}\nType: {escape_markdown_v2(action)}\nReason: {escape_markdown_v2(error_message)}")
+            self.notifier.send_message(f"⚠️ *Trade Failed* ⚠️\nSymbol: {escape_markdown_v2(symbol)}\nReason: {escape_markdown_v2(error_message)}")
             return None
 
-        if not symbol_info.visible:
-            print(f"Symbol {symbol} is not visible in Market Watch, trying to enable it.")
-            if not mt5.symbol_select(symbol, True):
-                print(f"Failed to enable symbol {symbol}. Error: {mt5.last_error()}")
-            else:
-                time.sleep(1) # Wait a moment for the terminal to update
-                symbol_info = mt5.symbol_info(symbol) # Refresh symbol info
+        # 2. Validate and Correct Volume
+        volume = lot_size
+        min_volume = symbol_info.volume_min
+        max_volume = symbol_info.volume_max
+        volume_step = symbol_info.volume_step
 
-        if symbol_info.trade_mode == mt5.SYMBOL_TRADE_MODE_DISABLED:
-            error_message = f"Trading for {symbol} is disabled. Please enable it in your terminal."
+        if volume < min_volume:
+            print(f"Volume {volume} is less than the minimum allowed volume {min_volume}. Adjusting to minimum.")
+            volume = min_volume
+        
+        if volume > max_volume:
+            error_message = f"Volume {volume} is greater than the maximum allowed volume {max_volume}."
             print(error_message)
-            self.notifier.send_message(f"⚠️ *Trade Failed* ⚠️\nSymbol: {escape_markdown_v2(symbol)}\nType: {escape_markdown_v2(action)}\nReason: {escape_markdown_v2(error_message)}")
+            self.notifier.send_message(f"⚠️ *Trade Failed* ⚠️\nSymbol: {escape_markdown_v2(symbol)}\nReason: {escape_markdown_v2(error_message)}")
+            return None
+
+        # Round to the nearest valid volume step
+        volume = round(volume / volume_step) * volume_step
+        volume = round(volume, 2) # MT5 requires volume to have at most 2 decimal places
+
+        # 3. Validate Stop Loss
+        point = symbol_info.point
+        digits = symbol_info.digits
+        stops_level = symbol_info.trade_stops_level
+
+        tick = mt5.symbol_info_tick(symbol)
+        if tick is None:
+            error_message = f"Could not get tick for {symbol}."
+            print(error_message)
+            self.notifier.send_message(f"⚠️ *Trade Failed* ⚠️\nSymbol: {escape_markdown_v2(symbol)}\nReason: {escape_markdown_v2(error_message)}")
             return None
         
-        trade_type = mt5.TRADE_ACTION_DEAL
-        point = symbol_info.point
-        stops_level = symbol_info.trade_stops_level
-        
+        ask_price = tick.ask
+        bid_price = tick.bid
+
         if action == "BUY":
             order_type = mt5.ORDER_TYPE_BUY
-            price = mt5.symbol_info_tick(symbol).ask
+            price = ask_price
+            if stop_loss >= price:
+                error_message = f"Stop loss for BUY must be below the entry price."
+                print(error_message)
+                self.notifier.send_message(f"⚠️ *Trade Failed* ⚠️\nSymbol: {escape_markdown_v2(symbol)}\nReason: {escape_markdown_v2(error_message)}")
+                return None
+            
             if price - stop_loss < stops_level * point:
                 stop_loss = price - stops_level * point
                 print(f"Adjusting SL for {symbol} BUY to {stop_loss}")
+
         elif action == "SELL":
             order_type = mt5.ORDER_TYPE_SELL
-            price = mt5.symbol_info_tick(symbol).bid
+            price = bid_price
+            if stop_loss <= price:
+                error_message = f"Stop loss for SELL must be above the entry price."
+                print(error_message)
+                self.notifier.send_message(f"⚠️ *Trade Failed* ⚠️\nSymbol: {escape_markdown_v2(symbol)}\nReason: {escape_markdown_v2(error_message)}")
+                return None
+
             if stop_loss - price < stops_level * point:
                 stop_loss = price + stops_level * point
                 print(f"Adjusting SL for {symbol} SELL to {stop_loss}")
@@ -136,15 +169,15 @@ class BrokerClient:
             return None
 
         # Normalize price and SL/TP to the correct number of digits
-        digits = symbol_info.digits
         stop_loss = round(stop_loss, digits)
         take_profit = round(take_profit, digits)
         price = round(price, digits)
 
+        # 4. Send the order
         request = {
-            "action": trade_type,
+            "action": mt5.TRADE_ACTION_DEAL,
             "symbol": symbol,
-            "volume": lot_size,
+            "volume": volume,
             "type": order_type,
             "price": price,
             "sl": stop_loss,
@@ -157,12 +190,12 @@ class BrokerClient:
         
         result = mt5.order_send(request)
         if result.retcode != mt5.TRADE_RETCODE_DONE:
-            error_message = f"Order send failed, retcode={result.retcode}"
+            error_message = f"Order send failed, retcode={result.retcode}, comment={result.comment}"
             print(error_message)
             self.notifier.send_message(f"⚠️ *Trade Failed* ⚠️\nSymbol: {escape_markdown_v2(symbol)}\nType: {escape_markdown_v2(action)}\nReason: {escape_markdown_v2(result.comment)}")
             return None
         
         success_message = f"Successfully placed {action} order for {symbol} at {price} with SL={stop_loss}, TP={take_profit}"
         print(success_message)
-        self.notifier.send_message(f"✅ *Trade Opened* ✅\nSymbol: {escape_markdown_v2(symbol)}\nType: {escape_markdown_v2(action)}\nEntry: {price:.5f}\nSL: {stop_loss:.5f}\nTP: {take_profit:.5f}\nVolume: {lot_size}")
+        self.notifier.send_message(f"✅ *Trade Opened* ✅\nSymbol: {escape_markdown_v2(symbol)}\nType: {escape_markdown_v2(action)}\nEntry: {price:.5f}\nSL: {stop_loss:.5f}\nTP: {take_profit:.5f}\nVolume: {volume}")
         return result

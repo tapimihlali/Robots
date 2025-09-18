@@ -163,60 +163,55 @@ class TradingBot:
             self.logger.error(f"Error getting info for symbol {symbol}: {e}")
             return None
 
-    def get_candle_data(self, symbol, timeframe, count=100):
+    def get_candle_data(self, symbol, timeframe, count=100, max_retries=3, retry_delay=5):
         """
-        Safely retrieves candle data from MT5, handling large requests by downloading in chunks.
-        It also ensures the data is sorted chronologically (oldest to newest).
+        Safely retrieves candle data from MT5 with retries and enhanced validation.
         """
         if not self.mt5_connected:
             self.logger.warning(f"Cannot get candle data for {symbol}, not connected to MT5.")
             return None
-        
-        try:
-            list_of_rate_arrays = []
-            chunk_size = 100000 
-            offset = 0
-            
-            self.logger.info(f"Starting download of {count} candles for {symbol}...")
-            remaining_count = count
-            while remaining_count > 0:
-                request_size = min(remaining_count, chunk_size) 
-                self.logger.debug(f"Requesting chunk of {request_size} candles for {symbol} from offset {offset}...")
-                
-                rates_chunk = mt5.copy_rates_from_pos(symbol, timeframe, offset, request_size)
-                
-                if rates_chunk is None or len(rates_chunk) == 0:
-                    self.logger.warning(f"No more candle data returned for {symbol} at offset {offset}. Download may be partial.")
-                    break
-                
-                list_of_rate_arrays.append(rates_chunk)
-                offset += len(rates_chunk)
-                remaining_count -= len(rates_chunk)
 
-                if len(rates_chunk) < request_size:
-                    self.logger.info(f"Reached the end of available history for {symbol}.")
-                    break
-            
-            if not list_of_rate_arrays:
-                self.logger.warning(f"No candle data was returned at all for {symbol} with timeframe {timeframe}.")
-                return None
+        # Ensure symbol is available
+        if not mt5.symbol_select(symbol, True):
+            self.logger.warning(f"Could not select {symbol} in Market Watch, it might be unavailable. Trying to fetch data anyway.")
 
-            all_rates_array = np.concatenate(list_of_rate_arrays)
-            self.logger.info(f"Successfully downloaded {len(all_rates_array)} total candles for {symbol}.")
-
-            df = pd.DataFrame(all_rates_array)
-            if df.empty or 'time' not in df.columns:
-                 self.logger.error(f"DataFrame created from MT5 data is invalid for {symbol}. Columns: {df.columns}")
-                 return None
-
-            df['time'] = pd.to_datetime(df['time'], unit='s', utc=True)
-            df.sort_values(by='time', inplace=True)
-            df.set_index('time', inplace=True)
-            
-            return df
-        except Exception as e:
-            self.logger.error(f"An error occurred while getting candle data for {symbol}: {e}", exc_info=True)
+        symbol_info = self.get_symbol_info(symbol)
+        if not symbol_info:
+            self.logger.error(f"Failed to get symbol info for {symbol}. Cannot download candle data.")
             return None
+
+        for attempt in range(1, max_retries + 1):
+            try:
+                self.logger.info(f"Attempt {attempt}/{max_retries}: Starting download of {count} candles for {symbol} on timeframe {timeframe}...")
+                rates = mt5.copy_rates_from_pos(symbol, timeframe, 0, count)
+
+                if rates is None or len(rates) == 0:
+                    self.logger.warning(f"No candle data returned for {symbol} on attempt {attempt}.")
+                    if attempt < max_retries:
+                        time.sleep(retry_delay)
+                        continue
+                    else:
+                        self.logger.error(f"Failed to download candle data for {symbol} after {max_retries} attempts.")
+                        return None
+
+                self.logger.info(f"Successfully downloaded {len(rates)} of {count} requested candles for {symbol}.")
+                if len(rates) < count:
+                    self.logger.warning(f"Downloaded fewer candles than requested for {symbol}. This may be due to limited history.")
+
+                df = pd.DataFrame(rates)
+                df['time'] = pd.to_datetime(df['time'], unit='s', utc=True)
+                df.sort_values(by='time', inplace=True)
+                df.set_index('time', inplace=True)
+                return df
+
+            except Exception as e:
+                self.logger.error(f"An exception occurred on attempt {attempt} while getting candle data for {symbol}: {e}", exc_info=True)
+                if attempt < max_retries:
+                    time.sleep(retry_delay)
+                else:
+                    self.logger.critical(f"Failed to get candle data for {symbol} after all retries.")
+                    return None
+        return None
 
     def _get_live_signal(self, symbol):
         """Gets the latest data and calculates the trading signal."""
@@ -400,13 +395,13 @@ class TradingBot:
         num_candles_m1 = days * 24 * 60
         df_m1 = self.get_candle_data(symbol, TF_ENTRY, count=num_candles_m1)
         if df_m1 is None or df_m1.empty or len(df_m1) < EMA_TREND_PERIOD:
-            self.logger.warning(f"Not enough M1 data for {symbol}.")
+            self.logger.warning(f"Not enough M1 data for {symbol}. Requested {num_candles_m1}, got {len(df_m1) if df_m1 is not None else 0}. Required at least {EMA_TREND_PERIOD}.")
             return pd.DataFrame()
 
         num_candles_m5 = days * 24 * 12
         df_m5 = self.get_candle_data(symbol, TF_TREND, count=num_candles_m5)
         if df_m5 is None or df_m5.empty or len(df_m5) < EMA_TREND_PERIOD:
-            self.logger.warning(f"Not enough M5 data for {symbol}.")
+            self.logger.warning(f"Not enough M5 data for {symbol}. Requested {num_candles_m5}, got {len(df_m5) if df_m5 is not None else 0}. Required at least {EMA_TREND_PERIOD}.")
             return pd.DataFrame()
 
         df_m5['ema_trend'] = ta.ema(df_m5['close'], length=EMA_TREND_PERIOD)
@@ -601,18 +596,12 @@ class TradingBot:
         num_days = (trades_df['exit_time'].max() - trades_df['entry_time'].min()).days
         if num_days > 0:
             annualized_return = ((1 + total_return) ** (365.0 / num_days)) - 1
-        # Use the absolute value of the maximum drawdown percentage
             if abs(max_drawdown_pct) > 0:
                 calmar_ratio = annualized_return / (abs(max_drawdown_pct) / 100)
             else:
                 calmar_ratio = 0
         else:
             calmar_ratio = 0
-        # if num_days > 0:
-        #     annualized_return = ((1 + total_return) ** (365.0 / num_days)) - 1
-        #     calmar_ratio = annualized_return / (max_drawdown_pct / 100) if max_drawdown_pct > 0 else 0
-        # else:
-        #     calmar_ratio = 0
 
         avg_holding_time = (trades_df['exit_time'] - trades_df['entry_time']).mean()
 
@@ -693,7 +682,8 @@ class TradingBot:
         fig, ax = plt.subplots(figsize=(15, 8))
 
         ax.plot(price_data.index, price_data['close'], label='Close Price', color='skyblue', linewidth=1)
-        ax.plot(price_data.index, price_data['ema_entry'], label=f'EMA({EMA_ENTRY_PERIOD})', color='orange', linestyle='--', linewidth=1)
+        ax.plot(price_data.index, price_data['ema_entry'], label=f'EMA({EMA_ENTRY_PERIOD})', color='orange', linestyle='--',
+                linewidth=1)
 
         for _, trade in trades_df.iterrows():
             entry_time = trade['entry_time']
@@ -854,78 +844,6 @@ class TradingBot:
         summary_sheet.write('A19', f"Max Consecutive Wins: {max_wins}")
         summary_sheet.write('A20', f"Max Consecutive Losses: {max_losses}")
 
-
-    def run_portfolio_backtest(self, days, initial_capital=100):
-        self.logger.info(f"--- Starting portfolio backtest over {days} days ---")
-        all_portfolio_trades = []
-        all_symbol_performance = []
-        
-        symbols_to_backtest = config.get_symbols()
-        if not symbols_to_backtest:
-            self.logger.error("No symbols defined in config.get_symbols() for portfolio backtest. Aborting.")
-            return None
-
-        for symbol in symbols_to_backtest:
-            self.logger.info(f"Running backtest for individual symbol: {symbol}")
-            
-            risk_params = CUSTOM_RISK_PARAMETERS.get(symbol, {})
-            sl_mult = risk_params.get('sl_multiplier', SL_MULTIPLIER)
-            tp_rr = risk_params.get('tp_risk_reward', TP_RISK_REWARD)
-
-            self.logger.info(f"  Using SL Mult={sl_mult}, TP RR={tp_rr} for {symbol}")
-
-            data = self._prepare_data_for_backtest(symbol, days)
-            if data.empty:
-                self.logger.warning(f"Skipping {symbol} due to data preparation failure.")
-                continue
-
-            symbol_trades_df = self._run_vectorized_backtest(
-                data=data,
-                symbol=symbol,
-                sl_multiplier=sl_mult,
-                tp_risk_reward=tp_rr,
-                use_trailing_stop=config.BACKTEST_TRAILING_STOP,
-                initial_capital=initial_capital
-            )
-            
-            if symbol_trades_df is not None and not symbol_trades_df.empty:
-                all_portfolio_trades.append(symbol_trades_df)
-                symbol_performance = self.calculate_performance_metrics(symbol_trades_df, initial_capital)
-                symbol_performance['symbol'] = symbol
-                all_symbol_performance.append(symbol_performance)
-            else:
-                self.logger.warning(f"No trades generated for {symbol} in portfolio backtest.")
-
-        if not all_portfolio_trades:
-            self.logger.warning("No trades generated across all symbols for portfolio backtest.")
-            return None
-
-        portfolio_trades_df = pd.concat(all_portfolio_trades, ignore_index=True)
-        portfolio_trades_df.sort_values(by='entry_time', inplace=True)
-        
-        self.logger.info(f"Total trades in portfolio backtest: {len(portfolio_trades_df)}")
-
-        portfolio_performance = self.calculate_performance_metrics(portfolio_trades_df, initial_capital)
-        
-        self.logger.info(f"--- Portfolio Backtest Results ---")
-        self.logger.info(f"Total Trades: {portfolio_performance.get('total_trades', 0)}")
-        self.logger.info(f"Net PnL: ${portfolio_performance.get('pnl', 0):.2f}")
-        self.logger.info(f"Max Drawdown: ${portfolio_performance.get('max_drawdown_dollars', 0):.2f} ({portfolio_performance.get('max_drawdown_pct', 0):.2f}%)")
-
-        portfolio_report_filename = "MT5_portfolio_results.xlsx"
-        self._generate_excel_report(
-            performance=portfolio_performance, 
-            trades_df=portfolio_trades_df, 
-            params={},
-            filename=portfolio_report_filename,
-            symbol_performance_data=all_symbol_performance,
-            initial_capital=initial_capital,
-            days_tested=days,
-            trailing_stop_status=config.BACKTEST_TRAILING_STOP
-        )
-
-        return portfolio_performance
-
     def _deals_to_dataframe(self, deals):
         """Converts a list of MT5 deals to a pandas DataFrame."""
         if deals is None or not deals:
@@ -1081,76 +999,6 @@ class TradingBot:
 
     def run_portfolio_backtest(self, days, initial_capital=100):
         self.logger.info(f"--- Starting portfolio backtest over {days} days ---")
-
-    def _write_backtest_summary_sheet(self, writer, performance, initial_capital):
-        summary_sheet = writer.book.add_worksheet('Summary')
-        bold = writer.book.add_format({'bold': True})
-        summary_sheet.set_column('A:B', 100)
-
-        pnl = performance.get('pnl', 0)
-        win_rate = performance.get('win_rate', 0)
-        profit_factor = performance.get('profit_factor', 0)
-        drawdown_pct = performance.get('max_drawdown_pct', 0)
-        sharpe_ratio = performance.get('sharpe_ratio', 0)
-
-        summary_sheet.write('A1', 'Data-Driven Backtest Analysis', bold)
-        summary_sheet.write('A2', f"Initial Capital: ${initial_capital:.2f}")
-
-        summary_sheet.write('A4', '1. Risk Assessment', bold)
-        risk_level = "High"
-        if drawdown_pct < 10:
-            risk_level = "Low"
-        elif drawdown_pct < 25:
-            risk_level = "Moderate"
-        summary_sheet.write('A4', f"The maximum drawdown was {drawdown_pct:.2f}%. This is considered a {risk_level} level of risk.")
-
-        summary_sheet.write('A6', '2. Profitability Confirmation', bold)
-        profitability = "Unprofitable"
-        if profit_factor > 1.5:
-            profitability = "Strong"
-        elif profit_factor > 1:
-            profitability = "Modest"
-        summary_sheet.write('A7', f"The strategy was { 'profitable' if pnl > 0 else 'unprofitable'} with a final PnL of ${pnl:.2f}. The profit factor of {profit_factor:.2f} indicates {profitability} profitability.")
-
-        summary_sheet.write('A9', '3. Consistency Check', bold)
-        consistency = "Poor"
-        if sharpe_ratio > 1.0:
-            consistency = "Excellent"
-        elif sharpe_ratio > 0.5:
-            consistency = "Good"
-        elif sharpe_ratio > 0:
-            consistency = "Acceptable"
-        summary_sheet.write('A10', f"Consistency appears {consistency}. The Sharpe Ratio of {sharpe_ratio:.2f} indicates the risk-adjusted return. The win rate was {win_rate:.2f}%. ")
-
-        summary_sheet.write('A12', '4. Balanced Verdict', bold)
-        verdict = ""
-        if pnl > 0 and sharpe_ratio > 0.8 and drawdown_pct < 15:
-            verdict = "Excellent. The strategy shows strong, consistent, risk-adjusted returns with low drawdown. It appears robust."
-        elif pnl > 0 and sharpe_ratio > 0.5 and drawdown_pct < 25:
-            verdict = "Good. The strategy is profitable and reasonably consistent. The risk level is moderate. Consider deploying, but monitor performance closely."
-        elif pnl > 0:
-            verdict = "Acceptable, with caveats. The strategy is profitable, but may have low consistency (Sharpe Ratio < 0.5) or high risk (Drawdown > 25%). Proceed with caution."
-        else:
-            verdict = "Not Recommended. The strategy was unprofitable in its current configuration for the tested period."
-        summary_sheet.write('A13', verdict)
-
-        summary_sheet.write('A15', '5. Advanced Metrics', bold)
-        
-        sortino = performance.get('sortino_ratio', 0)
-        calmar = performance.get('calmar_ratio', 0)
-        holding_time = performance.get('avg_holding_time', 'N/A')
-        max_wins = performance.get('max_consecutive_wins', 0)
-        max_losses = performance.get('max_consecutive_losses', 0)
-
-        summary_sheet.write('A16', f"Sortino Ratio: {sortino:.2f} (Measures return against downside risk)")
-        summary_sheet.write('A17', f"Calmar Ratio: {calmar:.2f} (Measures return against max drawdown)")
-        summary_sheet.write('A18', f"Average Trade Holding Time: {holding_time}")
-        summary_sheet.write('A19', f"Max Consecutive Wins: {max_wins}")
-        summary_sheet.write('A20', f"Max Consecutive Losses: {max_losses}")
-
-
-    def run_portfolio_backtest(self, days, initial_capital=100):
-        self.logger.info(f"--- Starting portfolio backtest over {days} days ---")
         all_portfolio_trades = []
         all_symbol_performance = []
         
@@ -1241,7 +1089,6 @@ if __name__ == '__main__':
         default=48,
         help="Number of hours to plot for live trade analysis. Defaults to 48."
     )
-    #)
     args = parser.parse_args()
 
     bot = None

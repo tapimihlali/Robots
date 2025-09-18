@@ -57,6 +57,7 @@ def check_trade_signals(symbol, df_day, orh, orl, bullish_break, bearish_break):
         return signals, bullish_break, bearish_break
         
     point = symbol_info.point
+    max_stop_loss_pips = config.CUSTOM_MAX_STOP_LOSS_PIPS.get(symbol, config.DEFAULT_MAX_STOP_LOSS_PIPS)
 
     prev_candle = df_day.iloc[-2]
     current_candle = df_day.iloc[-1]
@@ -73,7 +74,7 @@ def check_trade_signals(symbol, df_day, orh, orl, bullish_break, bearish_break):
         stop_loss = current_candle['Low']
         risk = entry_price - stop_loss
         stop_loss_pips = risk / point
-        if risk > 0 and stop_loss_pips <= config.MAX_STOP_LOSS_PIPS:
+        if risk > 0 and stop_loss_pips <= max_stop_loss_pips:
             take_profit = entry_price + (risk * config.RISK_REWARD_RATIO_STANDARD)
             signals.append({'type': 'BUY', 'entry': entry_price, 'sl': stop_loss, 'tp': take_profit, 'strategy': 'Standard'})
 
@@ -82,7 +83,7 @@ def check_trade_signals(symbol, df_day, orh, orl, bullish_break, bearish_break):
         stop_loss = current_candle['High']
         risk = stop_loss - entry_price
         stop_loss_pips = risk / point
-        if risk > 0 and stop_loss_pips <= config.MAX_STOP_LOSS_PIPS:
+        if risk > 0 and stop_loss_pips <= max_stop_loss_pips:
             take_profit = entry_price - (risk * config.RISK_REWARD_RATIO_STANDARD)
             signals.append({'type': 'SELL', 'entry': entry_price, 'sl': stop_loss, 'tp': take_profit, 'strategy': 'Standard'})
 
@@ -93,7 +94,7 @@ def check_trade_signals(symbol, df_day, orh, orl, bullish_break, bearish_break):
             stop_loss = current_candle['Low']
             risk = entry_price - stop_loss
             stop_loss_pips = risk / point
-            if risk > 0 and stop_loss_pips <= config.MAX_STOP_LOSS_PIPS:
+            if risk > 0 and stop_loss_pips <= max_stop_loss_pips:
                 take_profit = entry_price + (risk * config.RISK_REWARD_RATIO_REVERSAL)
                 signals.append({'type': 'BUY', 'entry': entry_price, 'sl': stop_loss, 'tp': take_profit, 'strategy': 'Reversal'})
 
@@ -102,7 +103,7 @@ def check_trade_signals(symbol, df_day, orh, orl, bullish_break, bearish_break):
             stop_loss = current_candle['High']
             risk = stop_loss - entry_price
             stop_loss_pips = risk / point
-            if risk > 0 and stop_loss_pips <= config.MAX_STOP_LOSS_PIPS:
+            if risk > 0 and stop_loss_pips <= max_stop_loss_pips:
                 take_profit = entry_price - (risk * config.RISK_REWARD_RATIO_REVERSAL)
                 signals.append({'type': 'SELL', 'entry': entry_price, 'sl': stop_loss, 'tp': take_profit, 'strategy': 'Reversal'})
                 
