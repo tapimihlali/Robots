@@ -8875,3 +8875,182 @@ DEBUG: Calling mt5.positions_get with symbol=None
 Failed to retrieve positions: (-2, 'Invalid "symbol" argument')
 
 Cycle complete. Sleeping for 60 seconds...
+
+[2025-09-18 16:28:33 UTC] | [2025-09-18 12:28:33 EDT] Starting new check cycle...
+[EURUSD] Within Killer Zone. Proceeding with checks.
+[EURUSD] Daily Bias: SHORT_CONTINUATION
+[EURUSD] Checking for FVG on H4...
+[EURUSD] Found BEARISH FVG on H4 between 1.17849 and 1.18199.
+[EURUSD] Price (0.00000) has not yet mitigated the FVG on H4. Skipping.
+[EURUSD] Checking for FVG on H1...
+[EURUSD] Found BEARISH FVG on H1 between 1.17816 and 1.17951.
+[EURUSD] Price (0.00000) has not yet mitigated the FVG on H1. Skipping.
+[GBPUSD] Within Killer Zone. Proceeding with checks.
+[GBPUSD] Daily Bias: SHORT_CONTINUATION
+[GBPUSD] Checking for FVG on H4...
+[GBPUSD] Found BEARISH FVG on H4 between 1.35577 and 1.36127.
+[GBPUSD] Price (0.00000) has not yet mitigated the FVG on H4. Skipping.
+[GBPUSD] Checking for FVG on H1...
+[GBPUSD] Found BEARISH FVG on H1 between 1.35712 and 1.35944.
+[GBPUSD] Price (0.00000) has not yet mitigated the FVG on H1. Skipping.
+[USDJPY] Within Killer Zone. Proceeding with checks.
+[USDJPY] Daily Bias: LONG_CONTINUATION
+[USDJPY] Checking for FVG on H4...
+[USDJPY] Found BULLISH FVG on H4 between 147.48700 and 147.91900.
+[USDJPY] Price (0.00000) has not yet mitigated the FVG on H4. Skipping.
+[USDJPY] Checking for FVG on H1...
+[USDJPY] Found BULLISH FVG on H1 between 147.80100 and 147.90100.
+[USDJPY] Price (0.00000) has not yet mitigated the FVG on H1. Skipping.
+[AUDUSD] Within Killer Zone. Proceeding with checks.
+[AUDUSD] Daily Bias: SHORT_CONTINUATION
+[AUDUSD] Checking for FVG on H4...
+[AUDUSD] Found BEARISH FVG on H4 between 0.66181 and 0.66357.
+[AUDUSD] Price (0.00000) has not yet mitigated the FVG on H4. Skipping.
+[AUDUSD] Checking for FVG on H1...
+[AUDUSD] Found BEARISH FVG on H1 between 0.66270 and 0.66309.
+[AUDUSD] Price (0.00000) has not yet mitigated the FVG on H1. Skipping.
+[USDCHF] Within Killer Zone. Proceeding with checks.
+[USDCHF] Daily Bias: LONG_CONTINUATION
+[USDCHF] Checking for FVG on H4...
+[USDCHF] Found BULLISH FVG on H4 between 0.78947 and 0.79234.
+[USDCHF] Price (0.00000) has not yet mitigated the FVG on H4. Skipping.
+[USDCHF] Checking for FVG on H1...
+[USDCHF] Found BULLISH FVG on H1 between 0.79105 and 0.79169.
+[USDCHF] Price (0.00000) has not yet mitigated the FVG on H1. Skipping.
+[USDCAD] Within Killer Zone. Proceeding with checks.
+[USDCAD] Daily Bias: LONG_CONTINUATION
+[USDCAD] Checking for FVG on H4...
+[USDCAD] Found BULLISH FVG on H4 between 1.37865 and 1.37951.
+[USDCAD] Price (0.00000) has not yet mitigated the FVG on H4. Skipping.
+[USDCAD] Checking for FVG on H1...
+[USDCAD] Found BULLISH FVG on H1 between 1.37900 and 1.37917.
+[USDCAD] Price (0.00000) has not yet mitigated the FVG on H1. Skipping.
+[NZDUSD] Within Killer Zone. Proceeding with checks.
+[NZDUSD] Daily Bias: SHORT_CONTINUATION
+[NZDUSD] Checking for FVG on H4...
+[NZDUSD] Found BEARISH FVG on H4 between 0.58799 and 0.58914.
+[NZDUSD] Price (0.00000) has not yet mitigated the FVG on H4. Skipping.
+[NZDUSD] Checking for FVG on H1...
+[NZDUSD] Found BEARISH FVG on H1 between 0.58883 and 0.58916.
+[NZDUSD] Price (0.00000) has not yet mitigated the FVG on H1. Skipping.
+[Wall Street 30] Within Killer Zone. Proceeding with checks.
+[Wall Street 30] Daily Bias: SHORT_REVERSAL
+[Wall Street 30] Checking for FVG on H4...
+[Wall Street 30] No recent FVG found on H4.
+[Wall Street 30] Checking for FVG on H1...
+[Wall Street 30] No recent FVG found on H1.
+[US SP 500] Within Killer Zone. Proceeding with checks.
+[US SP 500] Daily Bias: LONG_CONTINUATION
+[US SP 500] Checking for FVG on H4...
+[US SP 500] Found BULLISH FVG on H4 between 6514.57000 and 6516.07000.
+[US SP 500] Price (0.00000) has not yet mitigated the FVG on H4. Skipping.
+[US SP 500] Checking for FVG on H1...
+[US SP 500] No recent FVG found on H1.
+[US Tech 100] Within Killer Zone. Proceeding with checks.
+[US Tech 100] Daily Bias: LONG_CONTINUATION
+[US Tech 100] Checking for FVG on H4...
+[US Tech 100] Found BULLISH FVG on H4 between 24325.00000 and 24338.05000.
+[US Tech 100] Price (0.00000) has not yet mitigated the FVG on H4. Skipping.
+[US Tech 100] Checking for FVG on H1...
+[US Tech 100] Found BULLISH FVG on H1 between 24489.30000 and 24504.20000.
+[US Tech 100] Price (0.00000) has not yet mitigated the FVG on H1. Skipping.
+[Germany 40] Within Killer Zone. Proceeding with checks.
+[Germany 40] Daily Bias: LONG_CONTINUATION
+[Germany 40] Checking for FVG on H4...
+[Germany 40] Found BULLISH FVG on H4 between 23518.45000 and 23586.25000.
+[Germany 40] Price (0.00000) has not yet mitigated the FVG on H4. Skipping.
+[Germany 40] Checking for FVG on H1...
+[Germany 40] Found BULLISH FVG on H1 between 23504.25000 and 23586.25000.
+[Germany 40] Price (0.00000) has not yet mitigated the FVG on H1. Skipping.
+[UK 100] Within Killer Zone. Proceeding with checks.
+[UK 100] Daily Bias: NO_TRADE_CONSOLIDATION
+[BTCUSD] Within Killer Zone. Proceeding with checks.
+[BTCUSD] Daily Bias: LONG_CONTINUATION
+[BTCUSD] Checking for FVG on H4...
+[BTCUSD] Found BULLISH FVG on H4 between 117373.14800 and 117439.72400.
+[BTCUSD] Price (0.00000) has not yet mitigated the FVG on H4. Skipping.
+[BTCUSD] Checking for FVG on H1...
+[BTCUSD] No recent FVG found on H1.
+[AAPL] Within Killer Zone. Proceeding with checks.
+[AAPL] Daily Bias: SHORT_REVERSAL
+[AAPL] Checking for FVG on H4...
+[AAPL] Found BULLISH FVG on H4 between 234.43000 and 235.27000.
+[AAPL] Price (0.00000) has not yet mitigated the FVG on H4. Skipping.
+[AAPL] Checking for FVG on H1...
+[AAPL] Found BULLISH FVG on H1 between 236.17000 and 236.35000.
+[AAPL] Price (0.00000) has not yet mitigated the FVG on H1. Skipping.
+[MSFT] Within Killer Zone. Proceeding with checks.
+[MSFT] Daily Bias: SHORT_REVERSAL
+[MSFT] Checking for FVG on H4...
+[MSFT] Found BULLISH FVG on H4 between 503.14000 and 503.80000.
+[MSFT] Price (0.00000) has not yet mitigated the FVG on H4. Skipping.
+[MSFT] Checking for FVG on H1...
+[MSFT] Found BULLISH FVG on H1 between 501.57000 and 506.50000.
+[MSFT] Price (0.00000) has not yet mitigated the FVG on H1. Skipping.
+[TSLA] Within Killer Zone. Proceeding with checks.
+[TSLA] Daily Bias: SHORT_REVERSAL
+[TSLA] Checking for FVG on H4...
+[TSLA] Found BULLISH FVG on H4 between 419.44000 and 422.04000.
+[TSLA] Price (0.00000) has not yet mitigated the FVG on H4. Skipping.
+[TSLA] Checking for FVG on H1...
+[TSLA] Found BEARISH FVG on H1 between 425.77000 and 426.45000.
+[TSLA] Price (0.00000) has not yet mitigated the FVG on H1. Skipping.
+[AMZN] Within Killer Zone. Proceeding with checks.
+[AMZN] Daily Bias: NO_TRADE_CONSOLIDATION
+[XAUUSD] Within Killer Zone. Proceeding with checks.
+[XAUUSD] Daily Bias: SHORT_CONTINUATION
+[XAUUSD] Checking for FVG on H4...
+[XAUUSD] Found BEARISH FVG on H4 between 3645.79000 and 3653.73000.
+[XAUUSD] Price (0.00000) has not yet mitigated the FVG on H4. Skipping.
+[XAUUSD] Checking for FVG on H1...
+[XAUUSD] Found BEARISH FVG on H1 between 3646.44000 and 3663.04000.
+[XAUUSD] Price (0.00000) has not yet mitigated the FVG on H1. Skipping.
+[XAGUSD] Within Killer Zone. Proceeding with checks.
+[XAGUSD] Daily Bias: NO_TRADE_CONSOLIDATION
+[XPTUSD] Within Killer Zone. Proceeding with checks.
+[XPTUSD] Daily Bias: SHORT_REVERSAL
+[XPTUSD] Checking for FVG on H4...
+[XPTUSD] No recent FVG found on H4.
+[XPTUSD] Checking for FVG on H1...
+[XPTUSD] No recent FVG found on H1.
+[NGAS] Within Killer Zone. Proceeding with checks.
+[NGAS] Daily Bias: SHORT_CONTINUATION
+[NGAS] Checking for FVG on H4...
+[NGAS] Found BEARISH FVG on H4 between 2.93700 and 3.04900.
+[NGAS] Price (0.00000) has not yet mitigated the FVG on H4. Skipping.
+[NGAS] Checking for FVG on H1...
+[NGAS] Found BEARISH FVG on H1 between 2.93700 and 2.93900.
+[NGAS] Price (0.00000) has not yet mitigated the FVG on H1. Skipping.
+[UK Brent Oil] Within Killer Zone. Proceeding with checks.
+[UK Brent Oil] Daily Bias: SHORT_CONTINUATION
+[UK Brent Oil] Checking for FVG on H4...
+[UK Brent Oil] No recent FVG found on H4.
+[UK Brent Oil] Checking for FVG on H1...
+[UK Brent Oil] Found BEARISH FVG on H1 between 67.27600 and 67.58300.
+[UK Brent Oil] Price (0.00000) has not yet mitigated the FVG on H1. Skipping.
+[USDMXN] Within Killer Zone. Proceeding with checks.
+[USDMXN] Daily Bias: LONG_CONTINUATION
+[USDMXN] Checking for FVG on H4...
+[USDMXN] Found BULLISH FVG on H4 between 18.29644 and 18.35759.
+[USDMXN] Price (0.00000) has not yet mitigated the FVG on H4. Skipping.
+[USDMXN] Checking for FVG on H1...
+[USDMXN] Found BULLISH FVG on H1 between 18.25763 and 18.28954.
+[USDMXN] Price (0.00000) has not yet mitigated the FVG on H1. Skipping.
+[US Oil] Within Killer Zone. Proceeding with checks.
+[US Oil] Daily Bias: SHORT_CONTINUATION
+[US Oil] Checking for FVG on H4...
+[US Oil] No recent FVG found on H4.
+[US Oil] Checking for FVG on H1...
+[US Oil] Found BEARISH FVG on H1 between 63.48600 and 63.68600.
+[US Oil] Price (0.00000) has not yet mitigated the FVG on H1. Skipping.
+[US Oil] Within Killer Zone. Proceeding with checks.
+[US Oil] Daily Bias: SHORT_CONTINUATION
+[US Oil] Checking for FVG on H4...
+[US Oil] No recent FVG found on H4.
+[US Oil] Checking for FVG on H1...
+[US Oil] Found BEARISH FVG on H1 between 63.48600 and 63.68600.
+[US Oil] Price (0.00000) has not yet mitigated the FVG on H1. Skipping.
+DEBUG: Calling mt5.positions_get with symbol=None
+Failed to retrieve positions: (-2, 'Invalid "symbol" argument')
+
+Cycle complete. Sleeping for 60 seconds...
